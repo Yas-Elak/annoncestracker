@@ -1,0 +1,457 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-12 18:47+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\main\forms.py:40
+msgid "Téléphone"
+msgstr ""
+
+#: .\main\forms.py:41
+msgid "Premier Email"
+msgstr ""
+
+#: .\main\forms.py:42
+msgid "Second Email"
+msgstr ""
+
+#: .\main\forms.py:61
+msgid "Rechercher ce mot / cette phrase"
+msgstr ""
+
+#: .\main\forms.py:62
+msgid "Code postal"
+msgstr ""
+
+#: .\main\forms.py:63
+msgid "Distance depuis le code postal"
+msgstr ""
+
+#: .\main\forms.py:64
+msgid "Envoyé par sms"
+msgstr ""
+
+#: .\main\forms.py:65
+msgid "Envoyé par email"
+msgstr ""
+
+#: .\main\forms.py:83
+msgid "Nom"
+msgstr ""
+
+#: .\main\forms.py:85
+msgid "Message"
+msgstr ""
+
+#: .\main\templates\main\alerts.html:9
+#, python-format
+msgid ""
+"Résultat de toutes les alertes pour le tracker : %(tracker.search_query)s"
+msgstr ""
+
+#: .\main\templates\main\alerts.html:20 .\main\templates\main\alerts.html:66
+#: .\main\templates\main\tracking.html:165
+msgid "Voir l'annonce"
+msgstr ""
+
+#: .\main\templates\main\alerts.html:30
+#: .\main\templates\main\tracking.html:129
+msgid "Effacer"
+msgstr ""
+
+#: .\main\templates\main\alerts.html:38
+msgid ""
+" Merci de faire partie de nos membres,vous pouvez voir jusqu'à 250 alertes "
+"maximum "
+msgstr ""
+
+#: .\main\templates\main\alerts.html:40
+msgid ""
+" Vous êtes limités à 25 alertes maximum. Vous pouvez upgrader votre compte "
+"pour\n"
+"                                voir jusqu'à 250 alertes maximum."
+msgstr ""
+
+#: .\main\templates\main\alerts.html:43
+msgid " Vous êtes limités à 5 alertes maximum, upgradé votre compte."
+msgstr ""
+
+#: .\main\templates\main\alerts.html:53
+#: .\main\templates\main\tracking.html:152
+msgid "Résultat de toutes les alertes"
+msgstr ""
+
+#: .\main\templates\main\alerts.html:64
+msgid ""
+"tout voir de cet\n"
+"                                            tracker"
+msgstr ""
+
+#: .\main\templates\main\alerts.html:72
+#: .\main\templates\main\tracking.html:172
+msgid "Nombre d'alertes limitées à"
+msgstr ""
+
+#: .\main\templates\main\alerts.html:81
+msgid "Upgrade"
+msgstr ""
+
+#: .\main\templates\main\alerts.html:89
+#: .\main\templates\main\tracking.html:189
+msgid "Créer un nouveau tracker"
+msgstr ""
+
+#: .\main\templates\main\alerts.html:103
+msgid "Pour créer des trackers, enregistrez votre email"
+msgstr ""
+
+#: .\main\templates\main\cancelpayment.html:9
+msgid "Vous avez annulé votre achat"
+msgstr ""
+
+#: .\main\templates\main\cancelpayment.html:10
+msgid "ANNULATION"
+msgstr ""
+
+#: .\main\templates\main\contact.html:9
+msgid "Contact"
+msgstr ""
+
+#: .\main\templates\main\dashboard.html:27
+#, python-format
+msgid " SMS par mois : %(user_contact.sms)s "
+msgstr ""
+
+#: .\main\templates\main\dashboard.html:40
+#, python-format
+msgid "Archives : %(number_of_archives)s "
+msgstr ""
+
+#: .\main\templates\main\dashboard.html:55
+msgid " Vous êtes un utilisateur Gold, merci de votre soutien ! "
+msgstr ""
+
+#: .\main\templates\main\dashboard.html:57
+msgid " Vous êtes un utilisateur Argent : "
+msgstr ""
+
+#: .\main\templates\main\dashboard.html:60
+msgid " Vous êtes un utilisateur normal : "
+msgstr ""
+
+#: .\main\templates\main\dashboard.html:73
+#, python-format
+msgid "Résultats sur 24h : %(last_24)s"
+msgstr ""
+
+#: .\main\templates\main\dashboard.html:74
+#, python-format
+msgid "Trackers actifs : %(number_of_tracker_activated)s "
+msgstr ""
+
+#: .\main\templates\main\dashboard.html:75
+#, python-format
+msgid "Trackers en pause: %(number_of_tracker_not_activated)s"
+msgstr ""
+
+#: .\main\templates\main\dashboard.html:80
+msgid "Comment ça marche"
+msgstr ""
+
+#: .\main\templates\main\dashboard.html:81
+msgid ""
+" \"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
+"tempor incididunt ut\n"
+"                            labore et dolore magna aliqua.\n"
+"                            Lorem ipsum dolor sit amet, consectetur "
+"adipisicing elit, sed do eiusmod tempor incididunt\n"
+"                            ut\n"
+"                            labore et dolore magna aliqua."
+msgstr ""
+
+#: .\main\templates\main\dashboard.html:92
+msgid "Recevoir les alertes"
+msgstr ""
+
+#: .\main\templates\main\dashboard.html:96
+#: .\main\templates\main\register.html:13
+msgid "Sauvegarder"
+msgstr ""
+
+#: .\main\templates\main\donepayment.html:9
+msgid "Merci pour votre achat"
+msgstr ""
+
+#: .\main\templates\main\homepage.html:5
+msgid "Let's translate this"
+msgstr ""
+
+#: .\main\templates\main\homepage.html:28
+msgid "le site kesako"
+msgstr "REEEEEEEEEEEEEEEEEE DIOOOOOOOOOOOO"
+
+#: .\main\templates\main\homepage.html:29
+msgid ""
+"dfdsf\n"
+"                        "
+msgstr ""
+
+#: .\main\templates\main\homepage.html:39
+msgid "Qu'est-ce qu'un tracker ?"
+msgstr ""
+
+#: .\main\templates\main\homepage.html:40
+#: .\main\templates\main\homepage.html:48
+#: .\main\templates\main\homepage.html:59
+#: .\main\templates\main\homepage.html:69
+#: .\main\templates\main\homepage.html:82
+#: .\main\templates\main\homepage.html:93
+msgid "fdf"
+msgstr ""
+
+#: .\main\templates\main\homepage.html:47
+msgid "Qu'est-ce qu'une alerte ?"
+msgstr ""
+
+#: .\main\templates\main\homepage.html:57
+msgid "Utilisateur normal"
+msgstr ""
+
+#: .\main\templates\main\homepage.html:67
+msgid "Utilisateur Argent"
+msgstr ""
+
+#: .\main\templates\main\homepage.html:80
+msgid "Utilisateur Gold"
+msgstr ""
+
+#: .\main\templates\main\homepage.html:92
+msgid "Quoi de prévu pour le futur du site"
+msgstr ""
+
+#: .\main\templates\main\login.html:19
+msgid "Si vous n'avez pas encore de compte,"
+msgstr ""
+
+#: .\main\templates\main\login.html:19
+msgid "Créez-en un"
+msgstr ""
+
+#: .\main\templates\main\register.html:9
+msgid "S'enregistrer"
+msgstr ""
+
+#: .\main\templates\main\tracking.html:9
+msgid "Vos trackers"
+msgstr ""
+
+#: .\main\templates\main\tracking.html:12
+#: .\main\templates\main\tracking.html:16
+msgid " Nombre de trackers maximum atteint\" "
+msgstr ""
+
+#: .\main\templates\main\tracking.html:14
+msgid " Nombre de trackers maximum atteint "
+msgstr ""
+
+#: .\main\templates\main\tracking.html:34
+msgid "SMS : Oui /"
+msgstr ""
+
+#: .\main\templates\main\tracking.html:42
+#: .\main\templates\main\tracking.html:73
+msgid "Désactiver"
+msgstr ""
+
+#: .\main\templates\main\tracking.html:48
+msgid "SMS : Non /"
+msgstr ""
+
+#: .\main\templates\main\tracking.html:57
+#: .\main\templates\main\tracking.html:88
+msgid "Activer"
+msgstr ""
+
+#: .\main\templates\main\tracking.html:64
+msgid "Email : Oui /"
+msgstr ""
+
+#: .\main\templates\main\tracking.html:79
+msgid "Email : Non /"
+msgstr ""
+
+#: .\main\templates\main\tracking.html:100
+msgid "Voir les alertes"
+msgstr ""
+
+#: .\main\templates\main\tracking.html:110
+msgid " Réactiver "
+msgstr ""
+
+#: .\main\templates\main\tracking.html:115
+msgid " Pause "
+msgstr ""
+
+#: .\main\templates\main\tracking.html:164
+msgid "Tout voir de ce tracker"
+msgstr ""
+
+#: .\main\templates\main\tracking.html:199
+msgid " Créer "
+msgstr ""
+
+#: .\main\templates\main\tracking.html:202
+msgid "Pour créer des trackers, enregistrez votre email "
+msgstr ""
+
+#: .\main\templates\main\user.html:12
+msgid "Type de compte"
+msgstr ""
+
+#: .\main\templates\main\user.html:16 .\main\templates\main\user.html:20
+#: .\main\templates\main\user.html:24
+msgid "Utilisateur"
+msgstr ""
+
+#: .\main\templates\main\user.html:16
+msgid "Normal"
+msgstr ""
+
+#: .\main\templates\main\user.html:17
+msgid "Upgrade vers Argent ou Gold"
+msgstr ""
+
+#: .\main\templates\main\user.html:20
+msgid "Argent"
+msgstr ""
+
+#: .\main\templates\main\user.html:21
+msgid "Upgrade vers Gold"
+msgstr ""
+
+#: .\main\templates\main\user.html:24
+msgid "Merci de votre confiance"
+msgstr ""
+
+#: .\main\templates\main\user.html:29
+msgid "pour le moment l'option est <strong>désactivée</strong>"
+msgstr ""
+
+#: .\main\templates\main\user.html:31
+msgid "pour le moment l'option est <strong>activée</strong>"
+msgstr ""
+
+#: .\main\templates\main\user.html:35
+msgid ""
+"<p>Les alertes vieilles de plus de deux jours s'effacent automatiquement.</"
+"p>\n"
+"                                <p>Ceci permet de ne pas dépasser la limite "
+"d'archives et donc d'empêcher les trackers\n"
+"                                    de ce mettre en pause.</p>"
+msgstr ""
+
+#: .\main\templates\main\user.html:40 .\main\templates\main\user.html:46
+msgid ""
+"<p>Option disponible uniquement pour les utilisateurs <strong>GOLD</strong>\n"
+"                                        <a href=\"\"\n"
+"                                           class=\"waves-effect waves-light "
+"btn-small\">Upgrade vers Gold</a>\n"
+"                                    </p>"
+msgstr ""
+
+#: .\main\templates\main\user.html:52
+msgid "Activé"
+msgstr ""
+
+#: .\main\templates\main\user.html:54
+msgid "Désactivé"
+msgstr ""
+
+#: .\main\templates\main\user.html:59
+msgid "Mot de passe"
+msgstr ""
+
+#: .\main\templates\main\user.html:61
+msgid "Changer le mot de passe"
+msgstr ""
+
+#: .\main\templates\main\user.html:63
+msgid "Confirmez votre email"
+msgstr ""
+
+#: .\main\templates\main\user.html:64
+msgid "Envoyer un lien pour enregistrer l'email"
+msgstr ""
+
+#: .\main\views\alerts.py:39
+msgid "{alert.alert_title} : supprimé"
+msgstr ""
+
+#: .\main\views\contact.py:29
+msgid "Message envoyé"
+msgstr ""
+
+#: .\main\views\contact.py:32
+msgid "Formulaire invalide"
+msgstr ""
+
+#: .\main\views\tracker_forms.py:30
+msgid "Vous n'avez plus droit à des trackers, Upgradez pour en avoir plus"
+msgstr ""
+
+#: .\main\views\tracking.py:61
+msgid "{alert.search_query} : supprimé"
+msgstr ""
+
+#: .\main\views\user_auth.py:26
+msgid "Un utilisateur avec cet email existe déjà"
+msgstr ""
+
+#: .\main\views\user_auth.py:47
+msgid "Nouveau compte crée: {username}"
+msgstr ""
+
+#: .\main\views\user_auth.py:49
+msgid "Vous êtes maintenant connecté : {username}"
+msgstr ""
+
+#: .\main\views\user_auth.py:50
+msgid "Enregistrez votre email afin de pouvoir créer des trackers"
+msgstr ""
+
+#: .\main\views\user_auth.py:73
+msgid "Vous êtes maintenant connecté : {user.username}"
+msgstr ""
+
+#: .\main\views\user_auth.py:76 .\main\views\user_auth.py:78
+msgid "Email ou password invalide"
+msgstr ""
+
+#: .\main\views\user_auth.py:87
+msgid "Vous êtes maintenant déconnecté"
+msgstr ""
+
+#: .\main\views\user_auth.py:100
+msgid "Votre email est confirmé, merci"
+msgstr ""
+
+#: .\main\views\user_auth.py:103
+msgid "Lien d'activation invalide"
+msgstr ""
+
+#: .\main\views\user_auth.py:122
+msgid "Email de vérification envoyé, vérifié vos emails"
+msgstr ""
