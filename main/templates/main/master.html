@@ -46,7 +46,7 @@
             $(".a-flag").on("click", function (e) {
                 e.preventDefault(); // cancel the link itself
                 var data = $(this).attr("data-value");
-                $('<form action="{% url 'set_language' %}" method="post"> {% csrf_token %} <input name="next" type="hidden" value="{{ redirect_to }}"/> <input name="language" type="hidden" value="' + data + '"/> <input type="submit" value="go"/> </form>').appendTo('body').submit();
+                $('<form action="{% url 'set_language' %}" method="post"> {% csrf_token %} <input name="next" type="hidden" value="{{ redirect_to }}"/> <input name="language" type="hidden" value="' + data + '"/> </form>').appendTo('body').submit();
             });
         });
     }

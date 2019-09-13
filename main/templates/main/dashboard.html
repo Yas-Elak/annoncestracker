@@ -58,10 +58,10 @@
                             {% blocktrans %} Vous êtes un utilisateur Gold, merci de votre soutien ! {% endblocktrans %}
                         {% elif user_contact.premium_user %}
                             {% blocktrans %} Vous êtes un utilisateur Argent : {% endblocktrans %}
-                            <a href="{% url "main:upgrade" %}">Upgrade</a></p>
+                            <a href="{% url "upgrade" %}">Upgrade</a></p>
                         {% else %}
                             {% blocktrans %} Vous êtes un utilisateur normal : {% endblocktrans %}
-                            <a href="{% url "main:upgrade" %}">Upgrade</a></p>
+                            <a href="{% url "upgrade" %}">Upgrade</a></p>
                         {% endif %}
                     </div>
                 </div>

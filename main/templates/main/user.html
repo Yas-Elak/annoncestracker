@@ -18,12 +18,12 @@
                             <li class="collection-item">
                                 {% if user_contact.normal_user %}
                                     <p>{% trans "Utilisateur" %} <strong>{% trans "Normal" %}</strong> :
-                                        <a href="{% url "main:upgrade" %}"
+                                        <a href="{% url "upgrade" %}"
                                            class="waves-effect waves-light btn-small">{% trans "Upgrade vers Argent ou Gold" %}</a>
                                     </p>
                                 {% elif user_contact.premium_user %}
                                     <p>{% trans "Utilisateur" %} <strong>{% trans "Argent" %}</strong> :
-                                        <a href="{% url "main:upgrade" %}"
+                                        <a href="{% url "upgrade" %}"
                                            class="waves-effect waves-light btn-small">{% trans "Upgrade vers Gold" %}</a>
                                     </p>
                                 {% elif user_contact.super_premium_user %}
@@ -50,7 +50,7 @@
                                 {% if user_contact.normal_user %}
                                     {% blocktrans %}<p>Option disponible uniquement pour les
                                         utilisateurs {% endblocktrans %} <strong>GOLD</strong>
-                                <a href="{% url "main:upgrade" %}"
+                                <a href="{% url "upgrade" %}"
                                    class="waves-effect waves-light btn-small">{% blocktrans %}Upgrade vers
                                     Gold {% endblocktrans %}</a>
                                 </p>
@@ -58,16 +58,16 @@
 
                                     {% blocktrans %}<p>Option disponible uniquement pour les
                                         utilisateurs {% endblocktrans %}<strong>GOLD</strong>
-                                <a href="{% url "main:upgrade" %}"
+                                <a href="{% url "upgrade" %}"
                                    class="waves-effect waves-light btn-small">{% blocktrans %}Upgrade vers
                                     Gold {% endblocktrans %}</a>
                                 </p>
                                 {% elif user_contact.super_premium_user %}
                                     {% if user_contact.auto_delete == 0 %}
-                                        <a href="{% url "main:auto_delete_activate" activation="activation" %}"
+                                        <a href="{% url "auto_delete_activate" activation="activation" %}"
                                            class="waves-effect waves-light btn-small">{% trans "Activé" %}</a>
                                     {% else %}
-                                        <a href="{% url "main:auto_delete_activate" activation="desactivation" %}"
+                                        <a href="{% url "auto_delete_activate" activation="desactivation" %}"
                                            class="waves-effect waves-light btn-small">{% trans "Désactivé" %}</a>
                                     {% endif %}
                                 {% endif %}
@@ -89,7 +89,7 @@
                             {% if user_contact.trackers_activated == 0 %}
                                 <li class="collection-header blue-grey darken-1"><h5
                                         class="white-text">{% trans "Confirmez votre email" %}</h5></li>
-                                <li class="collection-item"><a href="{% url "main:resent" %}"
+                                <li class="collection-item"><a href="{% url "resent" %}"
                                                                class="waves-effect waves-light btn-small">{% trans "Envoyer un lien pour enregistrer l'email" %}</a>
                                 </li>
                             {% endif %}

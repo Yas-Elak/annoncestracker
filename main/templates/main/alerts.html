@@ -23,7 +23,7 @@
                                         <a class="waves-effect waves-light btn-small green lighten-1">{% trans "Voir l'annonce"%}</a>
                                         <p>{{ alert.alert_content }}</p>
                                         <br>
-                                        <form method="POST" action="{% url "main:delete_alerte" alert_id=alert.id %}"
+                                        <form method="POST" action="{% url "delete_alerte" alert_id=alert.id %}"
                                               class="right-align">
                                             {% csrf_token %}
                                             <input type="hidden" name="alert_id"
@@ -81,7 +81,7 @@
                                 500
                             {% endif %}</p>
                         {% if user_contact.super_premium_user == False %}
-                            <a href="{% url "main:upgrade" %}" class="waves-effect waves-light btn-small">{% blocktrans %}Upgrade{% endblocktrans %}</a>
+                            <a href="{% url "upgrade" %}" class="waves-effect waves-light btn-small">{% blocktrans %}Upgrade{% endblocktrans %}</a>
                         {% endif %}
                     </div>
                 </div>
@@ -96,14 +96,14 @@
                                 <div class="collapsible-body">
                                         <span>
                                             {% if user_contact.trackers_activated == 1 %}
-                                                <form action="{% url "main:alerts_deuxiememainbe_form" tracker_id=tracker.id %}"
+                                                <form action="{% url "alerts_deuxiememainbe_form" tracker_id=tracker.id %}"
                                                       method="POST">
                                             {% csrf_token %}
                                             {{ deuxiememainbe_form.as_p }}
                                             <button type="submit" class="btn blue-grey darken-1">Créer</button>
                                         </form>
                                             {% else %}
-                                                <p><a href="{% url "main:user_info" %}">{% blocktrans %}Pour créer des trackers, enregistrez votre email{% endblocktrans %}</a></p>
+                                                <p><a href="{% url "user_info" %}">{% blocktrans %}Pour créer des trackers, enregistrez votre email{% endblocktrans %}</a></p>
                                             {% endif %}
                                         </span>
                                 </div>

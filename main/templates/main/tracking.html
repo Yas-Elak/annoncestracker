@@ -37,7 +37,7 @@
                                             <div class="row row_sms_email">
                                                 <span class="col s4">{%  trans "SMS : Oui /" %} </span>
                                                 <form method="POST"
-                                                      action="{% url "main:change_type_alerte" alert_type="sms" answer='no' %}"
+                                                      action="{% url "change_type_alerte" alert_type="sms" answer='no' %}"
                                                       class="col s8">
                                                     {% csrf_token %}
                                                     <input type="hidden" name="alert_id"
@@ -51,7 +51,7 @@
                                             <div class="row row_sms_email">
                                                 <span class="col s4">{% trans "SMS : Non /"%} </span>
                                                 <form method="POST"
-                                                      action="{% url "main:change_type_alerte" alert_type="sms" answer='yes' %}"
+                                                      action="{% url "change_type_alerte" alert_type="sms" answer='yes' %}"
                                                       class=" col s8">
                                                     {% csrf_token %}
                                                     <input type="hidden" name="alert_id"
@@ -67,7 +67,7 @@
                                             <div class="row row_sms_email">
                                                 <span class="col s4">{% trans "Email : Oui /" %} </span>
                                                 <form method="POST"
-                                                      action="{% url "main:change_type_alerte" alert_type="email" answer='no' %}"
+                                                      action="{% url "change_type_alerte" alert_type="email" answer='no' %}"
                                                       class="col s8">
                                                     {% csrf_token %}
                                                     <input type="hidden" name="alert_id"
@@ -82,7 +82,7 @@
                                             <div class="row_sms_email row">
                                                 <span class="col s4">{% trans "Email : Non /" %} </span>
                                                 <form method="POST"
-                                                      action="{% url "main:change_type_alerte" alert_type="email" answer='yes' %}"
+                                                      action="{% url "change_type_alerte" alert_type="email" answer='yes' %}"
                                                       class="col s8">
                                                     {% csrf_token %}
                                                     <input type="hidden" name="alert_id"
@@ -99,12 +99,12 @@
                                     <div class="card-action">
                                         <div class="row">
                                             <div class="col">
-                                                <a href="{% url 'main:alerts' tracker_id=tracker.id %}"
+                                                <a href="{% url 'alerts' tracker_id=tracker.id %}"
                                                    class="waves-effect waves-light btn-small green lighten-1">
                                                     {% trans "Voir les alertes" %}</a>
                                             </div>
                                             <div class="col">
-                                                <form method="POST" action="{% url "main:pause_alerte" %}">
+                                                <form method="POST" action="{% url "pause_alerte" %}">
                                                     {% csrf_token %}
                                                     <input type="hidden" name="alert_id"
                                                            value="{{ tracker.id }}"/>
@@ -123,7 +123,7 @@
                                             </div>
                                             <div class="col">
 
-                                                <form method="POST" action="{% url "main:delete_alerte_info" %}"
+                                                <form method="POST" action="{% url "delete_alerte_info" %}"
                                                       class="">
                                                     {% csrf_token %}
                                                     <input type="hidden" name="alert_id"
@@ -164,7 +164,7 @@
                                         | de {{ alert.pseudo_user }}
                                     </div>
                                     <div class="collapsible-body collapse-body">
-                                        <a href="{% url 'main:alerts' tracker_id=alert.tracker_id %}"
+                                        <a href="{% url 'alerts' tracker_id=alert.tracker_id %}"
                                            class="waves-effect waves-light btn-small blue lighten-1 ">{% trans "Tout voir de ce tracker" %}</a>
                                         <a class="waves-effect waves-light btn-small green lighten-1">{% trans "Voir l'annonce" %}</a>
                                         <h5>{{ alert.alert_title }}</h5>
@@ -182,7 +182,7 @@
                                 500
                             {% endif %}</p>
                         {% if user_contact.super_premium_user == False %}
-                            <a href="{% url "main:upgrade" %}" class="waves-effect waves-light btn-small">Upgrade</a>
+                            <a href="{% url "upgrade" %}" class="waves-effect waves-light btn-small">Upgrade</a>
                         {% endif %}
                     </div>
                 </div>
@@ -197,13 +197,13 @@
                                 <div class="collapsible-body">
                             <span>
                                 {% if user_contact.trackers_activated == 1 %}
-                                    <form action="{% url "main:tracking_deuxiememainbe_form" %}" method="POST">
+                                    <form action="{% url "tracking_deuxiememainbe_form" %}" method="POST">
                                         {% csrf_token %}
                                         {{ deuxiememainbe_form.as_p }}
                                         <button type="submit" class="btn blue-grey darken-1">{% blocktrans %} Créer {% endblocktrans %}</button>
                                     </form>
                                 {% else %}
-                                    <p><a href="{% url "main:user_info" %}">{% blocktrans %}Pour créer des trackers, enregistrez votre email {% endblocktrans %}</a></p>
+                                    <p><a href="{% url "user_info" %}">{% blocktrans %}Pour créer des trackers, enregistrez votre email {% endblocktrans %}</a></p>
                                 {% endif %}
 
                         </span>
