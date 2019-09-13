@@ -17,7 +17,6 @@ from django.contrib.auth.models import User# Create your views here.
 def index(request):
     # What you want the button to do.
     from annoncestracker.settings import BASE_DIR
-    print(BASE_DIR)
     current_user = auth.get_user(request)
     invoice_id_part_one = str(current_user.pk)
     invoice_id_part_two = "1"

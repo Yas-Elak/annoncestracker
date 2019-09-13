@@ -90,3 +90,10 @@ textarea.materialize-textarea{
     height: 12rem !important;
 }
 
+.td-strong{
+    font-weight: bold;
+}
+
+.star-normal{
+    width: 100px;
+}

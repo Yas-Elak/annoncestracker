@@ -15,16 +15,18 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.urls import path, include
-from main.views import dashboard, tracking, user_auth, alerts, homepage, user, payments, contact
+from main.views import dashboard, tracking, user_auth, alerts, homepage, user, payments, contact, upgrade
 
 app_name = "main"
 
 urlpatterns = [
     path("", homepage.index, name="homepage"),
     path("mes_infos/", user.index, name="user_info"),
+    path("mes_infos/<activation>", user.activate_auto_delete, name="auto_delete_activate"),
 
     path("tracking/", tracking.index, name="tracking"),
-    path("tracking/tracking_deuxiememain_form", tracking.tracking_deuxiememainbe_form, name="tracking_deuxiememainbe_form"),
+    path("tracking/tracking_deuxiememain_form", tracking.tracking_deuxiememainbe_form,
+         name="tracking_deuxiememainbe_form"),
 
     path("tracking/<alert_type>/<answer>/", tracking.update_alert_info, name="change_type_alerte"),
     path("tracking/pause/", tracking.update_alerte_pause, name="pause_alerte"),
@@ -41,20 +43,22 @@ urlpatterns = [
     path("logout/", user_auth.logout_request, name="logout"),
     path("login/", user_auth.login_request, name="login"),
 
-    #activation
+    # activation
     url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
         user_auth.activate, name='activate'),
     path("resent/", user_auth.resent_activation_email, name="resent"),
 
-
-    #paypal
+    # paypal
     url(r'^paypal/', include('paypal.standard.ipn.urls')),
     path("cancel-payment/", payments.cancel_payment, name="cancel_payment"),
     path("process-payment/", payments.process_payment, name="done_payment"),
 
-    #contact
+    # contact
     path("contact/", contact.contact, name="contact"),
 
-    #to delete
+    # upgrade
+    path("upgrade/", upgrade.index, name="upgrade"),
+
+    # to delete
 
 ]

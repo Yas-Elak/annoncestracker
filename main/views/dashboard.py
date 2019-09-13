@@ -3,7 +3,7 @@ from django.shortcuts import render
 from ..models import UserContact, Tracker, Alert
 from ..forms import UpdateUserContactForm
 from django.contrib import auth
-
+from ..constantes import *
 from django.http import HttpResponse
 
 
@@ -26,6 +26,7 @@ def index(request):
     form = UpdateUserContactForm(initial={'phone_number': user_contact.phone_number,
                                           'email_one': user_contact.email_one,
                                           'email_two': user_contact.email_two})
+
     return render(request,
                   "main/dashboard.html",
                   {"form": form, "number_of_tracker": number_of_tracker,

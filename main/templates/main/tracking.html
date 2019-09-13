@@ -173,12 +173,12 @@
                             {% if user_contact.normal_user %}
                                 5
                             {% elif user_contact.premium_user %}
-                                25
+                                50
                             {% elif user_contact.super_premium_user %}
-                                250
+                                500
                             {% endif %}</p>
                         {% if user_contact.super_premium_user == False %}
-                            <a href="" class="waves-effect waves-light btn-small">Upgrade</a>
+                            <a href="{% url "main:upgrade" %}" class="waves-effect waves-light btn-small">Upgrade</a>
                         {% endif %}
                     </div>
                 </div>

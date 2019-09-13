@@ -1,0 +1,64 @@
+{% extends "main/master.html" %}
+{% block content %}
+ {% load static %}
+    {% load i18n %}
+    <div class="content">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title"><h4>{% trans "Upgradez votre compte" %}</h4> </span>
+                        <table class="centered">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th><img class="star-normal" src="{% static "/images/star.png" %}"/><p>{% trans "Normal" %}</p></th>
+                                <th><img src="{% static "/images/starplatinum128.png" %}"/><p>{% trans "Argent" %}</p></th>
+                                <th><img src="{% static "/images/goldstar128.png" %}"/><p>{% trans "Gold" %}</p></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="td-strong">{% trans "Trackers : " %}</td>
+                                <td >1</td>
+                                <td>5</td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td class="td-strong">{% trans "Sms : " %}</td>
+                                <td>10</td>
+                                <td>50</td>
+                                <td>250</td>
+                            </tr>
+                            <tr>
+                                <td class="td-strong">{% trans "Archives : " %}</td>
+                                <td>5</td>
+                                <td>50</td>
+                                <td>500</td>
+                            </tr>
+                            <tr>
+                                <td class="td-strong">{% trans "Auto-delete : " %}</td>
+                                <td>{% trans "Non" %}</td>
+                                <td>{% trans "Non" %}</td>
+                                <td>{% trans "Oui" %}</td>
+                            </tr>
+                            <tr>
+                                <td class="td-strong">{% trans "Prix : " %}</td>
+                                <td>{% trans "Gratuit" %}</td>
+                                <td>{% trans "4.99€/mois" %}</td>
+                                <td>{% trans "9.99€/mois" %}</td>
+                            </tr>
+                            <tr>
+                                <td class="td-strong">Upgrade : </td>
+                                <td>/</td>
+                                <td>form argent</td>
+                                <td>form gold</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

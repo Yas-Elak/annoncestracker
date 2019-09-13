@@ -1,4 +1,2 @@
-from . import dashboard
-from . import user_auth
-from . import tracking
+MAX_SMS_GOLD = 250
 

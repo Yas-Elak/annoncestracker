@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.contrib import auth
 from .tracker_forms import deuxiememainbe_form_call
 from django.utils.translation import gettext as _
-
+from ..constantes import *
 from ..models import Tracker, Alert
 from django.contrib.auth.models import User# Create your views here.
 
@@ -18,11 +18,11 @@ def index(request):
     user_contact = UserContact.objects.get(user__id=current_user.id)
     tracker_by_date = Tracker.objects.filter(user__id=current_user.id).order_by('-created')
     if user_contact.normal_user:
-        all_alerts = Alert.objects.filter(user__id=current_user.id, activated=True).order_by('-alert_time')[:5]
+        all_alerts = Alert.objects.filter(user__id=current_user.id, activated=True).order_by('-alert_time')[:MAX_ARCHIVES_NORMAL]
     elif user_contact.premium_user:
-        all_alerts = Alert.objects.filter(user__id=current_user.id, activated=True).order_by('-alert_time')[:25]
+        all_alerts = Alert.objects.filter(user__id=current_user.id, activated=True).order_by('-alert_time')[:MAX_ARCHIVES_ARGENT]
     elif user_contact.super_premium_user:
-        all_alerts = Alert.objects.filter(user__id=current_user.id, activated=True).order_by('-alert_time')[:250]
+        all_alerts = Alert.objects.filter(user__id=current_user.id, activated=True).order_by('-alert_time')[:MAX_ARCHIVES_GOLD]
     return render(request,
                   "main/tracking.html",
                   {"deuxiememainbe_form": deuxiememainbe_form, "tracker_by_date": tracker_by_date, "all_alerts": all_alerts, "user_contact": user_contact})

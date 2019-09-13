@@ -14,11 +14,11 @@
                                          class="center-align icon-charts"/>
                                     <p><strong>Trackers : {{ number_of_tracker }} /
                                         {% if user_contact.super_premium_user %}
-                                            10
+                                            25
                                         {% elif user_contact.premium_user %}
                                             5
                                         {% elif user_contact.normal_user %}
-                                            2
+                                            1
                                         {% endif %}
                                     </strong></p>
                                 </div>
@@ -28,7 +28,7 @@
                                         {% if user_contact.super_premium_user %}
                                             250
                                         {% elif user_contact.premium_user %}
-                                            100
+                                            25
                                         {% elif user_contact.normal_user %}
                                             5
                                         {% endif %}
@@ -39,9 +39,9 @@
                                          class="center-align icon-charts"/>
                                     <p><strong>{% blocktrans %}Archives : {{ number_of_archives }} {% endblocktrans %} /
                                         {% if user_contact.super_premium_user %}
-                                            250
+                                            500
                                         {% elif user_contact.premium_user %}
-                                            25
+                                            50
                                         {% elif user_contact.normal_user %}
                                             5
                                         {% endif %}
@@ -55,10 +55,10 @@
                             {% blocktrans %} Vous êtes un utilisateur Gold, merci de votre soutien ! {% endblocktrans %}
                         {% elif user_contact.premium_user %}
                             {% blocktrans %} Vous êtes un utilisateur Argent : {% endblocktrans %}
-                            <a href="#">Upgrade</a></p>
+                            <a href="{% url "main:upgrade" %}">Upgrade</a></p>
                         {% else %}
                             {% blocktrans %} Vous êtes un utilisateur normal : {% endblocktrans %}
-                            <a href="#">Upgrade</a></p>
+                            <a href="{% url "main:upgrade" %}">Upgrade</a></p>
                         {% endif %}
                     </div>
                 </div>
