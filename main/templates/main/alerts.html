@@ -1,0 +1,116 @@
+{% extends "main/master.html" %}
+{% block content %}
+    {% load i18n %}
+    <div class="content">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">{% blocktrans %}Résultat de toutes les alertes pour le tracker : {{ tracker.search_query }}{% endblocktrans %}</span>
+                        <ul class="collapsible">
+                            {% for alert in all_alerts %}
+                                <li>
+                                    <div class="collapsible-header collapse_title">
+                                        Tracker: {{ alert.alert_info.search_query }} |
+                                        {{ alert.alert_info.website }} | {{ alert.alert_title }}
+                                        | {{ alert.alert_time|timesince }}
+                                        | de {{ alert.pseudo_user }}
+                                    </div>
+                                    <div class="collapsible-body collapse-body">
+                                        <a class="waves-effect waves-light btn-small green lighten-1">{% trans "Voir l'annonce"%}</a>
+                                        <p>{{ alert.alert_content }}</p>
+                                        <br>
+                                        <form method="POST" action="{% url "main:delete_alerte" alert_id=alert.id %}"
+                                              class="right-align">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="alert_id"
+                                                   value="{{ alert.id }}"/>
+                                            <button class="btn btn-small waves-effect waves-light red lighten-1"
+                                                    type="submit"
+                                                    name="action">{% trans "Effacer" %}
+                                            </button>
+                                        </form>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        {% if user_contact.super_premium_user %}
+                            <p>{% blocktrans %} Merci de faire partie de nos membres,vous pouvez voir jusqu'à 250 alertes maximum {% endblocktrans %}</p>
+                        {% elif user_contact.premium_user %}
+                            <p>{% blocktrans %} Vous êtes limités à 25 alertes maximum. Vous pouvez upgrader votre compte pour
+                                voir jusqu'à 250 alertes maximum.{% endblocktrans %}</p>
+                        {% elif user_contact.normal_user %}
+                            <p>{% blocktrans %} Vous êtes limités à 5 alertes maximum, upgradé votre compte.{% endblocktrans %}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m7">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">{% blocktrans %}Résultat de toutes les alertes{% endblocktrans %}</span>
+                        <ul class="collapsible">
+                            {% for alert in all_alerts %}
+                                <li>
+                                    <div class="collapsible-header collapse_title">
+                                        Tracker: {{ alert.alert_info.search_query }} |
+                                        {{ alert.alert_info.website }} | {{ alert.alert_title }}
+                                        | {{ alert.alert_time|timesince }}
+                                        | de {{ alert.pseudo_user }}
+                                    </div>
+                                    <div class="collapsible-body collapse-body">
+                                        <a class="waves-effect waves-light btn-small blue lighten-1 ">{% blocktrans %}tout voir de cet
+                                            tracker{% endblocktrans %}</a>
+                                        <a class="waves-effect waves-light btn-small green lighten-1">{% blocktrans %}Voir l'annonce{% endblocktrans %}</a>
+                                        <p>{{ alert.alert_content }}</p>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <p>{% blocktrans %}Nombre d'alertes limitées à{% endblocktrans %}
+                            {% if user_contact.normal_user %}
+                                5
+                            {% elif user_contact.premium_user %}
+                                25
+                            {% elif user_contact.super_premium_user %}
+                                250
+                            {% endif %}</p>
+                        {% if user_contact.super_premium_user == False %}
+                            <a href="" class="waves-effect waves-light btn-small">{% blocktrans %}Upgrade{% endblocktrans %}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m5">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">{% blocktrans %}Créer un nouveau tracker{% endblocktrans %}</span>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header">www.2ememain.be</div>
+                                <div class="collapsible-body">
+                                        <span>
+                                            {% if user_contact.trackers_activated == 1 %}
+                                                <form action="{% url "main:alerts_deuxiememainbe_form" tracker_id=tracker.id %}"
+                                                      method="POST">
+                                            {% csrf_token %}
+                                            {{ deuxiememainbe_form.as_p }}
+                                            <button type="submit" class="btn blue-grey darken-1">Créer</button>
+                                        </form>
+                                            {% else %}
+                                                <p><a href="{% url "main:user_info" %}">{% blocktrans %}Pour créer des trackers, enregistrez votre email{% endblocktrans %}</a></p>
+                                            {% endif %}
+                                        </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

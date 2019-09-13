@@ -1,0 +1,216 @@
+{% extends "main/master.html" %}
+{% block content %}
+    {% load i18n %}
+    <div class="content">
+        <div class="row">
+            <div class="col s12">
+                <ul class="collapsible">
+                    <li class="active">
+                        <div class="collapsible-header ">{% trans "Vos trackers" %}
+                            <span class="new badge" data-badge-caption="">{{ tracker_by_date|length }}</span>
+                            {% if user_contact.normal_user and tracker_by_date|length  == 2 %}
+                                {%blocktrans %} Nombre de trackers maximum atteint" {% endblocktrans %}
+                            {% elif user_contact.premium_user and tracker_by_date|length  == 5 %}
+                                {%blocktrans %} Nombre de trackers maximum atteint {% endblocktrans %}
+                            {% elif user_contact.super_premium_user and tracker_by_date|length  == 10 %}
+                                {% blocktrans %} Nombre de trackers maximum atteint" {% endblocktrans %}
+                            {% endif %}
+                        </div>
+                        <div class="collapsible-body blue-grey darken-1">
+                            {% for tracker in tracker_by_date %}
+                                {% if forloop.counter|divisibleby:2 %}
+
+                                {% else %}
+                                    <div class="row">
+                                {% endif %}
+                            <div class="col s12 m6">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <span class="card-title">{{ tracker.search_query }}</span>
+                                        <p>Site : <a href="//{{ tracker.website }}">{{ tracker.website }}</a></p>
+                                        <p>Nombre d'alertes : {{ tracker.alert_set.all|length }}</p>
+                                        {% if tracker.sms == "yes" %}
+                                            <div class="row row_sms_email">
+                                                <span class="col s4">{%  trans "SMS : Oui /" %} </span>
+                                                <form method="POST"
+                                                      action="{% url "main:change_type_alerte" alert_type="sms" answer='no' %}"
+                                                      class="col s8">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="alert_id"
+                                                           value="{{ tracker.id }}"/>
+                                                    <button class="red-text text-lighten-3 btn-sms-email"
+                                                            type="submit" name="action">{% trans "Désactiver" %}
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        {% else %}
+                                            <div class="row row_sms_email">
+                                                <span class="col s4">{% trans "SMS : Non /"%} </span>
+                                                <form method="POST"
+                                                      action="{% url "main:change_type_alerte" alert_type="sms" answer='yes' %}"
+                                                      class=" col s8">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="alert_id"
+                                                           value="{{ tracker.id }}"/>
+                                                    <button class="green-text text-lighten-3 btn-sms-email"
+                                                            type="submit"
+                                                            name="action">{% trans "Activer" %}
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        {% endif %}
+                                        {% if tracker.email == "yes" %}
+                                            <div class="row row_sms_email">
+                                                <span class="col s4">{% trans "Email : Oui /" %} </span>
+                                                <form method="POST"
+                                                      action="{% url "main:change_type_alerte" alert_type="email" answer='no' %}"
+                                                      class="col s8">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="alert_id"
+                                                           value="{{ tracker.id }}"/>
+                                                    <button class="red-text text-lighten-3 btn-sms-email"
+                                                            type="submit"
+                                                            name="action">{% trans "Désactiver" %}
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        {% else %}
+                                            <div class="row_sms_email row">
+                                                <span class="col s4">{% trans "Email : Non /" %} </span>
+                                                <form method="POST"
+                                                      action="{% url "main:change_type_alerte" alert_type="email" answer='yes' %}"
+                                                      class="col s8">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="alert_id"
+                                                           value="{{ tracker.id }}"/>
+                                                    <button class="green-text text-lighten-3 btn-sms-email"
+                                                            type="submit"
+                                                            name="action">{% trans "Activer" %}
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+
+                                    <div class="card-action">
+                                        <div class="row">
+                                            <div class="col">
+                                                <a href="{% url 'main:alerts' tracker_id=tracker.id %}"
+                                                   class="waves-effect waves-light btn-small green lighten-1">
+                                                    {% trans "Voir les alertes" %}</a>
+                                            </div>
+                                            <div class="col">
+                                                <form method="POST" action="{% url "main:pause_alerte" %}">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="alert_id"
+                                                           value="{{ tracker.id }}"/>
+                                                    {% if tracker.activated == "no" %}
+                                                        <button class="btn btn-small waves-effect waves-light blue lighten-1"
+                                                                type="submit"
+                                                                name="action">{% blocktrans %} Réactiver {% endblocktrans %}
+                                                        </button>
+                                                    {% else %}
+                                                        <button class="btn btn-small waves-effect waves-light blue lighten-1"
+                                                                type="submit"
+                                                                name="action">{% blocktrans %} Pause {% endblocktrans %}
+                                                        </button>
+                                                    {% endif %}
+                                                </form>
+                                            </div>
+                                            <div class="col">
+
+                                                <form method="POST" action="{% url "main:delete_alerte_info" %}"
+                                                      class="">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="alert_id"
+                                                           value="{{ tracker.id }}"/>
+                                                    <button class="btn btn-small waves-effect waves-light red lighten-1"
+                                                            type="submit"
+                                                            name="action">{% trans "Effacer" %}
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% if forloop.counter|divisibleby:2 %}
+                                </div>
+                            {% else %}
+
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m7">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">{% trans "Résultat de toutes les alertes" %}</span>
+                        <ul class="collapsible">
+                            {% for alert in all_alerts %}
+                                <li>
+                                    <div class="collapsible-header collapse_title">
+                                        Tracker: {{ alert.tracker.search_query }} |
+                                        {{ alert.tracker.website }}
+                                        | {{ alert.alert_time|timesince }}
+                                        | de {{ alert.pseudo_user }}
+                                    </div>
+                                    <div class="collapsible-body collapse-body">
+                                        <a href="{% url 'main:alerts' tracker_id=alert.tracker_id %}"
+                                           class="waves-effect waves-light btn-small blue lighten-1 ">{% trans "Tout voir de ce tracker" %}</a>
+                                        <a class="waves-effect waves-light btn-small green lighten-1">{% trans "Voir l'annonce" %}</a>
+                                        <h5>{{ alert.alert_title }}</h5>
+                                        <p>{{ alert.alert_content }}</p>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <p>{% trans "Nombre d'alertes limitées à" %}
+                            {% if user_contact.normal_user %}
+                                5
+                            {% elif user_contact.premium_user %}
+                                25
+                            {% elif user_contact.super_premium_user %}
+                                250
+                            {% endif %}</p>
+                        {% if user_contact.super_premium_user == False %}
+                            <a href="" class="waves-effect waves-light btn-small">Upgrade</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m5">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">{% trans "Créer un nouveau tracker" %}</span>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header">www.2ememain.be</div>
+                                <div class="collapsible-body">
+                            <span>
+                                {% if user_contact.trackers_activated == 1 %}
+                                    <form action="{% url "main:tracking_deuxiememainbe_form" %}" method="POST">
+                                        {% csrf_token %}
+                                        {{ deuxiememainbe_form.as_p }}
+                                        <button type="submit" class="btn blue-grey darken-1">{% blocktrans %} Créer {% endblocktrans %}</button>
+                                    </form>
+                                {% else %}
+                                    <p><a href="{% url "main:user_info" %}">{% blocktrans %}Pour créer des trackers, enregistrez votre email {% endblocktrans %}</a></p>
+                                {% endif %}
+
+                        </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

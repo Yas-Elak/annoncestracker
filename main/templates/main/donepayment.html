@@ -1,0 +1,16 @@
+{% extends "main/master.html" %}
+{% block content %}
+    {% load i18n %}
+    <div class="content">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title center-align ">{% trans "Merci pour votre achat" %}</span>
+                        <p>{% trans Votre commande a bien été prise en compte. Merci %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

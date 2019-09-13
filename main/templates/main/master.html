@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'main/master.css' %}">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+</head>
+<body>
+{% include "main/includes/navbar.html" %}
+{% include "main/includes/messages.html" %}
+
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+
+
+{#</script>#}
+</body>
+<!-- Compiled and minified JavaScript -->
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script>
+    window.onload = function () {
+        M.AutoInit();
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems, options);
+        });
+
+
+        $(function () {
+            $(".a-flag").on("click", function (e) {
+                e.preventDefault(); // cancel the link itself
+                var data = $(this).attr("data-value");
+                $('<form action="{% url 'set_language' %}" method="post"> {% csrf_token %} <input name="next" type="hidden" value="{{ redirect_to }}"/> <input name="language" type="hidden" value="' + data + '"/> <input type="submit" value="go"/> </form>').appendTo('body').submit();
+            });
+        });
+    }
+</script>
+
+</html>

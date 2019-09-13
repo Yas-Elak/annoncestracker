@@ -1,0 +1,72 @@
+{% extends "main/master.html" %}
+{% block content %}
+    {%  load i18n %}
+    <div class="content">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <ul class="collection with-header">
+                            <li class="collection-header blue-grey darken-1"><h5 class="white-text">Email</h5></li>
+                            <li class="collection-item">{{ current_user.email }}</li>
+                            <li class="collection-header blue-grey darken-1"><h5 class="white-text">{% trans "Type de compte" %}</h5>
+                            </li>
+                            <li class="collection-item">
+                                {% if user_contact.normal_user %}
+                                    <p>{% trans "Utilisateur" %} <strong>{% trans "Normal" %}</strong> :
+                                        <a href="" class="waves-effect waves-light btn-small">{% trans "Upgrade vers Argent ou Gold" %}</a>
+                                    </p>
+                                {% elif user_contact.premium_user %}
+                                    <p>{% trans "Utilisateur" %} <strong>{% trans "Argent" %}</strong> :
+                                        <a href="" class="waves-effect waves-light btn-small">{% trans "Upgrade vers Gold" %}</a>
+                                    </p>
+                                {% elif user_contact.super_premium_user %}
+                                    <p>{% trans "Utilisateur" %} <strong>GOLD</strong> : {% trans "Merci de votre confiance" %}</p>
+                                {% endif %}
+                            </li>
+                            <li class="collection-header blue-grey darken-1"><h5 class="white-text">Auto-delete :
+                                {% if user_contact.auto_delete == 0 %}
+                                    {% blocktrans %}pour le moment l'option est <strong>désactivée</strong>{% endblocktrans %}
+                                {% else %}
+                                    {%  blocktrans %}pour le moment l'option est <strong>activée</strong>{% endblocktrans %}
+                                {% endif %}</h5>
+                            </li>
+                            <li class="collection-item">
+                                {% blocktrans %}<p>Les alertes vieilles de plus de deux jours s'effacent automatiquement.</p>
+                                <p>Ceci permet de ne pas dépasser la limite d'archives et donc d'empêcher les trackers
+                                    de ce mettre en pause.</p>{% endblocktrans %}
+                            <li class="collection-item">
+                                {% if user_contact.normal_user %}
+                                    {% blocktrans %}<p>Option disponible uniquement pour les utilisateurs <strong>GOLD</strong>
+                                        <a href=""
+                                           class="waves-effect waves-light btn-small">Upgrade vers Gold</a>
+                                    </p>{% endblocktrans %}
+                                {% elif user_contact.premium_user %}
+
+                                    {% blocktrans %}<p>Option disponible uniquement pour les utilisateurs <strong>GOLD</strong>
+                                        <a href=""
+                                           class="waves-effect waves-light btn-small">Upgrade vers Gold</a>
+                                    </p>{% endblocktrans %}
+                                {% elif user_contact.super_premium_user %}
+                                    {% if user_contact.auto_delete == 0 %}
+                                        <a href="" class="waves-effect waves-light btn-small">{% trans "Activé" %}</a>
+                                    {% else %}
+                                        <a href="" class="waves-effect waves-light btn-small">{% trans "Désactivé" %}</a>
+                                    {% endif %}
+                                {% endif %}
+                            </li>
+                            </li>
+                            <li class="collection-header blue-grey darken-1"><h5 class="white-text">{% trans "Mot de passe" %}</h5>
+                            </li>
+                            <li class="collection-item"><a href="" class="waves-effect waves-light btn-small">{%  trans "Changer le mot de passe" %}</a></li>
+                            {% if user_contact.trackers_activated == 0 %}
+                                <li class="collection-header blue-grey darken-1"><h5 class="white-text">{% trans "Confirmez votre email" %}</h5></li>
+                                <li class="collection-item"><a href="{%  url "main:resent" %}" class="waves-effect waves-light btn-small">{% trans "Envoyer un lien pour enregistrer l'email" %}</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
