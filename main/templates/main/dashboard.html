@@ -1,4 +1,7 @@
-{% extends "main/master.html" %}
+{% extends "main/master.html" %}{% block meta_info %}
+    <title>Dashboard</title>
+{% endblock %}
+
 {% block content %}
     {% load i18n %}
     <div class="content">
@@ -24,7 +27,7 @@
                                 </div>
                                 <div class="col s4">
                                     <img src="{% static 'images/icons/sms.png' %}" class="center-align icon-charts"/>
-                                    <p><strong>{% blocktrans %} SMS par mois : {{ user_contact.sms }} {% endblocktrans %} /
+                                    <p><strong>{% blocktrans %} SMS par mois : {% endblocktrans %}  {{ user_contact.sms }} /
                                         {% if user_contact.super_premium_user %}
                                             250
                                         {% elif user_contact.premium_user %}
@@ -78,11 +81,10 @@
                 <div class="card">
                     <div class="card-content">
                         <span class="card-title">{% trans "Comment ça marche" %}</span>
-                        <p>{%  blocktrans %} "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                            ut
-                            labore et dolore magna aliqua.{% endblocktrans %}</p>
+                        <p>{%  blocktrans %} Au dessus vous pouvez savoir ou vous en êtes dans vos limites. A
+                            droite vous pouvez renseigner d'autres email afin de recevoir les notifications sur plusieurs boites.
+                        Lorsque le nombre d'archives est dépassé, le tracker se met en pause. N'oubliez pas de faire de la place et de réactiver le tracker.
+                        {% endblocktrans %}</p>
                     </div>
                 </div>
             </div>

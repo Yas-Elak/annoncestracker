@@ -1,4 +1,7 @@
 {% extends "main/master.html" %}
+{% block meta_info %}
+    <title>Upgrade</title>
+{% endblock %}
 {% block content %}
  {% load static %}
     {% load i18n %}
@@ -51,8 +54,8 @@
                             <tr>
                                 <td class="td-strong">Upgrade : </td>
                                 <td>/</td>
-                                <td>form argent</td>
-                                <td>form gold</td>
+                                <td>{{ form_argent.render }}</td>
+                                <td>{{ form_gold.render }}</td>
                             </tr>
                             </tbody>
                         </table>

@@ -1,0 +1,102 @@
+{% extends "main/master.html" %}
+{% block meta_info %}
+    <title>Faq</title>
+        <meta name="description" content= "Comprenez tout sur nos trackers, alertes et sur comment ne plus louper une bonnes affaires">
+{% endblock %}
+
+{% block content %}
+        {% load i18n %}
+    <div class="content">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title center-align "><h1>{% trans "TrackAnnonces" %}</h1></span>
+                        <h5 class="center-align">Ne manquez plus jamais les bonnes affaires en seconde main en étant prévenu dès qu'une nouvelle annonce est publiée !</h5>
+                        <p class="center-align">{% blocktrans %}www.2ememain.be vous permet d'avoirune notification journalière des nouvelles
+                            annonces publiées. Le temps de recevoir cette notification, les bonnes affaires ne sont déjà plus disponible.
+                            C'est ici que nous entrons en jeu. Nous vérifions constamment
+                            les nouvelles petites annonces et nous pouvons vous avertir par Email ou par WhatsApp dès
+                            qu'une nouvelle annonce correspondant à votre recherche est publiée. Vous ne manquerez plus les
+                            bonnes affaires !
+                        {% endblocktrans %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title center-align">{% trans "Qu'est-ce qu'un tracker ?" %}</span>
+                        <p class="p-justifie">{% blocktrans %}Lorsque vous créez un tracker, un logiciel recherche le site en fonction des
+                        options que vous avez précisées. C'est donc une recherche effectuée en permanence sur le
+                        site en question.{% endblocktrans %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title center-align">{% trans "Qu'est-ce qu'une alerte ?" %}</span>
+                        <p class="p-justifie">{% blocktrans %}Lorsque le tracker obtient un résultat, il crée une alerte. Un email vous est
+                        ensuite envoyé à votre adresse email afin de vous prévenir. Ne manquez plus aucune bonne affaire.
+                        Les alertes sont ensuite consultable ici-même.{% endblocktrans %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title center-align">{% trans "Utilisateur normal" %}</span>
+                        <p class="p-justifie">
+                            {% blocktrans %}Vous avez accès au site et vous pouvez créer un tracker gratuitement
+                            mais le nombre d'alertes consultable ici est limité. Vous devez aussi les effacer manuellement
+                            afin de pouvoir en recevoir d'autres.{% endblocktrans %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title center-align">{% trans "Utilisateur Argent" %}</span>
+                        <p class="p-justifie">
+                            {% blocktrans %}Avec l'abonnement "Argent" vous augmentez le nombre de trackers que vous
+                            pouvez créer en même temps ainsi que le nombre de message WhatsApp que vous pouvez recevoir et
+                            le nombre d'alertes qui peuvent être archivée ici pour 4.99€/par mois. Avec les abonnements,
+                            vous vous assurez de ne louper aucune bonne affaire.{% endblocktrans %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title center-align">{% trans "Utilisateur Gold" %}</span>
+                        <p class="p-justifie">
+                            {% blocktrans %}Avec l'abonnement "Gold" vous augmentez ENCORE PLUS le nombre de trackers que vous
+                            pouvez créer en même temps ainsi que le nombre de message WhatsApp que vous pouvez recevoir et
+                            le nombre d'alertes qui peuvent être archivée ici pour 9.99€/par mois. Avec les abonnements,
+                            vous vous assurez de ne louper aucune bonne affaire. Qui plus est, les archives s'auto-effacent,
+                            comme ça vous êtes sur de ne jamais saturer votre quota et de continuer à recevoir des alertes{% endblocktrans %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title center-align">{% trans "Quoi de prévu pour le futur du site" %}</span>
+                        <p class="p-justifie">{% blocktrans %}Pour l'instant,nous ne fonctionnons qu'avec www.2ememain.be mais nous rajouterons
+                        bientôt d'autres sites.{% endblocktrans %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

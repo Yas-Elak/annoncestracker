@@ -21,6 +21,8 @@ app_name = "main"
 
 urlpatterns = [
     path("", homepage.index, name="homepage"),
+
+    path("faq/", homepage.faq, name="faq"),
     path("mes_infos/", user.index, name="user_info"),
     path("mes_infos/<activation>", user.activate_auto_delete, name="auto_delete_activate"),
 

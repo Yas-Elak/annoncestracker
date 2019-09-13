@@ -1,4 +1,10 @@
 {% extends "main/master.html" %}
+
+{% block meta_info %}
+    <title>Contact</title>
+    <meta name="description" content="Contactez-nous si vous avez la moindre question.">
+{% endblock %}
+
 {% block content %}
     {% load i18n %}
     <div class="content">
@@ -6,11 +12,11 @@
             <div class="col s12">
                 <div class="card">
                     <div class="card-content">
-                        <span class="card-title">{% trans "Contact" %}</span>
+                        <span class="card-title">{% trans "Contactez-nous" %}</span>
                         <form method="POST">
                             {% csrf_token %}
                             {{ form.as_p }}
-                            <button type="submit" class="btn">{% trans Envoyer %}</button>
+                            <button type="submit" class="btn">Submit</button>
                         </form>
                     </div>
                 </div>

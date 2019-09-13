@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-12 18:47+0200\n"
+"POT-Creation-Date: 2019-09-13 17:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: .\main\forms.py:40
 msgid "Téléphone"
 msgstr ""
@@ -56,347 +56,474 @@ msgstr ""
 msgid "Message"
 msgstr ""
 
-#: .\main\templates\main\alerts.html:9
+#: .\main\templates\main\alerts.html:12
 #, python-format
 msgid ""
 "Résultat de toutes les alertes pour le tracker : %(tracker.search_query)s"
 msgstr ""
 
-#: .\main\templates\main\alerts.html:20 .\main\templates\main\alerts.html:66
-#: .\main\templates\main\tracking.html:165
+#: .\main\templates\main\alerts.html:23 .\main\templates\main\alerts.html:69
+#: .\main\templates\main\tracking.html:169
 msgid "Voir l'annonce"
 msgstr ""
 
-#: .\main\templates\main\alerts.html:30
-#: .\main\templates\main\tracking.html:129
+#: .\main\templates\main\alerts.html:33
+#: .\main\templates\main\tracking.html:133
 msgid "Effacer"
 msgstr ""
 
-#: .\main\templates\main\alerts.html:38
+#: .\main\templates\main\alerts.html:41
 msgid ""
 " Merci de faire partie de nos membres,vous pouvez voir jusqu'à 250 alertes "
 "maximum "
 msgstr ""
 
-#: .\main\templates\main\alerts.html:40
+#: .\main\templates\main\alerts.html:43
 msgid ""
 " Vous êtes limités à 25 alertes maximum. Vous pouvez upgrader votre compte "
 "pour\n"
 "                                voir jusqu'à 250 alertes maximum."
 msgstr ""
 
-#: .\main\templates\main\alerts.html:43
+#: .\main\templates\main\alerts.html:46
 msgid " Vous êtes limités à 5 alertes maximum, upgradé votre compte."
 msgstr ""
 
-#: .\main\templates\main\alerts.html:53
-#: .\main\templates\main\tracking.html:152
+#: .\main\templates\main\alerts.html:56
+#: .\main\templates\main\tracking.html:156
 msgid "Résultat de toutes les alertes"
 msgstr ""
 
-#: .\main\templates\main\alerts.html:64
+#: .\main\templates\main\alerts.html:67
 msgid ""
 "tout voir de cet\n"
 "                                            tracker"
 msgstr ""
 
-#: .\main\templates\main\alerts.html:72
-#: .\main\templates\main\tracking.html:172
+#: .\main\templates\main\alerts.html:75
+#: .\main\templates\main\tracking.html:176
 msgid "Nombre d'alertes limitées à"
 msgstr ""
 
-#: .\main\templates\main\alerts.html:81
+#: .\main\templates\main\alerts.html:84
 msgid "Upgrade"
 msgstr ""
 
-#: .\main\templates\main\alerts.html:89
-#: .\main\templates\main\tracking.html:189
+#: .\main\templates\main\alerts.html:92
+#: .\main\templates\main\tracking.html:193
 msgid "Créer un nouveau tracker"
 msgstr ""
 
-#: .\main\templates\main\alerts.html:103
+#: .\main\templates\main\alerts.html:106
 msgid "Pour créer des trackers, enregistrez votre email"
 msgstr ""
 
-#: .\main\templates\main\cancelpayment.html:9
+#: .\main\templates\main\cancelpayment.html:12
 msgid "Vous avez annulé votre achat"
 msgstr ""
 
-#: .\main\templates\main\cancelpayment.html:10
+#: .\main\templates\main\cancelpayment.html:13
 msgid "ANNULATION"
 msgstr ""
 
-#: .\main\templates\main\contact.html:9
-msgid "Contact"
+#: .\main\templates\main\contact.html:15
+msgid "Contactez-nous"
 msgstr ""
 
-#: .\main\templates\main\dashboard.html:27
-#, python-format
-msgid " SMS par mois : %(user_contact.sms)s "
+#: .\main\templates\main\dashboard.html:30
+msgid " SMS par mois : "
 msgstr ""
 
-#: .\main\templates\main\dashboard.html:40
+#: .\main\templates\main\dashboard.html:43
 #, python-format
 msgid "Archives : %(number_of_archives)s "
 msgstr ""
 
-#: .\main\templates\main\dashboard.html:55
+#: .\main\templates\main\dashboard.html:58
 msgid " Vous êtes un utilisateur Gold, merci de votre soutien ! "
 msgstr ""
 
-#: .\main\templates\main\dashboard.html:57
+#: .\main\templates\main\dashboard.html:60
 msgid " Vous êtes un utilisateur Argent : "
 msgstr ""
 
-#: .\main\templates\main\dashboard.html:60
+#: .\main\templates\main\dashboard.html:63
 msgid " Vous êtes un utilisateur normal : "
 msgstr ""
 
-#: .\main\templates\main\dashboard.html:73
+#: .\main\templates\main\dashboard.html:76
 #, python-format
 msgid "Résultats sur 24h : %(last_24)s"
 msgstr ""
 
-#: .\main\templates\main\dashboard.html:74
+#: .\main\templates\main\dashboard.html:77
 #, python-format
 msgid "Trackers actifs : %(number_of_tracker_activated)s "
 msgstr ""
 
-#: .\main\templates\main\dashboard.html:75
+#: .\main\templates\main\dashboard.html:78
 #, python-format
 msgid "Trackers en pause: %(number_of_tracker_not_activated)s"
 msgstr ""
 
-#: .\main\templates\main\dashboard.html:80
+#: .\main\templates\main\dashboard.html:83
 msgid "Comment ça marche"
 msgstr ""
 
-#: .\main\templates\main\dashboard.html:81
+#: .\main\templates\main\dashboard.html:84
 msgid ""
-" \"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
-"tempor incididunt ut\n"
-"                            labore et dolore magna aliqua.\n"
-"                            Lorem ipsum dolor sit amet, consectetur "
-"adipisicing elit, sed do eiusmod tempor incididunt\n"
-"                            ut\n"
-"                            labore et dolore magna aliqua."
-msgstr ""
-
-#: .\main\templates\main\dashboard.html:92
-msgid "Recevoir les alertes"
-msgstr ""
-
-#: .\main\templates\main\dashboard.html:96
-#: .\main\templates\main\register.html:13
-msgid "Sauvegarder"
-msgstr ""
-
-#: .\main\templates\main\donepayment.html:9
-msgid "Merci pour votre achat"
-msgstr ""
-
-#: .\main\templates\main\homepage.html:5
-msgid "Let's translate this"
-msgstr ""
-
-#: .\main\templates\main\homepage.html:28
-msgid "le site kesako"
-msgstr "REEEEEEEEEEEEEEEEEE DIOOOOOOOOOOOO"
-
-#: .\main\templates\main\homepage.html:29
-msgid ""
-"dfdsf\n"
+" Au dessus vous pouvez savoir ou vous en êtes dans vos limites. A\n"
+"                            droite vous pouvez renseigner d'autres email "
+"afin de recevoir les notifications sur plusieurs boites.\n"
+"                        Lorsque le nombre d'archives est dépassé, le tracker "
+"se met en pause. N'oubliez pas de faire de la place et de réactiver le "
+"tracker.\n"
 "                        "
 msgstr ""
 
-#: .\main\templates\main\homepage.html:39
+#: .\main\templates\main\dashboard.html:94
+msgid "Recevoir les alertes"
+msgstr ""
+
+#: .\main\templates\main\dashboard.html:98
+#: .\main\templates\main\register.html:17
+msgid "Sauvegarder"
+msgstr ""
+
+#: .\main\templates\main\donepayment.html:12
+msgid "Merci pour votre achat"
+msgstr ""
+
+#: .\main\templates\main\faq.html:14 .\main\templates\main\homepage.html:17
+msgid "TrackAnnonces"
+msgstr ""
+
+#: .\main\templates\main\faq.html:16
+msgid ""
+"www.2ememain.be vous permet d'avoirune notification journalière des "
+"nouvelles\n"
+"                            annonces publiées. Le temps de recevoir cette "
+"notification, les bonnes affaires ne sont déjà plus disponible.\n"
+"                            C'est ici que nous entrons en jeu. Nous "
+"vérifions constamment\n"
+"                            les nouvelles petites annonces et nous pouvons "
+"vous avertir par Email ou par WhatsApp dès\n"
+"                            qu'une nouvelle annonce correspondant à votre "
+"recherche est publiée. Vous ne manquerez plus les\n"
+"                            bonnes affaires !\n"
+"                        "
+msgstr ""
+
+#: .\main\templates\main\faq.html:31
 msgid "Qu'est-ce qu'un tracker ?"
 msgstr ""
 
-#: .\main\templates\main\homepage.html:40
-#: .\main\templates\main\homepage.html:48
-#: .\main\templates\main\homepage.html:59
-#: .\main\templates\main\homepage.html:69
-#: .\main\templates\main\homepage.html:82
-#: .\main\templates\main\homepage.html:93
-msgid "fdf"
+#: .\main\templates\main\faq.html:32
+msgid ""
+"Lorsque vous créez un tracker, un logiciel recherche le site en fonction "
+"des\n"
+"                        options que vous avez précisées. C'est donc une "
+"recherche effectuée en permanence sur le\n"
+"                        site en question."
 msgstr ""
 
-#: .\main\templates\main\homepage.html:47
+#: .\main\templates\main\faq.html:41
 msgid "Qu'est-ce qu'une alerte ?"
 msgstr ""
 
-#: .\main\templates\main\homepage.html:57
+#: .\main\templates\main\faq.html:42
+msgid ""
+"Lorsque le tracker obtient un résultat, il crée une alerte. Un email vous "
+"est\n"
+"                        ensuite envoyé à votre adresse email afin de vous "
+"prévenir. Ne manquez plus aucune bonne affaire.\n"
+"                        Les alertes sont ensuite consultable ici-même."
+msgstr ""
+
+#: .\main\templates\main\faq.html:53
 msgid "Utilisateur normal"
 msgstr ""
 
-#: .\main\templates\main\homepage.html:67
+#: .\main\templates\main\faq.html:55
+msgid ""
+"Vous avez accès au site et vous pouvez créer un tracker gratuitement\n"
+"                            mais le nombre d'alertes consultable ici est "
+"limité. Vous devez aussi les effacer manuellement\n"
+"                            afin de pouvoir en recevoir d'autres."
+msgstr ""
+
+#: .\main\templates\main\faq.html:65
 msgid "Utilisateur Argent"
 msgstr ""
 
-#: .\main\templates\main\homepage.html:80
+#: .\main\templates\main\faq.html:67
+msgid ""
+"Avec l'abonnement \"Argent\" vous augmentez le nombre de trackers que vous\n"
+"                            pouvez créer en même temps ainsi que le nombre "
+"de message WhatsApp que vous pouvez recevoir et\n"
+"                            le nombre d'alertes qui peuvent être archivée "
+"ici pour 4.99€/par mois. Avec les abonnements,\n"
+"                            vous vous assurez de ne louper aucune bonne "
+"affaire."
+msgstr ""
+
+#: .\main\templates\main\faq.html:78
 msgid "Utilisateur Gold"
 msgstr ""
 
-#: .\main\templates\main\homepage.html:92
+#: .\main\templates\main\faq.html:80
+msgid ""
+"Avec l'abonnement \"Gold\" vous augmentez ENCORE PLUS le nombre de trackers "
+"que vous\n"
+"                            pouvez créer en même temps ainsi que le nombre "
+"de message WhatsApp que vous pouvez recevoir et\n"
+"                            le nombre d'alertes qui peuvent être archivée "
+"ici pour 9.99€/par mois. Avec les abonnements,\n"
+"                            vous vous assurez de ne louper aucune bonne "
+"affaire. Qui plus est, les archives s'auto-effacent,\n"
+"                            comme ça vous êtes sur de ne jamais saturer "
+"votre quota et de continuer à recevoir des alertes"
+msgstr ""
+
+#: .\main\templates\main\faq.html:94
 msgid "Quoi de prévu pour le futur du site"
 msgstr ""
 
-#: .\main\templates\main\login.html:19
+#: .\main\templates\main\faq.html:95
+msgid ""
+"Pour l'instant,nous ne fonctionnons qu'avec www.2ememain.be mais nous "
+"rajouterons\n"
+"                        bientôt d'autres sites."
+msgstr ""
+
+#: .\main\templates\main\homepage.html:19
+msgid ""
+"Ne manquez plus jamais les bonnes affaires des sites de\n"
+"                            seconde\n"
+"                            main en étant\n"
+"                            prévenu dès qu'une nouvelle annonce est publiée !"
+msgstr ""
+
+#: .\main\templates\main\homepage.html:23
+msgid ""
+"Créez des recherches automatiques qui vous préviendront\n"
+"                            dés qu'un nouveau résultat apparaitrât. Soyez le "
+"premier sur les bonnes\n"
+"                            affaires!"
+msgstr ""
+
+#: .\main\templates\main\login.html:23
 msgid "Si vous n'avez pas encore de compte,"
 msgstr ""
 
-#: .\main\templates\main\login.html:19
+#: .\main\templates\main\login.html:23
 msgid "Créez-en un"
 msgstr ""
 
-#: .\main\templates\main\register.html:9
+#: .\main\templates\main\register.html:13
 msgid "S'enregistrer"
 msgstr ""
 
-#: .\main\templates\main\tracking.html:9
+#: .\main\templates\main\tracking.html:13
 msgid "Vos trackers"
 msgstr ""
 
-#: .\main\templates\main\tracking.html:12
 #: .\main\templates\main\tracking.html:16
+#: .\main\templates\main\tracking.html:20
 msgid " Nombre de trackers maximum atteint\" "
 msgstr ""
 
-#: .\main\templates\main\tracking.html:14
+#: .\main\templates\main\tracking.html:18
 msgid " Nombre de trackers maximum atteint "
 msgstr ""
 
-#: .\main\templates\main\tracking.html:34
+#: .\main\templates\main\tracking.html:38
 msgid "SMS : Oui /"
 msgstr ""
 
-#: .\main\templates\main\tracking.html:42
-#: .\main\templates\main\tracking.html:73
+#: .\main\templates\main\tracking.html:46
+#: .\main\templates\main\tracking.html:77
 msgid "Désactiver"
 msgstr ""
 
-#: .\main\templates\main\tracking.html:48
+#: .\main\templates\main\tracking.html:52
 msgid "SMS : Non /"
 msgstr ""
 
-#: .\main\templates\main\tracking.html:57
-#: .\main\templates\main\tracking.html:88
+#: .\main\templates\main\tracking.html:61
+#: .\main\templates\main\tracking.html:92
 msgid "Activer"
 msgstr ""
 
-#: .\main\templates\main\tracking.html:64
+#: .\main\templates\main\tracking.html:68
 msgid "Email : Oui /"
 msgstr ""
 
-#: .\main\templates\main\tracking.html:79
+#: .\main\templates\main\tracking.html:83
 msgid "Email : Non /"
 msgstr ""
 
-#: .\main\templates\main\tracking.html:100
+#: .\main\templates\main\tracking.html:104
 msgid "Voir les alertes"
 msgstr ""
 
-#: .\main\templates\main\tracking.html:110
+#: .\main\templates\main\tracking.html:114
 msgid " Réactiver "
 msgstr ""
 
-#: .\main\templates\main\tracking.html:115
+#: .\main\templates\main\tracking.html:119
 msgid " Pause "
 msgstr ""
 
-#: .\main\templates\main\tracking.html:164
+#: .\main\templates\main\tracking.html:168
 msgid "Tout voir de ce tracker"
 msgstr ""
 
-#: .\main\templates\main\tracking.html:199
+#: .\main\templates\main\tracking.html:203
 msgid " Créer "
 msgstr ""
 
-#: .\main\templates\main\tracking.html:202
+#: .\main\templates\main\tracking.html:206
 msgid "Pour créer des trackers, enregistrez votre email "
 msgstr ""
 
-#: .\main\templates\main\user.html:12
-msgid "Type de compte"
+#: .\main\templates\main\upgrade.html:13
+msgid "Upgradez votre compte"
 msgstr ""
 
-#: .\main\templates\main\user.html:16 .\main\templates\main\user.html:20
-#: .\main\templates\main\user.html:24
-msgid "Utilisateur"
-msgstr ""
-
-#: .\main\templates\main\user.html:16
+#: .\main\templates\main\upgrade.html:18 .\main\templates\main\user.html:20
 msgid "Normal"
 msgstr ""
 
-#: .\main\templates\main\user.html:17
-msgid "Upgrade vers Argent ou Gold"
-msgstr ""
-
-#: .\main\templates\main\user.html:20
+#: .\main\templates\main\upgrade.html:19 .\main\templates\main\user.html:25
 msgid "Argent"
 msgstr ""
 
-#: .\main\templates\main\user.html:21
+#: .\main\templates\main\upgrade.html:20
+msgid "Gold"
+msgstr ""
+
+#: .\main\templates\main\upgrade.html:25
+msgid "Trackers : "
+msgstr ""
+
+#: .\main\templates\main\upgrade.html:31
+msgid "Sms : "
+msgstr ""
+
+#: .\main\templates\main\upgrade.html:37
+msgid "Archives : "
+msgstr ""
+
+#: .\main\templates\main\upgrade.html:43
+msgid "Auto-delete : "
+msgstr ""
+
+#: .\main\templates\main\upgrade.html:44 .\main\templates\main\upgrade.html:45
+msgid "Non"
+msgstr ""
+
+#: .\main\templates\main\upgrade.html:46
+msgid "Oui"
+msgstr ""
+
+#: .\main\templates\main\upgrade.html:49
+msgid "Prix : "
+msgstr ""
+
+#: .\main\templates\main\upgrade.html:50
+msgid "Gratuit"
+msgstr ""
+
+#: .\main\templates\main\upgrade.html:51
+msgid "4.99€/mois"
+msgstr ""
+
+#: .\main\templates\main\upgrade.html:52
+msgid "9.99€/mois"
+msgstr ""
+
+#: .\main\templates\main\user.html:16
+msgid "Type de compte"
+msgstr ""
+
+#: .\main\templates\main\user.html:20 .\main\templates\main\user.html:25
+#: .\main\templates\main\user.html:30
+msgid "Utilisateur"
+msgstr ""
+
+#: .\main\templates\main\user.html:22
+msgid "Upgrade vers Argent ou Gold"
+msgstr ""
+
+#: .\main\templates\main\user.html:27
 msgid "Upgrade vers Gold"
 msgstr ""
 
-#: .\main\templates\main\user.html:24
+#: .\main\templates\main\user.html:31
 msgid "Merci de votre confiance"
 msgstr ""
 
-#: .\main\templates\main\user.html:29
-msgid "pour le moment l'option est <strong>désactivée</strong>"
-msgstr ""
-
-#: .\main\templates\main\user.html:31
-msgid "pour le moment l'option est <strong>activée</strong>"
-msgstr ""
-
-#: .\main\templates\main\user.html:35
+#: .\main\templates\main\user.html:36
 msgid ""
-"<p>Les alertes vieilles de plus de deux jours s'effacent automatiquement.</"
-"p>\n"
-"                                <p>Ceci permet de ne pas dépasser la limite "
-"d'archives et donc d'empêcher les trackers\n"
-"                                    de ce mettre en pause.</p>"
+"pour le moment l'option est <strong>désactivée</strong>\n"
+"                                    "
 msgstr ""
 
-#: .\main\templates\main\user.html:40 .\main\templates\main\user.html:46
+#: .\main\templates\main\user.html:39
 msgid ""
-"<p>Option disponible uniquement pour les utilisateurs <strong>GOLD</strong>\n"
-"                                        <a href=\"\"\n"
-"                                           class=\"waves-effect waves-light "
-"btn-small\">Upgrade vers Gold</a>\n"
-"                                    </p>"
+"pour le moment l'option est <strong>activée</strong>\n"
+"                                    "
 msgstr ""
 
-#: .\main\templates\main\user.html:52
+#: .\main\templates\main\user.html:44
+msgid ""
+"\n"
+"                                    <p>Les alertes vieilles de plus de deux "
+"jours s'effacent automatiquement.</p>\n"
+"                                    <p>Ceci permet de ne pas dépasser la "
+"limite d'archives et donc d'empêcher les\n"
+"                                        trackers\n"
+"                                        de ce mettre en pause.</p>"
+msgstr ""
+
+#: .\main\templates\main\user.html:51 .\main\templates\main\user.html:59
+msgid ""
+"<p>Option disponible uniquement pour les\n"
+"                                        utilisateurs "
+msgstr ""
+
+#: .\main\templates\main\user.html:54 .\main\templates\main\user.html:62
+msgid ""
+"Upgrade vers\n"
+"                                    Gold "
+msgstr ""
+
+#: .\main\templates\main\user.html:68
 msgid "Activé"
 msgstr ""
 
-#: .\main\templates\main\user.html:54
+#: .\main\templates\main\user.html:71
 msgid "Désactivé"
 msgstr ""
 
-#: .\main\templates\main\user.html:59
+#: .\main\templates\main\user.html:77
 msgid "Mot de passe"
 msgstr ""
 
-#: .\main\templates\main\user.html:61
-msgid "Changer le mot de passe"
+#: .\main\templates\main\user.html:80
+msgid "Changer le password"
 msgstr ""
 
-#: .\main\templates\main\user.html:63
+#: .\main\templates\main\user.html:91
 msgid "Confirmez votre email"
 msgstr ""
 
-#: .\main\templates\main\user.html:64
+#: .\main\templates\main\user.html:93
 msgid "Envoyer un lien pour enregistrer l'email"
 msgstr ""
 
-#: .\main\views\alerts.py:39
+#: .\main\views\alerts.py:42
 msgid "{alert.alert_title} : supprimé"
 msgstr ""
 
@@ -408,7 +535,7 @@ msgstr ""
 msgid "Formulaire invalide"
 msgstr ""
 
-#: .\main\views\tracker_forms.py:30
+#: .\main\views\tracker_forms.py:32
 msgid "Vous n'avez plus droit à des trackers, Upgradez pour en avoir plus"
 msgstr ""
 
@@ -455,3 +582,6 @@ msgstr ""
 #: .\main\views\user_auth.py:122
 msgid "Email de vérification envoyé, vérifié vos emails"
 msgstr ""
+
+#~ msgid "le site kesako"
+#~ msgstr "REEEEEEEEEEEEEEEEEE DIOOOOOOOOOOOO"
