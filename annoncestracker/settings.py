@@ -25,7 +25,7 @@ SECRET_KEY = '5d6wu$_v*&0&t3o1k!!b^5#&(2obi5v*3d=_t)+*gv1@s(+hrr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["www.trackannonces.be"]
 
 
 # Application definition
