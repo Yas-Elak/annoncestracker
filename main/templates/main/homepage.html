@@ -1,39 +1,106 @@
-{% extends "main/master.html" %}
-{% block meta_info %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    {% load i18n %}
+    <meta charset="UTF-8">
 
+    <link rel="stylesheet" type="text/css" href="{% static 'main/master.css' %}">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Accueil</title>
     <meta name="description"
           content="Ne loupez plus jamais une bonne affaire sur une site de seconde main en étant averti tout de suite de la publication d'une nouvelle annonce">
-{% endblock %}
 
-{% block content %}
-    {% load i18n %}
-    {% load static %}
-    <div class="content">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+</head>
+<body>
+{% include "main/includes/navbar.html" %}
+{% include "main/includes/messages.html" %}
+
+<div id="homepage-back" class="blue-grey lighten-1">
+    <div class="container">
+        <h1 class="white-text" id="homepage-title">{% trans "Soyez le premier sur les bonnes affaires !" %}</h1>
         <div class="row">
-            <div class="col s12">
-                <div class="card">
-                    <div class="card-content">
-                        <span class="card-title center-align "><h2>{% trans "TrackAnnonces" %}</h2></span>
-                    <div class="row">
-                        <h5 class="col s12 m6 p-justifie">{% blocktrans %}Ne manquez plus jamais les bonnes affaires des sites de
-                            seconde
-                            main en étant
-                            prévenu dès qu'une nouvelle annonce est publiée !{% endblocktrans %}</h5>
-                        <h5 class="col s12 m6 p-justifie" class="center-align">{% blocktrans %}Créez des recherches automatiques qui vous préviendront
-                            dés qu'un nouveau résultat apparaitrât. Soyez le premier sur les bonnes
-                            affaires!{% endblocktrans %}</h5>
-                    </div>
-                        <div class="center-align">
-                            <br>
-                            <a href="{% url "faq" %}" class="waves-effect waves-light btn">En savoir plus</a>
-                            <a href="{% url "register" %}" class="waves-effect waves-light btn">S'enregistrer</a>
-
-                        </div>
-                    </div>
-                </div>
+            <div class="col s12 m6 white-text">
+                <p class="p-justifie">{% blocktrans %} TrackAnnonces vous permet d'être le premier à être prévenu
+                    de la publication d'une annonce correspondant à votre recherche sur les sites de
+                    seconde main. Vous serez ainsi le premier à pouvoir réagir et à faire la bonne affaire.
+                    Créer un tracker sur notre site et dés qu'une nouvelle annonce est publiée, vous serez prévenu.
+                    Le tracker recherche inlassablement les nouvelles annonces correspondant à votre recherche
+                    Vous pouvez créer un tracker sur notre site gratuitement, il suffit de vous
+                    inscrire.{% endblocktrans %}</p>
+                <p class="p-justifie">{% blocktrans %}Besoin d'effectuer des recherches différentes ? Créer plus de
+                    trackers grâce à notre
+                    premier
+                    abonnement "Argent" pour 4.99€/mois{% endblocktrans %}</p>
+                <a href="register.html"
+                   class="waves-effect waves-light btn homepage-btn">{% trans "Inscrivez-vous gratuitement" %}</a>
+            </div>
+            <div class="col s12 m6">
+                <img class="hp-img z-depth-4" src="{% static "images/img-homepage.PNG" %}">
             </div>
         </div>
     </div>
 
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m4">
+            <h5 class="center-align">{% trans "Vos recherches" %}</h5>
+            <p>{% blocktrans %}Avec les trackers, nous serons  l'affut des types d'annonces que vous recherchez.
+                Rentrez un mot clé et nous vous renverrons toutes les nouvelles annonces concernant votre
+                mot.{% endblocktrans %}</p>
+        </div>
+
+        <div class="col s12 m4">
+            <h5 class="center-align">{% trans "Vos alertes par email" %}</h5>
+            <p>{% blocktrans %} Soyez prévenu directement par email lorsque qu'une annonce correspondant à votre
+                recherche est publiée. 2èmemain.be propose un récapitulatif quotidient des annonces. Nous vous proposons d'être
+                prévenu directement{% endblocktrans %}</p>
+        </div>
+        <div class="col s12 m4">
+            <h5 class="center-align">{% trans "WhatsApp" %}</h5>
+            <p>{% blocktrans %} Soyez prévenu directement sur votre smartphone via l'application WhatsApp. Vous serez
+                ainsi le
+                premier à réagir et à pouvoir profiter de la bonne affaire.{% endblocktrans %}</p>
+        </div>
+    </div>
+</div>
+
+{#</script>#}
+</body>
+<!-- Compiled and minified JavaScript -->
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script>
+    window.onload = function () {
+        M.AutoInit();
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.collapsible');
+            var instances = M.Collapsible.init(elems, options);
+        });
+
+
+        $(function () {
+            $(".a-flag").on("click", function (e) {
+                e.preventDefault(); // cancel the link itself
+                var data = $(this).attr("data-value");
+                $('<form action="{% url 'set_language' %}" method="post"> {% csrf_token %} <input name="next" type="hidden" value="{{ redirect_to }}"/> <input name="language" type="hidden" value="' + data + '"/> </form>').appendTo('body').submit();
+            });
+        });
+    }
+
+
+</script>
+{% block script %}
 {% endblock %}
+
+
+</html>

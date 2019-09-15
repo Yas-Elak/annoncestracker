@@ -1,15 +1,13 @@
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
-from ..models import UserContact
-from ..forms import DeuxiemeMainBe
-from django.shortcuts import render, redirect
-from django.contrib import messages
 from django.contrib import auth
-from .tracker_forms import deuxiememainbe_form_call
+from django.contrib import messages
+from django.shortcuts import render, redirect
 from django.utils.translation import gettext as _
+
+from .tracker_forms import deuxiememainbe_form_call
 from ..constantes import *
+from ..forms import DeuxiemeMainBe
 from ..models import Tracker, Alert
-from django.contrib.auth.models import User# Create your views here.
+from ..models import UserContact
 
 
 def index(request):

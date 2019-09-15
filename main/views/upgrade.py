@@ -24,9 +24,9 @@ def index(request):
         "sra": "1",  # reattempt payment on payment error
         "no_note": "1",  # remove extra notes (optional)
         "item_name": "Argent Subscription",
-        "notify_url": request.build_absolute_uri(reverse('main:paypal-ipn')),
-        "return": request.build_absolute_uri(reverse('main:done_payment')),
-        "cancel_return": request.build_absolute_uri(reverse('main:cancel_payment')),
+        "notify_url": request.build_absolute_uri(reverse('paypal-ipn')),
+        "return": request.build_absolute_uri(reverse('done_payment')),
+        "cancel_return": request.build_absolute_uri(reverse('cancel_payment')),
     }
 
     # Create the instance.
@@ -42,9 +42,9 @@ def index(request):
         "sra": "1",  # reattempt payment on payment error
         "no_note": "1",  # remove extra notes (optional)
         "item_name": "Gold Subscription",
-        "notify_url": request.build_absolute_uri(reverse('main:paypal-ipn')),
-        "return": request.build_absolute_uri(reverse('main:done_payment')),
-        "cancel_return": request.build_absolute_uri(reverse('main:cancel_payment')),
+        "notify_url": request.build_absolute_uri(reverse('paypal-ipn')),
+        "return": request.build_absolute_uri(reverse('done_payment')),
+        "cancel_return": request.build_absolute_uri(reverse('cancel_payment')),
     }
 
     # Create the instance.

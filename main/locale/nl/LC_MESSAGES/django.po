@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-13 17:44+0200\n"
+"POT-Creation-Date: 2019-09-15 15:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -194,7 +194,7 @@ msgstr ""
 msgid "Merci pour votre achat"
 msgstr ""
 
-#: .\main\templates\main\faq.html:14 .\main\templates\main\homepage.html:17
+#: .\main\templates\main\faq.html:14
 msgid "TrackAnnonces"
 msgstr ""
 
@@ -296,20 +296,74 @@ msgid ""
 "                        bientôt d'autres sites."
 msgstr ""
 
-#: .\main\templates\main\homepage.html:19
-msgid ""
-"Ne manquez plus jamais les bonnes affaires des sites de\n"
-"                            seconde\n"
-"                            main en étant\n"
-"                            prévenu dès qu'une nouvelle annonce est publiée !"
+#: .\main\templates\main\homepage.html:25
+msgid "Soyez le premier sur les bonnes affaires !"
 msgstr ""
 
-#: .\main\templates\main\homepage.html:23
+#: .\main\templates\main\homepage.html:28
 msgid ""
-"Créez des recherches automatiques qui vous préviendront\n"
-"                            dés qu'un nouveau résultat apparaitrât. Soyez le "
-"premier sur les bonnes\n"
-"                            affaires!"
+" TrackAnnonces vous permet d'être le premier à être prévenu\n"
+"                    de la publication d'une annonce correspondant à votre "
+"recherche sur les sites de\n"
+"                    seconde main. Vous serez ainsi le premier à pouvoir "
+"réagir et à faire la bonne affaire.\n"
+"                    Créer un tracker sur notre site et dés qu'une nouvelle "
+"annonce est publiée, vous serez prévenu.\n"
+"                    Le tracker recherche inlassablement les nouvelles "
+"annonces correspondant à votre recherche\n"
+"                    Vous pouvez créer un tracker sur notre site "
+"gratuitement, il suffit de vous\n"
+"                    inscrire."
+msgstr ""
+
+#: .\main\templates\main\homepage.html:35
+msgid ""
+"Besoin d'effectuer des recherches différentes ? Créer plus de\n"
+"                    trackers grâce à notre\n"
+"                    premier\n"
+"                    abonnement \"Argent\" pour 4.99€/mois"
+msgstr ""
+
+#: .\main\templates\main\homepage.html:40
+msgid "Inscrivez-vous gratuitement"
+msgstr ""
+
+#: .\main\templates\main\homepage.html:53
+msgid "Vos recherches"
+msgstr ""
+
+#: .\main\templates\main\homepage.html:54
+msgid ""
+"Avec les trackers, nous serons  l'affut des types d'annonces que vous "
+"recherchez.\n"
+"                Rentrez un mot clé et nous vous renverrons toutes les "
+"nouvelles annonces concernant votre\n"
+"                mot."
+msgstr ""
+
+#: .\main\templates\main\homepage.html:60
+msgid "Vos alertes par email"
+msgstr ""
+
+#: .\main\templates\main\homepage.html:61
+msgid ""
+" Soyez prévenu directement par email lorsque qu'une annonce correspondant à "
+"votre\n"
+"                recherche est publiée. 2èmemain.be propose un récapitulatif "
+"quotidient des annonces. Nous vous proposons d'être\n"
+"                prévenu directement"
+msgstr ""
+
+#: .\main\templates\main\homepage.html:66
+msgid "WhatsApp"
+msgstr ""
+
+#: .\main\templates\main\homepage.html:67
+msgid ""
+" Soyez prévenu directement sur votre smartphone via l'application WhatsApp. "
+"Vous serez\n"
+"                ainsi le\n"
+"                premier à réagir et à pouvoir profiter de la bonne affaire."
 msgstr ""
 
 #: .\main\templates\main\login.html:23
@@ -539,7 +593,7 @@ msgstr ""
 msgid "Vous n'avez plus droit à des trackers, Upgradez pour en avoir plus"
 msgstr ""
 
-#: .\main\views\tracking.py:61
+#: .\main\views\tracking.py:59
 msgid "{alert.search_query} : supprimé"
 msgstr ""
 

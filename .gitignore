@@ -109,3 +109,7 @@ media/
 **/migrations/**
 !**/migrations
 !**/migrations/__init__.py
+
+# Specific files #
+##################
+annoncetracker/settings.py
