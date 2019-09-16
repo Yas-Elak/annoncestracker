@@ -21,7 +21,7 @@ from main.views import dashboard, tracking, user_auth, alerts, homepage, user, p
 app_name = "main"
 
 urlpatterns = [
-    path("", homepage.index, name="homepage"),
+    path('', homepage.index, name="homepage"),
 
     path("faq/", homepage.faq, name="faq"),
     path("mes_infos/", user.index, name="user_info"),
@@ -63,6 +63,7 @@ urlpatterns = [
     path("upgrade/", upgrade.index, name="upgrade"),
 
     # to delete
+
 
 ]
 

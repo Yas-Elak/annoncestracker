@@ -70,5 +70,5 @@ urlpatterns = [
 #     path("upgrade/", upgrade.index, name="upgrade"),
 #
 #     # to delete
-#
+
 # )
