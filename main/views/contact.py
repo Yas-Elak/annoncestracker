@@ -27,7 +27,7 @@ def contact(request):
             )
             email.send()
             messages.info(request, gettext("Message envoyé"))
-            return redirect("main:homepage")
+            return redirect("homepage")
         else:
             messages.error(request, gettext("Formulaire invalide"))
 

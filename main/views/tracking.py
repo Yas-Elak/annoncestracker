@@ -38,7 +38,7 @@ def update_alert_info(request, alert_type, answer):
             Tracker.objects.filter(id=alert_id).update(sms=answer)
         else:
             Tracker.objects.filter(id=alert_id).update(email=answer)
-    return redirect("main:tracking")
+    return redirect("tracking")
 
 
 def update_alerte_pause(request):
@@ -49,7 +49,7 @@ def update_alerte_pause(request):
             Tracker.objects.filter(id=alert_id).update(activated="no")
         else:
             Tracker.objects.filter(id=alert_id).update(activated="yes")
-    return redirect("main:tracking")
+    return redirect("tracking")
 
 
 def delete(request):
@@ -59,6 +59,6 @@ def delete(request):
         messages.success(request, _(f"{alert.search_query} : supprimé"))
         alert.delete()
 
-    return redirect("main:tracking")
+    return redirect("tracking")
 
 

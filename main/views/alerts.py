@@ -41,7 +41,7 @@ def delete(request, alert_id):
         Alert.objects.filter(id=alert.id).update(activated=0)
         messages.success(request, _(f"{alert.alert_title} : supprimé"))
 
-    return redirect("main:alerts", tracker_id=tracker_id)
+    return redirect("alerts", tracker_id=tracker_id)
 
 
 # https://codepen.io/marcmatias/pen/gxPzvY

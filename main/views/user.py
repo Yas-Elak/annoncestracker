@@ -22,7 +22,7 @@ def index(request):
             user = form.save()
             update_session_auth_hash(request, user)  # Important!
             messages.success(request, 'Your password was successfully updated!')
-            return redirect("main:user_info")
+            return redirect("user_info")
         else:
             messages.error(request, 'Please correct the error below.')
     else:

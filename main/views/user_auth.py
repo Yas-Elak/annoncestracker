@@ -49,7 +49,7 @@ def create_user(request):
                 messages.info(request, _(f"Vous êtes maintenant connecté : {username}"))
                 messages.info(request, _("Enregistrez votre email afin de pouvoir créer des trackers"))
 
-                return redirect("main:homepage")
+                return redirect("homepage")
         else:
             data = {'username': form.data['username'], 'email': form.data['email']}
             form = NewUserForm(data)
@@ -71,7 +71,7 @@ def login_request(request):
             if user is not None and user.check_password(password):
                 login(request, user)
                 messages.info(request, _(f"Vous êtes maintenant connecté : {user.username}"))
-                return redirect("main:dashboard")
+                return redirect("dashboard")
             else:
                 messages.error(request, _("Email ou password invalide"))
         else:
@@ -85,7 +85,7 @@ def login_request(request):
 def logout_request(request):
     logout(request)
     messages.info(request, _("Vous êtes maintenant déconnecté"))
-    return redirect("main:homepage")
+    return redirect("homepage")
 
 
 def activate(request, uidb64, token):
@@ -98,10 +98,10 @@ def activate(request, uidb64, token):
         UserContact.objects.filter(user_id=user.id).update(trackers_activated=1)
 
         messages.info(request, _("Votre email est confirmé, merci"))
-        return redirect("main:homepage")
+        return redirect("homepage")
     else:
         messages.info(request, _("Lien d'activation invalide"))
-        return redirect("main:homepage")
+        return redirect("homepage")
 
 
 def resent_activation_email(request):
@@ -120,6 +120,6 @@ def resent_activation_email(request):
     )
     email.send()
     messages.info(request, _(f"Email de vérification envoyé, vérifié vos emails"))
-    return redirect("main:dashboard")
+    return redirect("dashboard")
 
 
