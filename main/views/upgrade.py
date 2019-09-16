@@ -1,12 +1,6 @@
-from django.utils import timezone
 from django.shortcuts import render
-from ..models import UserContact, Tracker, Alert
-from ..forms import UpdateUserContactForm
-from django.contrib import auth
-
-from django.http import HttpResponse
-from paypal.standard.forms import PayPalPaymentsForm
 from django.urls import reverse
+from paypal.standard.forms import PayPalPaymentsForm
 
 
 # Create your views here.

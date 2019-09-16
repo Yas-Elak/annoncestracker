@@ -1,15 +1,10 @@
+from django.contrib import auth
+from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.forms import PasswordChangeForm
-from django.shortcuts import render
-from ..models import UserContact
-from ..forms import DeuxiemeMainBe
 from django.shortcuts import render, redirect
-from django.contrib import messages
-from django.contrib import auth
-from .tracker_forms import deuxiememainbe_form_call
 
-from ..models import Tracker, Alert
-from django.contrib.auth.models import User# Create your views here.
+from ..models import UserContact
 
 
 def index(request):

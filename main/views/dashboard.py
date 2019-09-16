@@ -1,10 +1,9 @@
-from django.utils import timezone
-from django.shortcuts import render
-from ..models import UserContact, Tracker, Alert
-from ..forms import UpdateUserContactForm
 from django.contrib import auth
-from ..constantes import *
-from django.http import HttpResponse
+from django.shortcuts import render
+from django.utils import timezone
+
+from ..forms import UpdateUserContactForm
+from ..models import UserContact, Tracker, Alert
 
 
 # Create your views here.
