@@ -70,7 +70,7 @@ def login_request(request):
             if user is not None and user.check_password(password):
                 login(request, user)
                 messages.info(request, _(f"Vous êtes maintenant connecté : {user.username}"))
-                return redirect("main:dashboard")
+                return redirect("dashboard")
             else:
                 messages.error(request, _("Email ou password invalide"))
         else:
