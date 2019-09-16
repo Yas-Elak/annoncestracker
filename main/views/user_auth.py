@@ -1,8 +1,6 @@
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages, auth
-from django.urls import reverse
-
 from ..forms import NewUserForm, AuthForm
 from ..models import UserContact
 from django.contrib.auth.models import User
@@ -72,7 +70,7 @@ def login_request(request):
             if user is not None and user.check_password(password):
                 login(request, user)
                 messages.info(request, _(f"Vous êtes maintenant connecté : {user.username}"))
-                return HttpResponseRedirect(reverse('main:dashboard'))
+                return redirect("main:dashboard")
             else:
                 messages.error(request, _("Email ou password invalide"))
         else:
