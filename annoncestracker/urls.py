@@ -27,9 +27,9 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    url(r'^', homepage.index, name="homepage"),
+    path('', homepage.index, name="homepage"),
 
-    url(r"^faq/", homepage.faq, name="faq"),
+    path("faq/", homepage.faq, name="faq"),
     path("mes_infos/", user.index, name="user_info"),
     path("mes_infos/<activation>", user.activate_auto_delete, name="auto_delete_activate"),
 
@@ -46,7 +46,7 @@ urlpatterns += i18n_patterns(
     path("alerts/<tracker_id>/alerts_deuxiememain_form", alerts.alerts_deuxiememainbe_form,
          name="alerts_deuxiememainbe_form"),
 
-    url(r"^dashboard/", dashboard.index, name="dashboard"),
+    path("dashboard/", dashboard.index, name="dashboard"),
 
     path("register/", user_auth.create_user, name="register"),
     path("logout/", user_auth.logout_request, name="logout"),
