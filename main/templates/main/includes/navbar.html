@@ -2,15 +2,15 @@
 {% load i18n %}
 <ul class="sidenav" id="mobile-demo">
     {% if user.is_authenticated %}
-        <li><a href="{% url "dashboard" %}">Dashboard</a></li>
-        <li><a href="{% url "tracking" %}">Tracking</a></li>
+        <li><a href="{% url "main:dashboard" %}">Dashboard</a></li>
+        <li><a href="{% url "main:tracking" %}">Tracking</a></li>
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">{{ user.username }}</a></li>
-        <li><a href="{% url "contact" %}">Contact</a></li>
-        <li><a href="{% url "logout" %}">Logout</a></li>
+        <li><a href="{% url "main:contact" %}">Contact</a></li>
+        <li><a href="{% url "main:logout" %}">Logout</a></li>
     {% else %}
         <li><a href="../register">Register</a></li>
         <li><a href="../login">Login</a></li>
-        <li><a href="{% url "contact" %}">Contact</a></li>
+        <li><a href="{% url "main:contact" %}">Contact</a></li>
     {% endif %}
 </ul>
 
@@ -34,7 +34,7 @@
     <div class="nav-wrapper">
 
 
-        <a href="{% url "homepage" %}" class="brand-logo"><img class="logo-navbar"
+        <a href="{% url "main:homepage" %}" class="brand-logo"><img class="logo-navbar"
                                                                     src="{% static 'images/little_logo_transparent.png' %}"/></a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger">
             <div class="bars"></div>
@@ -43,9 +43,9 @@
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             {% if user.is_authenticated %}
-                <li><a href="{% url "dashboard" %}">Dashboard</a></li>
-                <li><a href="{% url "tracking" %}">Tracking</a></li>
-                <li class="valign-wrapper"><a href="{% url "user_info" %}">{{ user.username }}
+                <li><a href="{% url "main:dashboard" %}">Dashboard</a></li>
+                <li><a href="{% url "main:tracking" %}">Tracking</a></li>
+                <li class="valign-wrapper"><a href="{% url "main:user_info" %}">{{ user.username }}
                     {% if user.user_contact.super_premium_user %}
                         <img class="star-navbar" src="{% static 'images/icons/goldstar.png' %}"/>
                     {% elif user.user_contact.premium_user %}
@@ -55,13 +55,13 @@
                 </a>
                 </li>
                 <li> |</li>
-                <li><a href="{% url "logout" %}">Logout</a></li>
+                <li><a href="{% url "main:logout" %}">Logout</a></li>
             {% else %}
                 <li><a href="../register">Register</a></li>
                 <li><a href="../login">Login</a></li>
             {% endif %}
-            <li><a href="{% url "contact" %}">Contact</a></li>
-            <li><a href="{% url "faq" %}">FAQ</a></li>
+            <li><a href="{% url "main:contact" %}">Contact</a></li>
+            <li><a href="{% url "main:faq" %}">FAQ</a></li>
             <!-- Dropdown Trigger -->
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><img class="star-navbar"
                     src="{% static "images/icons/translation.png" %}"></a></li>
