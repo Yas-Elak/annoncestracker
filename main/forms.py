@@ -7,7 +7,7 @@ from django.utils.translation import gettext as _
 
 class NewUserForm(UserCreationForm):
     email = forms.EmailField(required=True)
-    username = forms.CharField(required=True, min_length=3, unique=False)
+    username = forms.CharField(required=True, min_length=3)
 
     class Meta:
         model = User
