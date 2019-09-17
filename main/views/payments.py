@@ -12,6 +12,10 @@ def cancel_payment(request):
 def process_payment(request):
     print(request)
     print("process payment")
+    tx = request.REQUEST['tx']
+    print("---------------------------")
+    print(tx)
+    print("---------------------------")
     return render(request, "main/donepayment.html")
 
 
