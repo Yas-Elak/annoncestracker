@@ -9,7 +9,8 @@
             <div class="col s12">
                 <div class="card">
                     <div class="card-content">
-                        <span class="card-title">{% blocktrans %}Résultat de toutes les alertes pour le tracker : {{ tracker.search_query }}{% endblocktrans %}</span>
+                        <span class="card-title">{% blocktrans %}Résultat de toutes les alertes pour le tracker :
+                            {{ tracker.search_query }}{% endblocktrans %}</span>
                         <ul class="collapsible">
                             {% for alert in all_alerts %}
                                 <li>
@@ -20,7 +21,7 @@
                                         | de {{ alert.pseudo_user }}
                                     </div>
                                     <div class="collapsible-body collapse-body">
-                                        <a class="waves-effect waves-light btn-small green lighten-1">{% trans "Voir l'annonce"%}</a>
+                                        <a class="waves-effect waves-light btn-small green lighten-1">{% trans "Voir l'annonce" %}</a>
                                         <p>{{ alert.alert_content }}</p>
                                         <br>
                                         <form method="POST" action="{% url "delete_alerte" alert_id=alert.id %}"
@@ -38,13 +39,26 @@
                             {% endfor %}
                         </ul>
                         {% if user_contact.super_premium_user %}
-                            <p>{% blocktrans %} Merci de faire partie de nos membres,vous pouvez voir jusqu'à 250 alertes maximum {% endblocktrans %}</p>
+                            <p>{% blocktrans %} Merci de faire partie de nos membres,vous pouvez voir jusqu'à 500
+                                alertes maximum {% endblocktrans %}</p>
                         {% elif user_contact.premium_user %}
-                            <p>{% blocktrans %} Vous êtes limités à 25 alertes maximum. Vous pouvez upgrader votre compte pour
+                            <p>{% blocktrans %} Vous êtes limités à 50 alertes maximum. Vous pouvez upgrader votre
+                                compte pour
                                 voir jusqu'à 250 alertes maximum.{% endblocktrans %}</p>
                         {% elif user_contact.normal_user %}
-                            <p>{% blocktrans %} Vous êtes limités à 5 alertes maximum, upgradé votre compte.{% endblocktrans %}</p>
+                            <p>{% blocktrans %} Vous êtes limités à 5 alertes maximum, upgradé votre
+                                compte.{% endblocktrans %}</p>
                         {% endif %}
+                        <form method="POST" action="{% url "delete_all_alerts_of_tracker" tracker_id=tracker.id %}"
+                              class="">
+                            {% csrf_token %}
+                            <input type="hidden" name="alert_id"
+                                   value="{{ tracker.id }}"/>
+                            <button class="btn btn-small waves-effect waves-light red lighten-1"
+                                    type="submit"
+                                    name="action">{% trans "Effacer toutes les alertes de ce tracker" %}
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -53,7 +67,8 @@
             <div class="col s12 m7">
                 <div class="card">
                     <div class="card-content">
-                        <span class="card-title">{% blocktrans %}Résultat de toutes les alertes{% endblocktrans %}</span>
+                        <span class="card-title">{% blocktrans %}Résultat de toutes les
+                            alertes{% endblocktrans %}</span>
                         <ul class="collapsible">
                             {% for alert in all_alerts %}
                                 <li>
@@ -64,9 +79,11 @@
                                         | de {{ alert.pseudo_user }}
                                     </div>
                                     <div class="collapsible-body collapse-body">
-                                        <a class="waves-effect waves-light btn-small blue lighten-1 ">{% blocktrans %}tout voir de cet
+                                        <a class="waves-effect waves-light btn-small blue lighten-1 ">{% blocktrans %}
+                                            tout voir de cet
                                             tracker{% endblocktrans %}</a>
-                                        <a class="waves-effect waves-light btn-small green lighten-1">{% blocktrans %}Voir l'annonce{% endblocktrans %}</a>
+                                        <a class="waves-effect waves-light btn-small green lighten-1">{% blocktrans %}
+                                            Voir l'annonce{% endblocktrans %}</a>
                                         <p>{{ alert.alert_content }}</p>
                                     </div>
                                 </li>
@@ -79,9 +96,21 @@
                                 50
                             {% elif user_contact.super_premium_user %}
                                 500
-                            {% endif %}</p>
+                            {% endif %}
+                        <form method="POST" action="{% url "delete_all_alerts" %}"
+                              class="">
+                            {% csrf_token %}
+                            <input type="hidden" name="alert_id"
+                                   value="{{ tracker.id }}"/>
+                            <button class="btn btn-small waves-effect waves-light red lighten-1"
+                                    type="submit"
+                                    name="action">{% trans "Effacer toutes les alertes" %}
+                            </button>
+                        </form>
+                        </p>
                         {% if user_contact.super_premium_user == False %}
-                            <a href="{% url "upgrade" %}" class="waves-effect waves-light btn-small">{% blocktrans %}Upgrade{% endblocktrans %}</a>
+                            <a href="{% url "upgrade" %}" class="waves-effect waves-light btn-small">{% blocktrans %}
+                                Upgrade{% endblocktrans %}</a>
                         {% endif %}
                     </div>
                 </div>
@@ -103,7 +132,8 @@
                                             <button type="submit" class="btn blue-grey darken-1">Créer</button>
                                         </form>
                                             {% else %}
-                                                <p><a href="{% url "user_info" %}">{% blocktrans %}Pour créer des trackers, enregistrez votre email{% endblocktrans %}</a></p>
+                                                <p><a href="{% url "user_info" %}">{% blocktrans %}Pour créer des
+                                                    trackers, enregistrez votre email{% endblocktrans %}</a></p>
                                             {% endif %}
                                         </span>
                                 </div>

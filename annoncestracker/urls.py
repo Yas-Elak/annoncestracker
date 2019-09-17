@@ -40,6 +40,8 @@ urlpatterns += i18n_patterns(
     path("tracking/<alert_type>/<answer>/", tracking.update_alert_info, name="change_type_alerte"),
     path("tracking/pause/", tracking.update_alerte_pause, name="pause_alerte"),
     path("tracking/delete/", tracking.delete, name="delete_alerte_info"),
+    path("tracking/delete_all/", tracking.delete_all_alerts, name="delete_all_alerts"),
+    path("tracking/delete_all/<tracker_id>", tracking.delete_all_alerts_of_tracker, name="delete_all_alerts_of_tracker"),
 
     path("alerts/<tracker_id>/", alerts.index, name="alerts"),
     path("alerts/delete/<alert_id>", alerts.delete, name="delete_alerte"),

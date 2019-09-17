@@ -62,3 +62,20 @@ def delete(request):
     return redirect("tracking")
 
 
+def delete_all_alerts(request):
+    if request.method == 'POST':
+        current_user = auth.get_user(request)
+        Alert.objects.filter(user_id=current_user.pk).delete()
+        messages.success(request, _(f"Toutes les alertes sont supprimées"))
+
+    return redirect("tracking")
+
+def delete_all_alerts_of_tracker(request, tracker_id):
+    if request.method == 'POST':
+        current_user = auth.get_user(request)
+        Alert.objects.filter(user_id=current_user.pk, tracker_id=tracker_id).delete()
+        messages.success(request, _(f"Toutes les alertes sont supprimées"))
+
+    return redirect("alerts", tracker_id = tracker_id)
+
+
