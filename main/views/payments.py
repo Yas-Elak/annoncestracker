@@ -20,3 +20,17 @@ def paypal_ipn(request):
         print("ipppppnnnnnnnnn")
     return HttpResponse('<h1>Page was found</h1>')
 
+
+class IPNHandler1(webapp.RequestHandler):
+    def post(self):
+        parameters = None
+        # Check payment is completed, not Pending or Failed.
+        if self.request.get('payment_status') == 'Completed':
+            if self.request.POST:
+                parameters = self.request.POST.copy()
+            if self.request.GET:
+                parameters = self.request.GET.copy()
+
+
+            if __name__ == '__main__':
+                print("IPNHandler1 is being run as main().")
