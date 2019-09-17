@@ -76,6 +76,6 @@ def delete_all_alerts_of_tracker(request, tracker_id):
         Alert.objects.filter(user_id=current_user.pk, tracker_id=tracker_id).delete()
         messages.success(request, _(f"Toutes les alertes sont supprimées"))
 
-    return redirect("alerts", tracker_id = tracker_id)
+    return redirect("alerts", tracker_id=tracker_id)
 
 
