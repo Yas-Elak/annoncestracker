@@ -13,7 +13,7 @@ def process_payment(request):
     return render(request, "main/donepayment.html")
 
 
-def process_payment(request):
+def paypal_ipn(request):
     print(request)
     print("i'm here")
     return render(request, "main/paypal-ipn.html")
