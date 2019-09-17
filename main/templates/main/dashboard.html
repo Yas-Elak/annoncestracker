@@ -40,13 +40,28 @@
                                 <div class="col s4">
                                     <img src="{% static 'images/icons/archive.png' %}"
                                          class="center-align icon-charts"/>
-                                    <p><strong>{% blocktrans %}Archives : {{ number_of_archives }} {% endblocktrans %} /
+                                    <p><strong>{% blocktrans %}Archives : {% endblocktrans %}
                                         {% if user_contact.super_premium_user %}
-                                            500
+                                            {% if  number_of_archives  >= 500 %}
+                                                500
+                                            {% else %}
+                                                {{ number_of_archives }}
+                                            {% endif %}
+                                            / 500
                                         {% elif user_contact.premium_user %}
-                                            50
+                                            {% if  number_of_archives  >= 50 %}
+                                                50
+                                            {% else %}
+                                                {{ number_of_archives }}
+                                            {% endif %}
+                                            / 50
                                         {% elif user_contact.normal_user %}
-                                            5
+                                           {% if  number_of_archives  >= 5 %}
+                                                500
+                                            {% else %}
+                                                {{ number_of_archives }}
+                                            {% endif %}
+                                            / 5
                                         {% endif %}
                                     </strong></p>
                                 </div>
