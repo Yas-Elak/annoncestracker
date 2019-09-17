@@ -72,3 +72,5 @@ def ipn_receiver(sender, **kwargs):
     # # elif ipn_obj.txn_type == "subscr_cancel":
     # #     pass
     # #
+
+valid_ipn_received.connect(ipn_receiver)
