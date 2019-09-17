@@ -12,9 +12,9 @@ def cancel_payment(request):
 def process_payment(request):
     # print(request)
     print("process payment")
-    tx = request.GET.get("tx")
+    # tx = request.GET.get("tx")
     print("---------------------------")
-    print(tx)
+    # print(tx)
     print("---------------------------")
     return render(request, "main/donepayment.html")
 
