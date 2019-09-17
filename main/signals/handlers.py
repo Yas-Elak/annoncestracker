@@ -1,3 +1,5 @@
+from django.contrib import auth
+from django.http import request
 from paypal.standard.ipn.signals import valid_ipn_received
 from django.dispatch import receiver
 from paypal.standard.models import ST_PP_COMPLETED
@@ -5,11 +7,17 @@ from django.core.mail import EmailMessage
 from django.contrib.auth.models import User
 from datetime import datetime
 
+from main.models import UserContact
 
 @receiver(valid_ipn_received)
 def ipn_receiver(sender, **kwargs):
     ipn_obj = sender
     print("test")
+    current_user = auth.get_user(request)
+
+    user_contact = UserContact.objects.get(user__id=current_user.id)
+    UserContact.objects.filter(user_id=1).update(email_two="truc@gmail.com")
+
     # check for Buy Now IPN
     if ipn_obj.txn_type == 'web_accept':
 
