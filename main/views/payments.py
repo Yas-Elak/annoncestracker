@@ -1,3 +1,5 @@
+from django.contrib.sites import requests
+from django.http import HttpResponse
 from django.shortcuts import render
 
 
@@ -14,7 +16,7 @@ def process_payment(request):
 
 
 def paypal_ipn(request):
-    print(request)
-    print("i'm here")
-    return render(request, "main/paypal-ipn.html")
+    if request.method == 'POST':
+        print("ipppppnnnnnnnnn")
+    return HttpResponse('<h1>Page was found</h1>')
 
