@@ -10,4 +10,3 @@ def process_payment(request):
 
     return render(request, "main/donepayment.html")
 
-
