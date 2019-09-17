@@ -108,7 +108,7 @@
                                                     {% csrf_token %}
                                                     <input type="hidden" name="alert_id"
                                                            value="{{ tracker.id }}"/>
-                                                    {% if tracker.activated == "no" %}
+                                                    {% if tracker.activated == 0 %}
                                                         <button class="btn btn-small waves-effect waves-light blue lighten-1"
                                                                 type="submit"
                                                                 name="action">{% blocktrans %} Réactiver {% endblocktrans %}
