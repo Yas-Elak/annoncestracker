@@ -63,6 +63,7 @@ urlpatterns += i18n_patterns(
     url(r'^paypal/', include('paypal.standard.ipn.urls')),
     path("cancel-payment/", payments.cancel_payment, name="cancel_payment"),
     path("process-payment/", payments.process_payment, name="done_payment"),
+    path("paypal-ipn/", payments.paypal_ipn, name="paypal-i"),
 
     # contact
     path("contact/", contact.contact, name="contact"),
