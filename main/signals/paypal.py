@@ -14,7 +14,9 @@ class Verify(object):
         post['cmd'] = '_notify-synch'
         post['tx'] = tx
         post['at'] = settings.PAYPAL_PDT_TOKEN
-        self.response = ur.urlopen(settings.PAYPAL_PDT_URL, urllib.parse.urlencode(post)).read()
+        with ur.urlopen(settings.PAYPAL_PDT_URL, urllib.parse.urlencode(post)) as url:
+            self.response = url.read()
+        # self.response = ur.urlopen(settings.PAYPAL_PDT_URL, urllib.parse.urlencode(post)).read()
         lines = self.response.split('\n')
         self.result = lines[0].strip()
         self.results = dict()
