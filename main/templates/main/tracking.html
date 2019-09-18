@@ -180,7 +180,14 @@
                                 50
                             {% elif user_contact.super_premium_user %}
                                 500
+                            {% endif %}</p>
+                        <br>
+                        <p>
+                            {% if user_contact.super_premium_user == False %}
+                                <a href="{% url "upgrade" %}" class="waves-effect waves-light btn-small">Upgrade</a>
                             {% endif %}
+                        </p><br>
+                        <p>
                         <form method="POST" action="{% url "delete_all_alerts" %}"
                               class="">
                             {% csrf_token %}
@@ -192,9 +199,6 @@
                             </button>
                         </form>
                         </p>
-                        {% if user_contact.super_premium_user == False %}
-                            <a href="{% url "upgrade" %}" class="waves-effect waves-light btn-small">Upgrade</a>
-                        {% endif %}
                     </div>
                 </div>
             </div>
