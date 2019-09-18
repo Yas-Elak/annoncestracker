@@ -3,6 +3,7 @@
     <title>Payed</title>
 {% endblock %}
 {% block content %}
+    {% load static %}
     {% load i18n %}
     <div class="content">
         <div class="row">
@@ -10,7 +11,10 @@
                 <div class="card">
                     <div class="card-content">
                         <span class="card-title center-align ">{% trans "Merci pour votre achat" %}</span>
-                        <p>{% trans "Votre commande a bien été prise en compte. Merci" %}</p>
+                        <br><p class="center-align">{%blocktrans %} Votre commande a bien été prise en compte. Merci.<br>
+                            Il faut en général quelques minutes à Paypal pour nous confirmer votre commande.<br>
+                            Vous aurez accès à vos nouveaux privilèges dans quelques instants. {% endblocktrans %}</p><br>
+                    <p class="center-align" ><img src="{% static "images/thanks.jpg" %}"/></p>
                     </div>
                 </div>
             </div>
