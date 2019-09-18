@@ -18,7 +18,6 @@ def payment_notification(sender, **kwargs):
     if ipn_obj.payment_status == ST_PP_COMPLETED:
         print("COMPLETED")
         print(ipn_obj.custom)
-        print(ipn_obj.item_name)
         print(ipn_obj.payer_id)
         print(ipn_obj.txn_id)
     print("+++++++++++++++++++++++++")

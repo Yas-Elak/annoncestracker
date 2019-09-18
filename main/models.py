@@ -3,6 +3,15 @@ from django.db import models
 from django.conf import settings
 from django.utils import timezone
 
+class UserOrder(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.SET_NULL)
+    paypal_payer_id = models.CharField(max_length=255, null=True, blank=True)
+    paypal_order_id = models.CharField(max_length=255, null=True, blank=True)
+    product = models.CharField(max_length=255)
+    payed = models.BooleanField(default=0)
+    created = models.DateTimeField(default=timezone.now)
+
+
 
 class UserContact(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL,
