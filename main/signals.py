@@ -44,7 +44,7 @@ def payment_notification(sender, **kwargs):
             UserContact.objects.filter(user__id=user.pk).update(normal_user=0, premium_user=0, super_premium_user=1)
         print("c'est pas tout ça mais on envoie l'email")
         mail_subject = f'Trackannonces thank you for your order.'
-        message = render_to_string('main/email/contact_email.html', {
+        message = render_to_string('main/email/subscription.html', {
             'subscription': ipn_obj.item_name,
         })
         to_email = user.email
