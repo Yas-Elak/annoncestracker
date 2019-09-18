@@ -9,14 +9,7 @@ def cancel_payment(request):
 
 @csrf_exempt
 def process_payment(request):
-    # print(request)
-    # print("process payment")
-    # tx = request.GET.get("tx")
-    # print("---------------------------")
-    # # print(tx)
-    # print("---------------------------")
-    # result = paypal.Verify(tx)
-    # if result.success():  # valid
-    #     print("yeeeeeeeeeeeeeeeeeeep")
+    print("I pass here before")
+    print("add an order here")
     return render(request, "main/donepayment.html")
 

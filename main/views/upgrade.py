@@ -12,8 +12,8 @@ def index(request):
 
     paypal_dict_argent = {
         "cmd": "_xclick-subscriptions",
-        "business": "lakhnati.dv@gmail.com",
-        "a3": "0.10",  # monthly price4
+        "business": "sb-oa1np146616@business.example.com",
+        "a3": "4.99",  # monthly price4
         "currency_code": "EUR",
         "p3": 1,  # duration of each unit (depends on unit)
         "t3": "M",  # duration unit ("M for Month")
@@ -21,7 +21,7 @@ def index(request):
         "sra": "1",  # reattempt payment on payment error
         "no_note": "1",  # remove extra notes (optional)
         "item_name": "Argent Subscription",
-        "custom": int(current_user.id),
+        "custom": current_user.pk,
         "notify_url": request.build_absolute_uri(reverse('paypal-ipn')),
         "return": request.build_absolute_uri(reverse('done_payment')),
         "cancel_return": request.build_absolute_uri(reverse('cancel_payment')),
