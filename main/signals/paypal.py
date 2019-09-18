@@ -17,7 +17,7 @@ class Verify(object):
         with ur.urlopen(settings.PAYPAL_PDT_URL, urllib.parse.urlencode(post).encode("utf-8")) as url:
             self.response = url.read()
         # self.response = ur.urlopen(settings.PAYPAL_PDT_URL, urllib.parse.urlencode(post)).read()
-        self.response = self.response.encode("utf-8")
+        self.response = self.response.decode()
         lines = self.response.split('\n')
         self.result = lines[0].strip()
         self.results = dict()
