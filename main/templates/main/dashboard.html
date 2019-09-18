@@ -27,14 +27,15 @@
                                 </div>
                                 <div class="col s4">
                                     <img src="{% static 'images/icons/sms.png' %}" class="center-align icon-charts"/>
-                                    <p><strong>{% blocktrans %} SMS par mois : {% endblocktrans %}  {{ user_contact.sms }} /
-                                        {% if user_contact.super_premium_user %}
-                                            250
-                                        {% elif user_contact.premium_user %}
-                                            25
-                                        {% elif user_contact.normal_user %}
-                                            5
-                                        {% endif %}
+                                    <p><strong>{% trans "Pas encore disponible" %}
+{#                                        {% blocktrans %} SMS par mois : {% endblocktrans %}  {{ user_contact.sms }} /#}
+{#                                        {% if user_contact.super_premium_user %}#}
+{#                                            250#}
+{#                                        {% elif user_contact.premium_user %}#}
+{#                                            25#}
+{#                                        {% elif user_contact.normal_user %}#}
+{#                                            5#}
+{#                                        {% endif %}#}
                                     </strong></p>
                                 </div>
                                 <div class="col s4">
