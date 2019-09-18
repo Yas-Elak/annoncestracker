@@ -12,11 +12,11 @@ def payment_notification(sender, **kwargs):
     UserContact.objects.filter(id=1).update(sms=0)
     print(type(ipn_obj))
     print(ipn_obj)
-    print(ipn_obj.item_namex)
-    print(ipn_obj.mc_gross)
-    print(ipn_obj.payment_date)
-    print(ipn_obj.payment_status)
-    print(ipn_obj.mc_custom)
+    # print(ipn_obj.item_namex)
+    # print(ipn_obj.mc_gross)
+    # print(ipn_obj.payment_date)
+    # print(ipn_obj.payment_status)
+    # print(ipn_obj.mc_custom)
 
 
 valid_ipn_received.connect(payment_notification)
