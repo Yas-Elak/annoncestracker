@@ -4,7 +4,8 @@
     {% if user.is_authenticated %}
         <li><a href="{% url "dashboard" %}">Dashboard</a></li>
         <li><a href="{% url "tracking" %}">Tracking</a></li>
-        <li><a class="dropdown-trigger" href="{% url "user_info" %}" data-target="dropdown1">{{ user.username }}</a></li>
+        <li><a href="{% url "user_info" %}" data-target="dropdown1">{{ user.username }}</a>
+        </li>
         <li><a href="{% url "contact" %}">Contact</a></li>
         <li><a href="{% url "logout" %}">Logout</a></li>
     {% else %}
@@ -20,7 +21,8 @@
     {% get_available_languages as LANGUAGES %}
     {% for lang in LANGUAGES %}
         <li>
-            <a class="a-flag" data-url="{% url 'set_language' %}" data-value="{{ lang.0 }}" data-redirect="{{ redirect_to }}">
+            <a class="a-flag" data-url="{% url 'set_language' %}" data-value="{{ lang.0 }}"
+               data-redirect="{{ redirect_to }}">
                 {% if lang.0 == "fr" %}
                     <img src="{% static "images/icons/france.png" %}"> {{ lang.1 }}
                 {% elif lang.0 == "nl" %}
@@ -35,11 +37,14 @@
 
 
         <a href="{% url "homepage" %}" class="brand-logo"><img class="logo-navbar"
-                                                                    src="{% static 'images/little_logo_transparent.png' %}"/></a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-            <div class="bars"></div>
-            <div class="bars"></div>
-            <div class="bars"></div>
+                                                               src="{% static 'images/little_logo_transparent.png' %}"/></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger valign-wrapper">
+            <div>
+                <div class="bars"></div>
+                <div class="bars"></div>
+                <div class="bars"></div>
+            </div>
+
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             {% if user.is_authenticated %}
@@ -64,7 +69,8 @@
             <li><a href="{% url "faq" %}">FAQ</a></li>
             <!-- Dropdown Trigger -->
             <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><img class="star-navbar"
-                    src="{% static "images/icons/translation.png" %}"></a></li>
+                                                                                   src="{% static "images/icons/translation.png" %}"></a>
+            </li>
         </ul>
     </div>
 </nav>

@@ -123,5 +123,13 @@ textarea.materialize-textarea{
     .hp-img {
         width: 300px;
         margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .tracking-col{
+        margin-bottom: 30px;
+    }
+    .tracker-btn{
+        margin-bottom: 15px;
     }
 }

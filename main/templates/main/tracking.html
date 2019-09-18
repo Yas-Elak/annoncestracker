@@ -100,12 +100,12 @@
 
                                     <div class="card-action">
                                         <div class="row">
-                                            <div class="col">
+                                            <div class="col s12 m4 tracker-btn">
                                                 <a href="{% url 'alerts' tracker_id=tracker.id %}"
                                                    class="waves-effect waves-light btn-small green lighten-1">
-                                                    {% trans "Voir les alertes" %}</a>
+                                                    {% trans "Alertes" %}</a>
                                             </div>
-                                            <div class="col">
+                                            <div class="col s12 m4 tracker-btn">
                                                 <form method="POST" action="{% url "pause_alerte" %}">
                                                     {% csrf_token %}
                                                     <input type="hidden" name="alert_id"
@@ -124,7 +124,7 @@
                                                     {% endif %}
                                                 </form>
                                             </div>
-                                            <div class="col">
+                                            <div class="col s12 m4">
                                                 <form method="POST" action="{% url "delete_alerte_info" %}"
                                                       class="">
                                                     {% csrf_token %}

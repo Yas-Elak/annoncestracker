@@ -22,6 +22,6 @@
                 </div>
             </div>
         </div>
-        <p>{% trans "Si vous n'avez pas encore de compte," %} <a href="register.html"><strong>{% trans "Créez-en un" %}</strong></a></p>
+        <p>{% trans "Si vous n'avez pas encore de compte," %} <a href="{% url 'register' %}"><strong>{% trans "Créez-en un" %}</strong></a></p>
     </div>
 {% endblock %}
