@@ -22,7 +22,7 @@ def payment_notification(sender, **kwargs):
                 paypal_payer_id=ipn_obj.payer_id, paypal_order_id=ipn_obj.txn_id, product=ipn_obj.item_name, payed=1,
                 pending=0, cancelled=0)
         else:
-            order = UserOrder.objects.create(user__id=user, paypal_payer_id=ipn_obj.payer_id,
+            order = UserOrder.objects.create(user=user, paypal_payer_id=ipn_obj.payer_id,
                               paypal_order_id=ipn_obj.txn_id,
                               product=ipn_obj.item_name, payed=1, pending=0, cancelled=0)
 
