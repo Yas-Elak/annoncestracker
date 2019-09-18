@@ -38,10 +38,10 @@ def payment_notification(sender, **kwargs):
 
         if ipn_obj.item_name == "Gold Subscription":
             print("maintenant je get le item name, ici c'est gold")
-            UserContact.objects.get(user__id=user.pk).update(normal_user=0, premium_user=0, super_premium_user=1)
+            UserContact.objects.filter(user__id=user.pk).update(normal_user=0, premium_user=0, super_premium_user=1)
         else:
             print("maintenant je get le item name, ici c'est argent")
-            UserContact.objects.get(user__id=user.pk).update(normal_user=0, premium_user=0, super_premium_user=1)
+            UserContact.objects.filter(user__id=user.pk).update(normal_user=0, premium_user=0, super_premium_user=1)
         print("c'est pas tout ça mais on envoie l'email")
         mail_subject = f'Trackannonces thank you for your order.'
         message = render_to_string('main/email/contact_email.html', {
