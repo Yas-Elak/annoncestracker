@@ -14,10 +14,13 @@ def payment_notification(sender, **kwargs):
     print(ipn_obj)
     # print(ipn_obj.item_namex)
     print("+++++++++++++++++++++++++")
+    print(ipn_obj.receiver_email)
     print(ipn_obj.mc_gross)
+    print("+++++++++++++++++++++++++")
+
     # print(ipn_obj.payment_date)
     # print(ipn_obj.payment_status)
-    # print(ipn_obj.mc_custom)
+    print(ipn_obj.mc_custom)
 
 
 valid_ipn_received.connect(payment_notification)
