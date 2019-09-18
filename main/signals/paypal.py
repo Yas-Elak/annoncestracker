@@ -10,7 +10,6 @@ class Verify(object):
     '''builds result, results, response'''
 
     def __init__(self, tx):
-        ...
         post = dict()
         post['cmd'] = '_notify-synch'
         post['tx'] = tx
