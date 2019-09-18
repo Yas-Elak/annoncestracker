@@ -7,6 +7,7 @@ from main.models import UserContact
 
 def payment_notification(sender, **kwargs):
     ipn_obj = sender
+    from pprint import pprint
     # if ipn_obj.payment_status == ST_PP_COMPLETED:
     # user_contact = UserContact.objects.get(user__id=1)
     # UserContact.objects.filter(id=1).update(sms=0)
@@ -16,7 +17,8 @@ def payment_notification(sender, **kwargs):
     print("+++++++++++++++++++++++++")
     # print(ipn_obj.receiver_email) ok
     # print(ipn_obj.mc_gross)
-    print(ipn_obj.mc_custom)
+    # print(ipn_obj.mc_custom)
+    pprint(vars(ipn_obj))
 
     print("+++++++++++++++++++++++++")
 
