@@ -94,19 +94,7 @@ def activate(request, uidb64, token):
 
 def resent_activation_email(request):
     current_user = auth.get_user(request)
-    current_site = get_current_site(request)
-    mail_subject = 'Activate your account.'
-    message = render_to_string('main/email/acc_active_email.html', {
-        'user': current_user,
-        'domain': current_site.domain,
-        'uid': urlsafe_base64_encode(force_bytes(current_user.pk)),
-        'token': account_activation_token.make_token(current_user),
-    })
-    to_email = current_user.email
-    email = EmailMessage(
-        mail_subject, message, to=[to_email]
-    )
-    email.send()
+    send_activation_mail(current_user, get_current_site(request).domain, current_user.email)
     messages.info(request, _(f"Email de vérification envoyé, vérifié vos emails"))
     return redirect("dashboard")
 
