@@ -13,7 +13,7 @@ def payment_notification(sender, **kwargs):
     print(type(ipn_obj))
     print(ipn_obj)
     # print(ipn_obj.item_namex)
-    # print(ipn_obj.mc_gross)
+    print(ipn_obj.mc_gross)
     # print(ipn_obj.payment_date)
     # print(ipn_obj.payment_status)
     # print(ipn_obj.mc_custom)
