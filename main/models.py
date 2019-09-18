@@ -9,6 +9,8 @@ class UserOrder(models.Model):
     paypal_order_id = models.CharField(max_length=255, null=True, blank=True)
     product = models.CharField(max_length=255)
     payed = models.BooleanField(default=0)
+    pending = models.BooleanField(default=0)
+    cancelled = models.BooleanField(default=1)
     created = models.DateTimeField(default=timezone.now)
 
 
