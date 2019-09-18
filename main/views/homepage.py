@@ -1,3 +1,4 @@
+from django import db
 from django.shortcuts import render
 
 
@@ -7,7 +8,7 @@ def faq(request):
 
 
 def index(request):
-
+    db.connections.close_all()
     return render(request, "main/homepage.html")
 
 
