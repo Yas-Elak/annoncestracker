@@ -118,3 +118,10 @@ textarea.materialize-textarea{
     width: 500px;
     margin-left: 60px;
 }
+
+@media (max-width: 600px) {
+    .hp-img {
+        width: 300px;
+        margin: auto;
+    }
+}
