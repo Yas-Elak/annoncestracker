@@ -1,6 +1,11 @@
+import urllib
+
 from django.contrib.sites import requests
 from django.http import HttpResponse
 from django.shortcuts import render
+
+from annoncestracker import settings
+from main.signals import paypal
 
 
 def cancel_payment(request):
@@ -16,6 +21,9 @@ def process_payment(request):
     print("---------------------------")
     # print(tx)
     print("---------------------------")
+    result = paypal.Verify(tx)
+    if result.success():  # valid
+        print("yeeeeeeeeeeeeeeeeeeep")
     return render(request, "main/donepayment.html")
 
 
