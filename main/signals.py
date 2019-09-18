@@ -14,13 +14,22 @@ def payment_notification(sender, **kwargs):
     # print(type(ipn_obj))
     # print(ipn_obj)
     # print(ipn_obj.item_namex)
+    if ipn_obj.payment_status == "Completed":
+        print("COMPLETED")
+        print(ipn_obj.custom)
+        print(ipn_obj.item_name)
+        print(ipn_obj.payer_id)
+        print(ipn_obj.receiver_email)
+        print(ipn_obj.txn_id)
     print("+++++++++++++++++++++++++")
-    # print(ipn_obj.receiver_email) ok
-    # print(ipn_obj.mc_gross)
-    # print(ipn_obj.mc_custom)
-    pprint(vars(ipn_obj))
-
-    print("+++++++++++++++++++++++++")
+    #interessnt
+    # payment_status string
+    # created_at datetime datetime
+    # custom string
+    # item_name string
+    # payer_id string
+    # txn_id
+    #
 
     # print(ipn_obj.payment_date)
     # print(ipn_obj.payment_status)
