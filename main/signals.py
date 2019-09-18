@@ -28,7 +28,7 @@ def payment_notification(sender, **kwargs):
             order.product=ipn_obj.item_name
             order.payed=1
             order.pending=0
-            order.ancelled=0
+            order.cancelled=0
             order.save()
         else:
             print("well the order did'nt exist")
