@@ -9,6 +9,7 @@ def cancel_payment(request):
 
 @csrf_exempt
 def process_payment(request):
+    print(request.method)
     print("I pass here before")
     print("add an order here")
     return render(request, "main/donepayment.html")
