@@ -7,9 +7,9 @@ class UserOrder(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.SET_NULL)
     paypal_payer_id = models.CharField(max_length=255, null=True, blank=True)
     paypal_order_id = models.CharField(max_length=255, null=True, blank=True)
-    product = models.CharField(max_length=255)
+    product = models.CharField(max_length=255, null=True, blank=True)
     payed = models.BooleanField(default=0)
-    pending = models.BooleanField(default=0)
+    pending = models.BooleanField(default=1)
     cancelled = models.BooleanField(default=1)
     created = models.DateTimeField(default=timezone.now)
 
