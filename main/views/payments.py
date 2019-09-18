@@ -1,12 +1,5 @@
-import urllib
-from django.views.decorators.csrf import csrf_exempt
-from django.contrib.sites import requests
-from django.http import HttpResponse
 from django.shortcuts import render
-from django.views.decorators.http import require_GET, require_http_methods
-from paypal.standard.pdt.views import process_pdt
-
-from annoncestracker import settings
+from django.views.decorators.csrf import csrf_exempt
 
 
 def cancel_payment(request):
