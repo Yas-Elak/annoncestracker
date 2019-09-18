@@ -1,10 +1,12 @@
-from main.forms import ContactForm
+from django.utils.html import strip_tags
 
+from main.forms import ContactForm
+from main.custom_email import send_contact_mail
 from django.shortcuts import render, redirect
 from django.contrib import messages
 
 from django.template.loader import render_to_string
-from django.core.mail import EmailMessage
+from django.core import mail
 from django.utils.translation import gettext
 
 def contact(request):
@@ -15,17 +17,7 @@ def contact(request):
             email = form.cleaned_data.get("email")
             name = form.cleaned_data.get("name")
             texte = form.cleaned_data.get("message")
-            mail_subject = f'Trackannonces contact : Message de {name}.'
-            message = render_to_string('main/email/contact_email.html', {
-                'user': name,
-                'email': email,
-                'texte': texte
-            })
-            to_email = "elalaoui87@gmail.com"
-            email = EmailMessage(
-                mail_subject, message, to=[to_email]
-            )
-            email.send()
+            send_contact_mail(name, email, texte)
             messages.info(request, gettext("Message envoyé"))
             return redirect("homepage")
         else:
