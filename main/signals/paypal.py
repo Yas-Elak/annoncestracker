@@ -21,6 +21,8 @@ class Verify(object):
         lines = self.response.split('\n')
         self.result = lines[0].strip()
         self.results = dict()
+        for line in lines:
+            print(line)
         for line in lines[1:]:  # skip first line
             linesplit = line.split('=', 2)
             if len(linesplit) == 2:
