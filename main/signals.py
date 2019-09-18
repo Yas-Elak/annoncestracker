@@ -13,7 +13,7 @@ def payment_notification(sender, **kwargs):
     ipn_obj = sender
     user = User.objects.get(id=int(ipn_obj.custom))
     if ipn_obj.payment_status == ST_PP_COMPLETED:
-        if ipn_obj.receiver_email != "receiver_email@example.com":
+        if ipn_obj.receiver_email != "sb-oa1np146616@business.example.com":
             a = 0
             print("I'm connected and it's not valid")
             return a
