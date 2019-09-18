@@ -17,8 +17,8 @@ def payment_notification(sender, **kwargs):
             a = 0
             print("I'm connected and it's not valid")
             return a
-        print("it is valid, I trie to get the order")
-        order_exist = UserOrder.objects.filter(user__id=user.pk, pending=1).exist()
+        print("it is valid, I try to get the order")
+        order_exist = UserOrder.objects.filter(user__id=user.pk, pending=1).exists()
 
         if order_exist:
             print("ok the order exist")
