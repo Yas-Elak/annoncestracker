@@ -3,7 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.sites import requests
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.views.decorators.http import require_GET
+from django.views.decorators.http import require_GET, require_http_methods
 from paypal.standard.pdt.views import process_pdt
 
 from annoncestracker import settings
@@ -28,7 +28,7 @@ def process_payment(request):
     return render(request, "main/donepayment.html")
 
 
-@require_GET()
+@require_http_methods(["GET", "POST"])
 def pdt_paypal(request):
     pdt_obj, failed = process_pdt(request)
     context = {"failed": failed, "pdt_obj": pdt_obj}
