@@ -1,5 +1,6 @@
 from django.contrib import auth
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.utils.translation import gettext as _
 
@@ -10,6 +11,7 @@ from ..models import Tracker, Alert
 from ..models import UserContact
 
 
+@login_required
 def index(request, tracker_id):
     current_user = auth.get_user(request)
     user_contact = UserContact.objects.get(user__id=current_user.id)
@@ -28,11 +30,12 @@ def index(request, tracker_id):
                   {"deuxiememainbe_form": deuxiememainbe_form, "all_alerts": all_alerts, "tracker": tracker, "user_contact": user_contact})
 
 
+@login_required
 def alerts_deuxiememainbe_form(request, tracker_id):
     deuxiememainbe_form_call(request)
     index(request, tracker_id)
 
-
+@login_required
 def delete(request, alert_id):
     if request.method == 'POST':
         alert = Alert.objects.get(pk=alert_id)

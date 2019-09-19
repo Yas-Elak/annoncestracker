@@ -1,4 +1,5 @@
 from django.contrib import auth
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from django.utils import timezone
 
@@ -8,7 +9,7 @@ from ..models import UserContact, Tracker, Alert
 
 # Create your views here.
 
-
+@login_required
 def index(request):
     current_user = auth.get_user(request)
     user_contact = UserContact.objects.get(user__id=current_user.id)

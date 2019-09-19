@@ -1,5 +1,6 @@
 from django.contrib import auth
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.utils.translation import gettext as _
 
@@ -9,7 +10,7 @@ from ..forms import DeuxiemeMainBe
 from ..models import Tracker, Alert
 from ..models import UserContact
 
-
+@login_required
 def index(request):
     current_user = auth.get_user(request)
     deuxiememainbe_form = DeuxiemeMainBe
@@ -40,7 +41,7 @@ def update_alert_info(request, alert_type, answer):
             Tracker.objects.filter(id=alert_id).update(email=answer)
     return redirect("tracking")
 
-
+@login_required
 def update_alerte_pause(request):
     if request.method == 'POST':
         alert_id = int(request.POST.get('alert_id'))
@@ -51,7 +52,7 @@ def update_alerte_pause(request):
             Tracker.objects.filter(id=alert_id).update(activated="yes")
     return redirect("tracking")
 
-
+@login_required
 def delete(request):
     if request.method == 'POST':
         alert_id = int(request.POST.get('alert_id'))
@@ -61,7 +62,7 @@ def delete(request):
 
     return redirect("tracking")
 
-
+@login_required
 def delete_all_alerts(request):
     if request.method == 'POST':
         current_user = auth.get_user(request)
@@ -70,6 +71,7 @@ def delete_all_alerts(request):
 
     return redirect("tracking")
 
+@login_required
 def delete_all_alerts_of_tracker(request, tracker_id):
     if request.method == 'POST':
         current_user = auth.get_user(request)

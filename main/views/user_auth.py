@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.contrib.auth import login, logout
 from django.contrib import messages, auth
@@ -91,7 +92,7 @@ def activate(request, uidb64, token):
         messages.info(request, _("Lien d'activation invalide"))
         return redirect("homepage")
 
-
+@login_required
 def resent_activation_email(request):
     current_user = auth.get_user(request)
     send_activation_mail(current_user, get_current_site(request).domain, current_user.email)

@@ -1,12 +1,13 @@
 from django.contrib import auth
 from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import PasswordChangeForm
 from django.shortcuts import render, redirect
 
 from ..models import UserContact
 
-
+@login_required
 def index(request):
     user = auth.get_user(request)
     user_contact = UserContact.objects.get(user__id=user.id)
@@ -25,7 +26,7 @@ def index(request):
 
     return render(request, "main/user.html", {"user_contact": user_contact, "current_user": user, "form":form})
 
-
+@login_required
 def activate_auto_delete(request, activation):
     current_user = auth.get_user(request)
     if activation == "activation":
