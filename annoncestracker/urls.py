@@ -23,6 +23,7 @@ from main.views import dashboard, tracking, user_auth, alerts, homepage, user, p
 urlpatterns = [
     # path('', include('main.urls')),
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('i18n/', include('django.conf.urls.i18n')),  # Make sure this is present
 ]
 #
@@ -69,6 +70,8 @@ urlpatterns += i18n_patterns(
 
     # upgrade
     path("upgrade/", upgrade.index, name="upgrade"),
+
+
 
     # to delete
 
