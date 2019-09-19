@@ -8,5 +8,5 @@ def handler404(request, exception, template_name="main/custom_error/404.html"):
     return response
 
 
-def handler500(request):
+def handler500(request, exception):
     return render(request, 'main/custom_error/500.html')
