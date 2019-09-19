@@ -1,11 +1,9 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
 
 def faq(request):
 
-    # return render(request, "main/faq.html")
-    return HttpResponse(status=500)
+    return render(request, "main/faq.html")
 
 
 def index(request):
