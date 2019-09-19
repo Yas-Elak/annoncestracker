@@ -39,7 +39,7 @@ class UpdateUserContactForm(forms.ModelForm):
         labels = {
             "phone_number": _("Téléphone"),
             "email_one": _("Premier Email"),
-            "email_two": _("Second Email")
+            "email_two": _("Deuxième Email")
         }
         widgets = {
             'phone_number': forms.TextInput(
@@ -58,7 +58,7 @@ class DeuxiemeMainBe(forms.ModelForm):
                   "sms",
                   "email",
                   ]
-        labels = {"search_query": _("Rechercher ce mot / cette phrase"),
+        labels = {"search_query": _("Rechercher ce mot / ces mots"),
                   "postal_code": _("Code postal"),
                   "distance_meters": _("Distance depuis le code postal"),
                   "sms": _("Envoyé par sms"),

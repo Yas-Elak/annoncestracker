@@ -96,7 +96,7 @@ def activate(request, uidb64, token):
 def resent_activation_email(request):
     current_user = auth.get_user(request)
     send_activation_mail(current_user, get_current_site(request).domain, current_user.email)
-    messages.info(request, _(f"Email de vérification envoyé, vérifié vos emails"))
+    messages.info(request, _(f"Email de vérification envoyé, vérifiez vos emails"))
     return redirect("dashboard")
 
 
