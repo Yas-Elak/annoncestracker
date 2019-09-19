@@ -1,0 +1,28 @@
+{% extends "main/master.html" %}
+
+{% block meta_info %}
+    <title>404</title>
+    <meta name="description" content="The page was not fond">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{% endblock %}
+
+{% block content %}
+    {% load i18n %}
+    {% load static %}
+    <div class="content">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <h1 class="center-align title-error"><span class="quatre-cent-quatre">5</span>00</h1>
+                        <h4 class="center-align">{% trans "Oops on dirait qu'il y a une erreur quelquepart..." %}</h4>
+                        <div class="center-align"><a href="{% url "homepage" %}"
+                                class="waves-effect waves-light btn">{% trans "Retourner à la page principale" %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
