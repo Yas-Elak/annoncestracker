@@ -1,12 +1,12 @@
 {% extends "main/master.html" %}
 {% block meta_info %}
     <title>Login</title>
-        <meta name="description" content="Connectez-vous pour profiter de nos services">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connectez-vous pour profiter de nos services">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {% endblock %}
 {% block content %}
-        {% load i18n %}
+    {% load i18n %}
     <div class="content">
         <div class="row">
             <div class="col s12">
@@ -22,7 +22,10 @@
                 </div>
             </div>
         </div>
-        <p>{% trans "Si vous n'avez pas encore de compte," %} <a href="{% url 'register' %}"><strong>{% trans "Créez-en un." %}</strong></a></p>
-        <p>{% trans "Si vous avez oublié votre password," %} <a href="./registration/password_reset_form"><strong>{% trans "réinitialisez-le." %}</strong></a></p>
+        <p>{% trans "Si vous n'avez pas encore de compte," %} <a
+                href="{% url 'register' %}"><strong>{% trans "Créez-en un." %}</strong></a></p>
+        <p>{% trans "Si vous avez oublié votre password," %} <a
+                href="{% url "password_reset" %}"><strong>{% trans "réinitialisez-le." %}</strong></a></p>
+
     </div>
 {% endblock %}
