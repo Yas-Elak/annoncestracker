@@ -123,6 +123,14 @@ textarea.materialize-textarea{
     font-size: smaller;
 }
 
+.title-error{
+    font-size: 165px;
+    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+}
+.quatre-cent-quatre{
+    color: #546E7A;
+}
+
 @media (max-width: 600px) {
     .hp-img {
         width: 300px;

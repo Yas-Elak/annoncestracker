@@ -99,6 +99,15 @@ urlpatterns += i18n_patterns(
     path('reset/done/',
          auth_views.PasswordResetCompleteView.as_view(template_name='registration/password_reset_complete.html'),
          name='password_reset_complete'),
+
+
+
+
     # to delete
 
 )
+
+#custom error
+handler404 = 'main.views.custom_error.handler404'
+# handler500 = 'main.views.custom_error.handler500'
+
