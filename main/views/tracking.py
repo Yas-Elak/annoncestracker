@@ -44,8 +44,8 @@ def update_alert_info(request, alert_type, answer):
 def update_alerte_pause(request):
     if request.method == 'POST':
         alert_id = int(request.POST.get('alert_id'))
-        alert = Tracker.objects.get(id=alert_id)
-        if alert.activated == "yes":
+        tracker = Tracker.objects.get(id=alert_id)
+        if tracker.activated == "yes":
             Tracker.objects.filter(id=alert_id).update(activated="no")
         else:
             Tracker.objects.filter(id=alert_id).update(activated="yes")
