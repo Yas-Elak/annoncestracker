@@ -119,6 +119,10 @@ textarea.materialize-textarea{
     margin-left: 60px;
 }
 
+.password_txt li{
+    font-size: smaller;
+}
+
 @media (max-width: 600px) {
     .hp-img {
         width: 300px;

@@ -1,12 +1,12 @@
 {% extends "main/master.html" %}
 {% block meta_info %}
     <title>Inscription</title>
-        <meta name="description" content="Enregistrez-vous pour profiter de nos services">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enregistrez-vous pour profiter de nos services">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {% endblock %}
 {% block content %}
-        {% load i18n %}
+    {% load i18n %}
     <div class="content">
         <div class="row">
             <div class="col s12">
@@ -19,8 +19,18 @@
                             <button type="submit" class="btn">{% trans "Sauvegarder" %}</button>
                         </form>
                     </div>
+                    <div class="card-action">
+                        <ul class="password_txt">
+                            <li>{% trans "Votre mot de passe ne peut pas trop ressembler à vos autres informations personnelles." %}
+                            </li>
+                            <li>{% trans "Votre mot de passe doit contenir au minimum 8 caractères." %}</li>
+                            <li>{% trans "Votre mot de passe ne peut pas être un mot de passe couramment utilisé." %}</li>
+                            <li>{% trans "Votre mot de passe ne peut pas être entièrement numérique." %}</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 {% endblock %}
+
