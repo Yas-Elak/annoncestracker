@@ -16,6 +16,9 @@ def index(request):
     deuxiememainbe_form = DeuxiemeMainBe
     user_contact = UserContact.objects.get(user__id=current_user.id)
     tracker_by_date = Tracker.objects.filter(user__id=current_user.id).order_by('-created')
+    dict_of_activated_tracker_alerts = {}
+    for tracker in tracker_by_date:
+        dict_of_activated_tracker_alerts[tracker.id] = Alert.objects.filter(tracker_id=tracker.id, activated=1)
     if user_contact.normal_user:
         all_alerts = Alert.objects.filter(user__id=current_user.id, activated=True).order_by('-alert_time')[:MAX_ARCHIVES_NORMAL]
     elif user_contact.premium_user:
@@ -24,7 +27,7 @@ def index(request):
         all_alerts = Alert.objects.filter(user__id=current_user.id, activated=True).order_by('-alert_time')[:MAX_ARCHIVES_GOLD]
     return render(request,
                   "main/tracking.html",
-                  {"deuxiememainbe_form": deuxiememainbe_form, "tracker_by_date": tracker_by_date, "all_alerts": all_alerts, "user_contact": user_contact})
+                  {"deuxiememainbe_form": deuxiememainbe_form, "dict_of_activated_tracker_alerts": dict_of_activated_tracker_alerts ,"tracker_by_date": tracker_by_date, "all_alerts": all_alerts, "user_contact": user_contact})
 
 
 def tracking_deuxiememainbe_form(request):
