@@ -18,7 +18,7 @@ def index(request):
     tracker_by_date = Tracker.objects.filter(user__id=current_user.id).order_by('-created')
     dict_of_activated_tracker_alerts = {}
     for tracker in tracker_by_date:
-        dict_of_activated_tracker_alerts[tracker.id] = Alert.objects.filter(tracker_id=tracker.id, activated=1)
+        dict_of_activated_tracker_alerts[tracker.id] = Alert.objects.filter(tracker_id=tracker.id, activated=1).count()
     if user_contact.normal_user:
         all_alerts = Alert.objects.filter(user__id=current_user.id, activated=True).order_by('-alert_time')[:MAX_ARCHIVES_NORMAL]
     elif user_contact.premium_user:
