@@ -23,6 +23,8 @@
                             {% endif %}
                         </div>
                         <div class="collapsible-body blue-grey darken-1">
+                            {% load main_filters %}
+
                             {% for tracker in tracker_by_date %}
                                 {% if forloop.counter|divisibleby:2 %}
 
@@ -34,7 +36,7 @@
                                     <div class="card-content">
                                         <span class="card-title">{{ tracker.search_query }}</span>
                                         <p>Site : <a href="//{{ tracker.website }}">{{ tracker.website }}</a></p>
-                                        <p>Nombre d'alertes : {{ dict_of_activated_tracker_alerts.tracke_id }}</p>
+                                        <p>Nombre d'alertes : {{ dict_of_activated_tracker_alerts|get_item:tracker.id }}</p>
                                         {% if tracker.sms == "yes" %}
                                             <div class="row row_sms_email">
                                                 <span class="col s4">{% trans "SMS : Oui /" %} </span>

@@ -109,5 +109,4 @@ urlpatterns += i18n_patterns(
 
 #custom error
 handler404 = 'main.views.custom_error.handler404'
-handler500 = 'main.views.custom_error.handler500'
 
