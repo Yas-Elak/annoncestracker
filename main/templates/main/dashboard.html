@@ -14,7 +14,7 @@
                         <div class="row">
                             <div class="center-align">
                                 {% load static %}
-                                <div class="col s12 m4 tracking-col">
+                                <div class="col s12 m6 tracking-col">
                                     <img src="{% static 'images/icons/tracker.png' %}"
                                          class="center-align icon-charts"/>
                                     <p><strong>Trackers : {{ number_of_tracker }} /
@@ -27,9 +27,9 @@
                                         {% endif %}
                                     </strong></p>
                                 </div>
-                                <div class="col s12 m4 tracking-col">
-                                    <img src="{% static 'images/icons/sms.png' %}" class="center-align icon-charts"/>
-                                    <p><strong>{% trans "Pas encore disponible" %}
+{#                                <div class="col s12 m4 tracking-col">#}
+{#                                    <img src="{% static 'images/icons/sms.png' %}" class="center-align icon-charts"/>#}
+{#                                    <p><strong>{% trans "Pas encore disponible" %}#}
 {#                                        {% blocktrans %} SMS par mois : {% endblocktrans %}  {{ user_contact.sms }} /#}
 {#                                        {% if user_contact.super_premium_user %}#}
 {#                                            250#}
@@ -38,9 +38,9 @@
 {#                                        {% elif user_contact.normal_user %}#}
 {#                                            5#}
 {#                                        {% endif %}#}
-                                    </strong></p>
-                                </div>
-                                <div class="col s12 m4 ">
+{#                                    </strong></p>#}
+{#                                </div>#}
+                                <div class="col s12 m6 ">
                                     <img src="{% static 'images/icons/archive.png' %}"
                                          class="center-align icon-charts"/>
                                     <p><strong>{% blocktrans %}Archives : {% endblocktrans %}

@@ -37,36 +37,36 @@
                                         <span class="card-title">{{ tracker.search_query }}</span>
                                         <p>Site : <a href="//{{ tracker.website }}">{{ tracker.website }}</a></p>
                                         <p>Nombre d'alertes : {{ dict_of_activated_tracker_alerts|get_item:tracker.id }}</p>
-                                        {% if tracker.sms == "yes" %}
-                                            <div class="row row_sms_email">
-                                                <span class="col s4">{% trans "SMS : Oui /" %} </span>
-                                                <form method="POST"
-                                                      action="{% url "change_type_alerte" alert_type="sms" answer='no' %}"
-                                                      class="col s8">
-                                                    {% csrf_token %}
-                                                    <input type="hidden" name="alert_id"
-                                                           value="{{ tracker.id }}"/>
-                                                    <button class="red-text text-lighten-3 btn-sms-email"
-                                                            type="submit" name="action">{% trans "Désactiver" %}
-                                                    </button>
-                                                </form>
-                                            </div>
-                                        {% else %}
-                                            <div class="row row_sms_email">
-                                                <span class="col s4">{% trans "SMS : Non /" %} </span>
-                                                <form method="POST"
-                                                      action="{% url "change_type_alerte" alert_type="sms" answer='yes' %}"
-                                                      class=" col s8">
-                                                    {% csrf_token %}
-                                                    <input type="hidden" name="alert_id"
-                                                           value="{{ tracker.id }}"/>
-                                                    <button class="green-text text-lighten-3 btn-sms-email"
-                                                            type="submit"
-                                                            name="action">{% trans "Activer" %}
-                                                    </button>
-                                                </form>
-                                            </div>
-                                        {% endif %}
+{#                                        {% if tracker.sms == "yes" %}#}
+{#                                            <div class="row row_sms_email">#}
+{#                                                <span class="col s4">{% trans "SMS : Oui /" %} </span>#}
+{#                                                <form method="POST"#}
+{#                                                      action="{% url "change_type_alerte" alert_type="sms" answer='no' %}"#}
+{#                                                      class="col s8">#}
+{#                                                    {% csrf_token %}#}
+{#                                                    <input type="hidden" name="alert_id"#}
+{#                                                           value="{{ tracker.id }}"/>#}
+{#                                                    <button class="red-text text-lighten-3 btn-sms-email"#}
+{#                                                            type="submit" name="action">{% trans "Désactiver" %}#}
+{#                                                    </button>#}
+{#                                                </form>#}
+{#                                            </div>#}
+{#                                        {% else %}#}
+{#                                            <div class="row row_sms_email">#}
+{#                                                <span class="col s4">{% trans "SMS : Non /" %} </span>#}
+{#                                                <form method="POST"#}
+{#                                                      action="{% url "change_type_alerte" alert_type="sms" answer='yes' %}"#}
+{#                                                      class=" col s8">#}
+{#                                                    {% csrf_token %}#}
+{#                                                    <input type="hidden" name="alert_id"#}
+{#                                                           value="{{ tracker.id }}"/>#}
+{#                                                    <button class="green-text text-lighten-3 btn-sms-email"#}
+{#                                                            type="submit"#}
+{#                                                            name="action">{% trans "Activer" %}#}
+{#                                                    </button>#}
+{#                                                </form>#}
+{#                                            </div>#}
+{#                                        {% endif %}#}
                                         {% if tracker.email == "yes" %}
                                             <div class="row row_sms_email">
                                                 <span class="col s4">{% trans "Email : Oui /" %} </span>
