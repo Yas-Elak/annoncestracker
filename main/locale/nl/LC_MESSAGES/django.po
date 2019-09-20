@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-19 13:39+0200\n"
+"POT-Creation-Date: 2019-09-19 15:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,11 +25,15 @@ msgid "Premier Email"
 msgstr "Eerste email"
 
 #: .\main\forms.py:42
-msgid "Second Email"
-msgstr "Tweede email"
+#, fuzzy
+#| msgid "Premier Email"
+msgid "Deuxième Email"
+msgstr "Eerste email"
 
 #: .\main\forms.py:61
-msgid "Rechercher ce mot / cette phrase"
+#, fuzzy
+#| msgid "Rechercher ce mot / cette phrase"
+msgid "Rechercher ce mot / ces mots"
 msgstr "Vind dit woord / deze woorden"
 
 #: .\main\forms.py:62
@@ -66,12 +70,12 @@ msgstr ""
 "                            %(tracker.search_query)s"
 
 #: .\main\templates\main\alerts.html:26
-#: .\main\templates\main\tracking.html:171
+#: .\main\templates\main\tracking.html:170
 msgid "Voir l'annonce"
 msgstr "Zie de aankondiging"
 
 #: .\main\templates\main\alerts.html:36
-#: .\main\templates\main\tracking.html:135
+#: .\main\templates\main\tracking.html:134
 msgid "Effacer"
 msgstr "Verwijderen"
 
@@ -86,9 +90,9 @@ msgid ""
 " Vous êtes limités à 50 alertes maximum. Vous pouvez upgrader votre\n"
 "                                compte pour\n"
 "                                voir jusqu'à 250 alertes maximum."
-msgstr  ""
-" U bent beperkt tot maximaal 50 U kunt uw account upgraden om maximaal 250 meldingen te zien."
-
+msgstr ""
+" U bent beperkt tot maximaal 50 U kunt uw account upgraden om maximaal 250 "
+"meldingen te zien."
 
 #: .\main\templates\main\alerts.html:51
 msgid ""
@@ -124,7 +128,7 @@ msgstr ""
 "                                            Zie de aankondiging"
 
 #: .\main\templates\main\alerts.html:95
-#: .\main\templates\main\tracking.html:178
+#: .\main\templates\main\tracking.html:177
 msgid "Nombre d'alertes limitées à"
 msgstr "Aantal waarschuwingen beperkt tot"
 
@@ -137,12 +141,12 @@ msgstr ""
 "Upgrade"
 
 #: .\main\templates\main\alerts.html:119
-#: .\main\templates\main\tracking.html:200
+#: .\main\templates\main\tracking.html:199
 msgid "Effacer toutes les alertes"
 msgstr "Verwijder alle waarschuwingen"
 
 #: .\main\templates\main\alerts.html:130
-#: .\main\templates\main\tracking.html:210
+#: .\main\templates\main\tracking.html:209
 msgid "Créer un nouveau tracker"
 msgstr "Maak een nieuwe tracker"
 
@@ -227,7 +231,10 @@ msgid ""
 "se met en pause. N'oubliez pas de faire de la place et de réactiver le "
 "tracker.\n"
 "                        "
-msgstr "Hierboven kun je zien waar je bent voor de grenzen. Recht om andere e-mails te vinden.Wanneer het archiefnummer wordt overschreden, pauzeert de tracker. Vergeet niet om uw meldingen te verwijderen. "
+msgstr ""
+"Hierboven kun je zien waar je bent voor de grenzen. Recht om andere e-mails "
+"te vinden.Wanneer het archiefnummer wordt overschreden, pauzeert de tracker. "
+"Vergeet niet om uw meldingen te verwijderen. "
 
 #: .\main\templates\main\dashboard.html:112
 msgid "Recevoir les alertes"
@@ -250,12 +257,16 @@ msgid ""
 "pour nous confirmer votre commande.<br>\n"
 "                            Vous aurez accès à vos nouveaux privilèges dans "
 "quelques instants. "
-msgstr "Er is rekening gehouden met uw verzoek. Wacht een paar minuten, Paypal moet uw bestelling bevestigen "
+msgstr ""
+"Er is rekening gehouden met uw verzoek. Wacht een paar minuten, Paypal moet "
+"uw bestelling bevestigen "
 
 #: .\main\templates\main\donepayment.html:19
 msgid ""
 "Si vous aviez déjà un autre abonnement chez nous, n'oubliez pas de l'annuler."
-msgstr "Als u al een ander abonnement bij ons hebt, vergeet dit dan niet te annuleren."
+msgstr ""
+"Als u al een ander abonnement bij ons hebt, vergeet dit dan niet te "
+"annuleren."
 
 #: .\main\templates\main\faq.html:16
 msgid "TrackAnnonces"
@@ -275,7 +286,13 @@ msgid ""
 "recherche est publiée. Vous ne manquerez plus les\n"
 "                            bonnes affaires !\n"
 "                        "
-msgstr "Met www.2ememain.be kunt u dagelijks een melding van nieuwe advertenties publiceren. Tijd om deze melding te ontvangen, goede deals zijn niet langer beschikbaar. Dit is waar we binnenkomen. We controleren voortdurend nieuwe advertenties en kunnen u via e-mail of WhatsApp op de hoogte stellen zodra er een nieuwe advertentie is geplaatst die overeenkomt met uw zoekopdracht. U zult de koopjes niet meer missen!"
+msgstr ""
+"Met www.2ememain.be kunt u dagelijks een melding van nieuwe advertenties "
+"publiceren. Tijd om deze melding te ontvangen, goede deals zijn niet langer "
+"beschikbaar. Dit is waar we binnenkomen. We controleren voortdurend nieuwe "
+"advertenties en kunnen u via e-mail of WhatsApp op de hoogte stellen zodra "
+"er een nieuwe advertentie is geplaatst die overeenkomt met uw zoekopdracht. "
+"U zult de koopjes niet meer missen!"
 
 #: .\main\templates\main\faq.html:33
 msgid "Qu'est-ce qu'un tracker ?"
@@ -301,7 +318,10 @@ msgid ""
 "                        ensuite envoyé à votre adresse email afin de vous "
 "prévenir. Ne manquez plus aucune bonne affaire.\n"
 "                        Les alertes sont ensuite consultable ici-même."
-msgstr "Wanneer de tracker een resultaat krijgt, maakt deze een waarschuwing. Een e-mail zal dan naar uw e-mailadres worden verzonden om u te waarschuwen, Mis geen enkel koopje, De meldingen zijn dan hier beschikbaar."
+msgstr ""
+"Wanneer de tracker een resultaat krijgt, maakt deze een waarschuwing. Een e-"
+"mail zal dan naar uw e-mailadres worden verzonden om u te waarschuwen, Mis "
+"geen enkel koopje, De meldingen zijn dan hier beschikbaar."
 
 #: .\main\templates\main\faq.html:55
 msgid "Utilisateur normal"
@@ -313,7 +333,10 @@ msgid ""
 "                            mais le nombre d'alertes consultable ici est "
 "limité. Vous devez aussi les effacer manuellement\n"
 "                            afin de pouvoir en recevoir d'autres."
-msgstr "U hebt toegang tot de site en u kunt een gratis tracker maken, maar het aantal beschikbare meldingen is hier beperkt. U moet ze ook handmatig verwijderen, zodat u anderen kunt ontvangen."
+msgstr ""
+"U hebt toegang tot de site en u kunt een gratis tracker maken, maar het "
+"aantal beschikbare meldingen is hier beperkt. U moet ze ook handmatig "
+"verwijderen, zodat u anderen kunt ontvangen."
 
 #: .\main\templates\main\faq.html:67
 msgid "Utilisateur Argent"
@@ -328,7 +351,12 @@ msgid ""
 "ici pour 4.99€/par mois. Avec les abonnements,\n"
 "                            vous vous assurez de ne louper aucune bonne "
 "affaire."
-msgstr "Met het 'Silver'-abonnement vergroot u het aantal trackers dat u tegelijkertijd kunt creëren, evenals het aantal WhatsApp-berichten dat u kunt ontvangen en het aantal waarschuwingen dat hier kan worden gearchiveerd voor 4,99 € / per maand. Met abonnementen zorg je ervoor dat je geen goede deals mist."
+msgstr ""
+"Met het 'Silver'-abonnement vergroot u het aantal trackers dat u "
+"tegelijkertijd kunt creëren, evenals het aantal WhatsApp-berichten dat u "
+"kunt ontvangen en het aantal waarschuwingen dat hier kan worden gearchiveerd "
+"voor 4,99 € / per maand. Met abonnementen zorg je ervoor dat je geen goede "
+"deals mist."
 
 #: .\main\templates\main\faq.html:80
 msgid "Utilisateur Gold"
@@ -346,7 +374,13 @@ msgid ""
 "affaire. Qui plus est, les archives s'auto-effacent,\n"
 "                            comme ça vous êtes sur de ne jamais saturer "
 "votre quota et de continuer à recevoir des alertes"
-msgstr "Met het abonnement 'Gold' vergroot u het aantal trackers dat u tegelijkertijd kunt maken, het aantal WhatsApp-berichten dat u kunt ontvangen en het aantal waarschuwingen dat hier kan worden gearchiveerd voor 9,99 € / per maand nog meer . Met abonnementen zorg je ervoor dat je geen goede deals mist. Wat meer is, archieven worden automatisch gewist, zodat u zeker bent dat u uw quotum nooit verzadigt en meldingen blijft ontvangen"
+msgstr ""
+"Met het abonnement 'Gold' vergroot u het aantal trackers dat u "
+"tegelijkertijd kunt maken, het aantal WhatsApp-berichten dat u kunt "
+"ontvangen en het aantal waarschuwingen dat hier kan worden gearchiveerd voor "
+"9,99 € / per maand nog meer . Met abonnementen zorg je ervoor dat je geen "
+"goede deals mist. Wat meer is, archieven worden automatisch gewist, zodat u "
+"zeker bent dat u uw quotum nooit verzadigt en meldingen blijft ontvangen"
 
 #: .\main\templates\main\faq.html:96
 msgid "Quoi de prévu pour le futur du site"
@@ -357,7 +391,9 @@ msgid ""
 "Pour l'instant,nous ne fonctionnons qu'avec www.2ememain.be mais nous "
 "rajouterons\n"
 "                        bientôt d'autres sites."
-msgstr "Voor nu werken we alleen met www.2ememain.be maar we zullen binnenkort andere sites toevoegen."
+msgstr ""
+"Voor nu werken we alleen met www.2ememain.be maar we zullen binnenkort "
+"andere sites toevoegen."
 
 #: .\main\templates\main\homepage.html:26
 msgid "Soyez le premier sur les bonnes affaires !"
@@ -377,7 +413,14 @@ msgid ""
 "                    Vous pouvez créer un tracker sur notre site "
 "gratuitement, il suffit de vous\n"
 "                    inscrire."
-msgstr "Met TrackAnnonces kunt u als eerste op de hoogte worden gebracht van de publicatie van een zoekopdracht voor advertenties op tweedehands sites. U zult de eerste zijn die reageert en het juiste doet. Maak een tracker op onze site en zodra een nieuwe advertentie wordt gepubliceerd, wordt u gewaarschuwd. De tracker zoekt voortdurend naar nieuwe advertenties die overeenkomen met uw zoekopdracht. U kunt gratis een tracker op onze site maken, meld u gewoon aan."
+msgstr ""
+"Met TrackAnnonces kunt u als eerste op de hoogte worden gebracht van de "
+"publicatie van een zoekopdracht voor advertenties op tweedehands sites. U "
+"zult de eerste zijn die reageert en het juiste doet. Maak een tracker op "
+"onze site en zodra een nieuwe advertentie wordt gepubliceerd, wordt u "
+"gewaarschuwd. De tracker zoekt voortdurend naar nieuwe advertenties die "
+"overeenkomen met uw zoekopdracht. U kunt gratis een tracker op onze site "
+"maken, meld u gewoon aan."
 
 #: .\main\templates\main\homepage.html:36
 msgid ""
@@ -385,7 +428,9 @@ msgid ""
 "                    trackers grâce à notre\n"
 "                    premier\n"
 "                    abonnement \"Argent\" pour 4.99€/mois"
-msgstr "Moet u verschillende zoekopdrachten uitvoeren? Maak meer trackers met ons eerste abonnement 'Silver' voor 4,99 € / maand"
+msgstr ""
+"Moet u verschillende zoekopdrachten uitvoeren? Maak meer trackers met ons "
+"eerste abonnement 'Silver' voor 4,99 € / maand"
 
 #: .\main\templates\main\homepage.html:41
 msgid "Inscrivez-vous gratuitement"
@@ -402,7 +447,9 @@ msgid ""
 "                Rentrez un mot clé et nous vous renverrons toutes les "
 "nouvelles annonces concernant votre\n"
 "                mot."
-msgstr "Met de trackers gaan we op zoek naar de soorten advertenties die u zoekt. Voer een trefwoord in en we sturen u alle nieuwe advertenties voor uw woord."
+msgstr ""
+"Met de trackers gaan we op zoek naar de soorten advertenties die u zoekt. "
+"Voer een trefwoord in en we sturen u alle nieuwe advertenties voor uw woord."
 
 #: .\main\templates\main\homepage.html:61
 msgid "Vos alertes par email"
@@ -415,7 +462,11 @@ msgid ""
 "                recherche est publiée. 2èmemain.be propose un récapitulatif "
 "quotidient des annonces. Nous vous proposons d'être\n"
 "                prévenu directement"
-msgstr "Wordt direct per e-mail op de hoogte gesteld wanneer een advertentie wordt gepubliceerd die overeenkomt met uw zoekopdracht. 2ememain.be biedt een dagelijks overzicht van aankondigingen. Wij stellen voor om direct te worden gewaarschuwd"
+msgstr ""
+"Wordt direct per e-mail op de hoogte gesteld wanneer een advertentie wordt "
+"gepubliceerd die overeenkomt met uw zoekopdracht. 2ememain.be biedt een "
+"dagelijks overzicht van aankondigingen. Wij stellen voor om direct te worden "
+"gewaarschuwd"
 
 #: .\main\templates\main\homepage.html:67
 msgid "WhatsApp"
@@ -427,7 +478,9 @@ msgid ""
 "Vous serez\n"
 "                ainsi le\n"
 "                premier à réagir et à pouvoir profiter de la bonne affaire."
-msgstr "Krijg rechtstreeks een melding op uw smartphone via de WhatsApp-app. U bent de eerste die reageert en profiteert van de goede deal."
+msgstr ""
+"Krijg rechtstreeks een melding op uw smartphone via de WhatsApp-app. U bent "
+"de eerste die reageert en profiteert van de goede deal."
 
 #: .\main\templates\main\login.html:25
 msgid "Si vous n'avez pas encore de compte,"
@@ -453,7 +506,8 @@ msgstr "Inschrijven"
 msgid ""
 "Votre mot de passe ne peut pas trop ressembler à vos autres informations "
 "personnelles."
-msgstr "Uw wachtwoord lijkt mogelijk niet op uw andere persoonlijke informatie."
+msgstr ""
+"Uw wachtwoord lijkt mogelijk niet op uw andere persoonlijke informatie."
 
 #: .\main\templates\main\register.html:26
 msgid "Votre mot de passe doit contenir au minimum 8 caractères."
@@ -489,7 +543,9 @@ msgstr "Verander wachtwoord"
 msgid ""
 "Le lien est invalide, probablement parce qu'il a déjà été utilisé. Refaite "
 "une nouvelle demande."
-msgstr "De link is ongeldig, waarschijnlijk omdat deze al is gebruikt.Voer een nieuw verzoek opnieuw uit. "
+msgstr ""
+"De link is ongeldig, waarschijnlijk omdat deze al is gebruikt.Voer een nieuw "
+"verzoek opnieuw uit. "
 
 #: .\main\templates\main\registration\password_reset_done.html:15
 msgid "Instructions envoyées par email"
@@ -502,7 +558,10 @@ msgid ""
 "l'adresse que vous avez indiquée. Vous devriez\n"
 "                            recevoir rapidement ce message.\n"
 "                        "
-msgstr "We hebben u een e-mail gestuurd met de instructies om uw wachtwoord te wijzigen, zolang er een account bestaat met het door u opgegeven adres. U zou dit bericht snel moeten ontvangen."
+msgstr ""
+"We hebben u een e-mail gestuurd met de instructies om uw wachtwoord te "
+"wijzigen, zolang er een account bestaat met het door u opgegeven adres. U "
+"zou dit bericht snel moeten ontvangen."
 
 #: .\main\templates\main\registration\password_reset_done.html:20
 msgid ""
@@ -510,7 +569,9 @@ msgid ""
 "                            avec laquelle vous vous êtes enregistré et "
 "contrôlez votre dossier de spams.\n"
 "                        "
-msgstr "Als u geen bericht ontvangt, controleer dan of u het adres hebt ingevoerd waarmee u zich hebt geregistreerd en controleer uw map met spam."
+msgstr ""
+"Als u geen bericht ontvangt, controleer dan of u het adres hebt ingevoerd "
+"waarmee u zich hebt geregistreerd en controleer uw map met spam."
 
 #: .\main\templates\main\tracking.html:15
 msgid "Vos trackers"
@@ -556,26 +617,24 @@ msgid "Alertes"
 msgstr "meldingen"
 
 #: .\main\templates\main\tracking.html:116
-msgid ""
-"\n"
-"                                                            Réactiver "
-msgstr ""
-"\n"
-"Reactiveren"
+#, fuzzy
+#| msgid "Désactiver"
+msgid "Réactiver "
+msgstr "Deactiveren"
 
-#: .\main\templates\main\tracking.html:122
+#: .\main\templates\main\tracking.html:121
 msgid " Pause "
 msgstr "pauze"
 
-#: .\main\templates\main\tracking.html:158
+#: .\main\templates\main\tracking.html:157
 msgid "Résultat de toutes les alertes"
 msgstr "Resultaat van alle waarschuwingen"
 
-#: .\main\templates\main\tracking.html:170
+#: .\main\templates\main\tracking.html:169
 msgid "Tout voir de ce tracker"
 msgstr "Bekijk al deze tracker"
 
-#: .\main\templates\main\tracking.html:220
+#: .\main\templates\main\tracking.html:219
 msgid ""
 "\n"
 "                                            Créer "
@@ -583,7 +642,7 @@ msgstr ""
 "\n"
 "scheppen"
 
-#: .\main\templates\main\tracking.html:224
+#: .\main\templates\main\tracking.html:223
 msgid ""
 "Pour créer des trackers,\n"
 "                                        enregistrez votre email "
@@ -685,16 +744,15 @@ msgid ""
 "                                        de ce mettre en pause.</p>"
 msgstr ""
 "\n"
-"<p>Meldingen ouder dan twee "
-"dagen verdwijnen automatisch.</p>Hiermee kan niet worden overschreden"
-"archieflimiet en dus voorkomen dat de trackers dit pauzeren.<p>"
+"<p>Meldingen ouder dan twee dagen verdwijnen automatisch.</p>Hiermee kan "
+"niet worden overschredenarchieflimiet en dus voorkomen dat de trackers dit "
+"pauzeren.<p>"
 
 #: .\main\templates\main\user.html:53 .\main\templates\main\user.html:61
 msgid ""
 "<p>Option disponible uniquement pour les\n"
 "                                        utilisateurs "
-msgstr ""
-"<p>Optie alleen beschikbaar voor gebruikers "
+msgstr "<p>Optie alleen beschikbaar voor gebruikers "
 
 #: .\main\templates\main\user.html:56 .\main\templates\main\user.html:64
 msgid ""
@@ -787,8 +845,20 @@ msgid "Lien d'activation invalide"
 msgstr "Ongeldige activeringslink"
 
 #: .\main\views\user_auth.py:99
-msgid "Email de vérification envoyé, vérifié vos emails"
+#, fuzzy
+#| msgid "Email de vérification envoyé, vérifié vos emails"
+msgid "Email de vérification envoyé, vérifiez vos emails"
 msgstr "Verificatie-e-mail verzonden, controleer uw e-mails"
+
+#~ msgid "Second Email"
+#~ msgstr "Tweede email"
+
+#~ msgid ""
+#~ "\n"
+#~ "                                                            Réactiver "
+#~ msgstr ""
+#~ "\n"
+#~ "Reactiveren"
 
 #~ msgid "le site kesako"
 #~ msgstr "REEEEEEEEEEEEEEEEEE DIOOOOOOOOOOOO"
