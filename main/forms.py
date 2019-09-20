@@ -35,17 +35,12 @@ class AuthForm(forms.Form):
 class UpdateUserContactForm(forms.ModelForm):
     class Meta:
         model = UserContact
-        fields = ["phone_number", "email_one", "email_two"]
+        fields = ["email_one", "email_two"]
         labels = {
-            "phone_number": _("Téléphone"),
             "email_one": _("Premier Email"),
             "email_two": _("Deuxième Email")
         }
-        widgets = {
-            'phone_number': forms.TextInput(
-                attrs={'placeholder': '+32499876543',
-                       'type': 'number'})
-        }
+
 
 
 class DeuxiemeMainBe(forms.ModelForm):
