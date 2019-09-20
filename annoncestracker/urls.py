@@ -18,8 +18,15 @@ from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
+from django.contrib.sitemaps.views import sitemap
 
 from main.views import dashboard, tracking, user_auth, alerts, homepage, user, payments, contact, upgrade
+
+from main.sitemaps import Static_Sitemap
+
+sitemaps = {
+    'static': Static_Sitemap(),
+}
 
 urlpatterns = [
     # path('', include('main.urls')),
@@ -101,8 +108,10 @@ urlpatterns += i18n_patterns(
          name='password_reset_complete'),
 
 
+    #sitemap
 
-
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
+         name='django.contrib.sitemaps.views.sitemap')
     # to delete
 
 )
