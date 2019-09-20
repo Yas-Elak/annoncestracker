@@ -18,7 +18,7 @@ def index(request):
     number_of_tracker_activated = Tracker.objects.filter(user__id=current_user.id, activated="yes").count()
     number_of_tracker_not_activated = Tracker.objects.filter(user__id=current_user.id, activated="no").count()
 
-    number_of_archives = Alert.objects.filter(user__id=current_user.id).count()
+    number_of_archives = Alert.objects.filter(user__id=current_user.id, activated=1).count()
 
     time_24_hours_ago = timezone.now() - timezone.timedelta(days=1)
     last_24 = Alert.objects.filter(user__id=current_user.id, alert_time__gte=time_24_hours_ago, activated=True).count()
