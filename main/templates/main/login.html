@@ -1,7 +1,10 @@
 {% extends "main/master.html" %}
 {% block meta_info %}
-    <title>Login</title>
-    <meta name="description" content="Connectez-vous pour profiter de nos services">
+     {% load i18n %}
+    {% trans "Login" as the_title %}
+    {% trans "Connectez-vous pour profiter de nos services." as the_desc %}
+    <title>{{ the_title }}</title>
+    <meta name="description" content="{{ the_desc }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {% endblock %}

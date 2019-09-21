@@ -1,7 +1,10 @@
 {% extends "main/master.html" %}
 {% block meta_info %}
-    <title>Payed</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load i18n %}
+    {% trans "Done" as the_title %}
+    <title>{{ the_title }}</title>
+    <meta name="description" content="{{ the_desc }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {% endblock %}
 {% block content %}
@@ -13,15 +16,17 @@
                 <div class="card">
                     <div class="card-content">
                         <span class="card-title center-align ">{% trans "Merci pour votre achat" %}</span>
-                        <br><p class="center-align">{%blocktrans %} Votre commande a bien été prise en compte. Merci.<br>
+                        <br>
+                        <p class="center-align">{% blocktrans %} Votre commande a bien été prise en compte. Merci.<br>
                             Il faut en général quelques minutes à Paypal pour nous confirmer votre commande.<br>
-                            Vous aurez accès à vos nouveaux privilèges dans quelques instants. {% endblocktrans %}</p><br>
-                    <p class="center-align">{% trans "Si vous aviez déjà un autre abonnement chez nous, n'oubliez pas de l'annuler."%}</p>
-                    <p class="center-align" ><img src="{% static "images/thanks.jpg" %}"/></p>
+                            Vous aurez accès à vos nouveaux privilèges dans quelques instants. {% endblocktrans %}</p>
+                        <br>
+                        <p class="center-align">{% trans "Si vous aviez déjà un autre abonnement chez nous, n'oubliez pas de l'annuler." %}</p>
+                        <p class="center-align"><img src="{% static "images/thanks.jpg" %}"/></p>
                     </div>
                 </div>
             </div>
         </div>
-    <?php $item_name = $_POST['item_name']; ?>
+        <?php $item_name = $_POST['item_name']; ?>
     </div>
 {% endblock %}

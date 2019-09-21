@@ -3,14 +3,16 @@
 <head>
     {% load static %}
     {% load i18n %}
-    <meta charset="UTF-8">
+
 
     <link rel="stylesheet" type="text/css" href="{% static 'main/master.css' %}">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <title>Accueil</title>
-    <meta name="description"
-          content="Ne loupez plus jamais une bonne affaire sur une site de seconde main en étant averti tout de suite de la publication d'une nouvelle annonce">
+    {% trans "Accueil" as the_title %}
+    {% trans "Ne loupez plus jamais une bonne affaire sur une site de seconde main en étant averti tout de suite de la publication d'une nouvelle annonce" as the_desc %}
+    <title>{{ the_title }}</title>
+    <meta name="description" content="{{ the_desc }}">
+    <meta charset="UTF-8">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,15 +62,16 @@
         <div class="col s12 m6">
             <h5 class="center-align">{% trans "Vos alertes par email" %}</h5>
             <p>{% blocktrans %} Soyez prévenu directement par email lorsque qu'une annonce correspondant à votre
-                recherche est publiée. 2èmemain.be propose un récapitulatif quotidient des annonces. Nous vous proposons d'être
+                recherche est publiée. 2èmemain.be propose un récapitulatif quotidient des annonces. Nous vous proposons
+                d'être
                 prévenu directement{% endblocktrans %}</p>
         </div>
-{#        <div class="col s12 m4">#}
-{#            <h5 class="center-align">{% trans "WhatsApp" %}</h5>#}
-{#            <p>{% blocktrans %} Soyez prévenu directement sur votre smartphone via l'application WhatsApp. Vous serez#}
-{#                ainsi le#}
-{#                premier à réagir et à pouvoir profiter de la bonne affaire.{% endblocktrans %}</p>#}
-{#        </div>#}
+        {#        <div class="col s12 m4">#}
+        {#            <h5 class="center-align">{% trans "WhatsApp" %}</h5>#}
+        {#            <p>{% blocktrans %} Soyez prévenu directement sur votre smartphone via l'application WhatsApp. Vous serez#}
+        {#                ainsi le#}
+        {#                premier à réagir et à pouvoir profiter de la bonne affaire.{% endblocktrans %}</p>#}
+        {#        </div>#}
     </div>
 </div>
 

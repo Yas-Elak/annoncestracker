@@ -1,7 +1,9 @@
 {% extends "main/master.html" %}
 {% block meta_info %}
-    <title>Alertes</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load i18n %}
+    {% trans "Alertes" as the_title %}
+    <title>{{ the_title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {% endblock %}
 {% block content %}
@@ -51,7 +53,7 @@
                             <p>{% blocktrans %} Vous êtes limités à 5 alertes maximum, upgradé votre
                                 compte.{% endblocktrans %}</p>
                         {% endif %}
-                    <br>
+                        <br>
                         <form method="POST" action="{% url "delete_all_alerts_of_tracker" tracker_id=tracker.id %}"
                               class="">
                             {% csrf_token %}

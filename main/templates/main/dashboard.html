@@ -1,6 +1,8 @@
 {% extends "main/master.html" %}{% block meta_info %}
-    <title>Dashboard</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load i18n %}
+    {% trans "Dashboard" as the_title %}
+    <title>{{ the_title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {% endblock %}
 
