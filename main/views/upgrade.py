@@ -12,7 +12,7 @@ def index(request):
 
     paypal_dict_argent = {
         "cmd": "_xclick-subscriptions",
-        "business": "sb-oa1np146616@business.example.com",
+        "business": "lakhnati.dv@gmail.com",
         "a3": "4.99",  # monthly price4
         "currency_code": "EUR",
         "p3": 1,  # duration of each unit (depends on unit)
@@ -31,7 +31,7 @@ def index(request):
     form_argent = PayPalPaymentsForm(initial=paypal_dict_argent, button_type="subscribe")
     paypal_dict_gold = {
         "cmd": "_xclick-subscriptions",
-        "business": "sb-oa1np146616@business.example.com",
+        "business": "lakhnati.dv@gmail.com",
         "a3": "9.99",  # monthly price4
         "currency_code": "EUR",
         "p3": 1,  # duration of each unit (depends on unit)
