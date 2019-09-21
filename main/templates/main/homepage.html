@@ -16,6 +16,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="TrackAnnonces">
+    <meta property="og:description" content="Get alerts for the last published deal on second hands websites">
+    <meta property="og:image" content="https://www.trackannonces.be/static/images/little_logo_transparent.png">
+    <meta property="og:url" content="https://www.trackannonces.be">
 
 
 </head>
@@ -48,63 +52,64 @@
         </div>
     </div>
 
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col s12 m6">
-            <h5 class="center-align">{% trans "Vos recherches" %}</h5>
-            <p>{% blocktrans %}Avec les trackers, nous serons  l'affut des types d'annonces que vous recherchez.
-                Rentrez un mot clé et nous vous renverrons toutes les nouvelles annonces concernant votre
-                mot.{% endblocktrans %}</p>
-        </div>
-
-        <div class="col s12 m6">
-            <h5 class="center-align">{% trans "Vos alertes par email" %}</h5>
-            <p>{% blocktrans %} Soyez prévenu directement par email lorsque qu'une annonce correspondant à votre
-                recherche est publiée. 2èmemain.be propose un récapitulatif quotidient des annonces. Nous vous proposons
-                d'être
-                prévenu directement{% endblocktrans %}</p>
-        </div>
-        {#        <div class="col s12 m4">#}
-        {#            <h5 class="center-align">{% trans "WhatsApp" %}</h5>#}
-        {#            <p>{% blocktrans %} Soyez prévenu directement sur votre smartphone via l'application WhatsApp. Vous serez#}
-        {#                ainsi le#}
-        {#                premier à réagir et à pouvoir profiter de la bonne affaire.{% endblocktrans %}</p>#}
-        {#        </div>#}
     </div>
-</div>
 
-{#</script>#}
-</body>
-<!-- Compiled and minified JavaScript -->
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6">
+                <h5 class="center-align">{% trans "Vos recherches" %}</h5>
+                <p>{% blocktrans %}Avec les trackers, nous serons  l'affut des types d'annonces que vous recherchez.
+                    Rentrez un mot clé et nous vous renverrons toutes les nouvelles annonces concernant votre
+                    mot.{% endblocktrans %}</p>
+            </div>
 
-<script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
-<script>
-    window.onload = function () {
-        M.AutoInit();
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.collapsible');
-            var instances = M.Collapsible.init(elems, options);
-        });
+            <div class="col s12 m6">
+                <h5 class="center-align">{% trans "Vos alertes par email" %}</h5>
+                <p>{% blocktrans %} Soyez prévenu directement par email lorsque qu'une annonce correspondant à votre
+                    recherche est publiée. 2èmemain.be propose un récapitulatif quotidient des annonces. Nous vous
+                    proposons
+                    d'être
+                    prévenu directement{% endblocktrans %}</p>
+            </div>
+            {#        <div class="col s12 m4">#}
+            {#            <h5 class="center-align">{% trans "WhatsApp" %}</h5>#}
+            {#            <p>{% blocktrans %} Soyez prévenu directement sur votre smartphone via l'application WhatsApp. Vous serez#}
+            {#                ainsi le#}
+            {#                premier à réagir et à pouvoir profiter de la bonne affaire.{% endblocktrans %}</p>#}
+            {#        </div>#}
+        </div>
+    </div>
 
+    {#</script>#}
+    </body>
+    <!-- Compiled and minified JavaScript -->
 
-        $(function () {
-            $(".a-flag").on("click", function (e) {
-                e.preventDefault(); // cancel the link itself
-                var data = $(this).attr("data-value");
-                $('<form action="{% url 'set_language' %}" method="post"> {% csrf_token %} <input name="next" type="hidden" value="{{ redirect_to }}"/> <input name="language" type="hidden" value="' + data + '"/> </form>').appendTo('body').submit();
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script>
+        window.onload = function () {
+            M.AutoInit();
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.collapsible');
+                var instances = M.Collapsible.init(elems, options);
             });
-        });
-    }
 
 
-</script>
-{% block script %}
-{% endblock %}
+            $(function () {
+                $(".a-flag").on("click", function (e) {
+                    e.preventDefault(); // cancel the link itself
+                    var data = $(this).attr("data-value");
+                    $('<form action="{% url 'set_language' %}" method="post"> {% csrf_token %} <input name="next" type="hidden" value="{{ redirect_to }}"/> <input name="language" type="hidden" value="' + data + '"/> </form>').appendTo('body').submit();
+                });
+            });
+        }
+
+
+    </script>
+    {% block script %}
+    {% endblock %}
 
 
 </html>
