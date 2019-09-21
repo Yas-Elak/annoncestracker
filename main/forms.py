@@ -50,13 +50,11 @@ class DeuxiemeMainBe(forms.ModelForm):
         fields = ["search_query",
                   "postal_code",
                   "distance_meters",
-                  "sms",
                   "email",
                   ]
         labels = {"search_query": _("Rechercher ce mot / ces mots"),
                   "postal_code": _("Code postal"),
                   "distance_meters": _("Distance depuis le code postal"),
-                  "sms": _("Envoyé par sms"),
                   "email": _("Envoyé par email"),
                   }
         widgets = {
