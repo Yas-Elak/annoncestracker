@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-21 12:22+0200\n"
+"POT-Creation-Date: 2019-09-21 13:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,10 +39,6 @@ msgstr "Postcode"
 #: .\main\forms.py:58
 msgid "Distance depuis le code postal"
 msgstr "Afstand van postcode"
-
-#: .\main\forms.py:59
-msgid "Envoyé par sms"
-msgstr "verzonden per sms"
 
 #: .\main\forms.py:60
 msgid "Envoyé par email"
@@ -83,7 +79,8 @@ msgstr "Verwijderen"
 msgid ""
 " Merci de faire partie de nos membres,vous pouvez voir jusqu'à 500\n"
 "                                alertes maximum "
-msgstr "Bedankt dat je lid bent van onze leden, je kunt maximaal 500 meldingen zien"
+msgstr ""
+"Bedankt dat je lid bent van onze leden, je kunt maximaal 500 meldingen zien"
 
 #: .\main\templates\main\alerts.html:49
 msgid ""
@@ -281,27 +278,31 @@ msgstr ""
 "Als u al een ander abonnement bij ons hebt, vergeet dit dan niet te "
 "annuleren."
 
-#: .\main\templates\main\faq.html:4
+#: .\main\templates\main\faq.html:5
 msgid "FAQ"
 msgstr "FAQ"
 
-#: .\main\templates\main\faq.html:5
+#: .\main\templates\main\faq.html:6
 msgid ""
 "Comprenez tout sur nos trackers, alertes et sur comment ne plus louper une "
 "bonne affaire."
-msgstr "Begrijp alles over onze trackers, waarschuwingen en hoe u een goede deal niet mag missen."
+msgstr ""
+"Begrijp alles over onze trackers, waarschuwingen en hoe u een goede deal "
+"niet mag missen."
 
-#: .\main\templates\main\faq.html:19
+#: .\main\templates\main\faq.html:21
 msgid "TrackAnnonces"
 msgstr "TrackAnnonces"
 
-#: .\main\templates\main\faq.html:20
+#: .\main\templates\main\faq.html:22
 msgid ""
 "Ne manquez plus jamais les bonnes affaires en seconde main en étant prévenu "
 "dès qu'une nouvelle annonce est publiée !"
-msgstr "Mis nooit meer tweedehands aanbiedingen door te worden gewaarschuwd wanneer een nieuwe advertentie wordt gepubliceerd!"
+msgstr ""
+"Mis nooit meer tweedehands aanbiedingen door te worden gewaarschuwd wanneer "
+"een nieuwe advertentie wordt gepubliceerd!"
 
-#: .\main\templates\main\faq.html:21
+#: .\main\templates\main\faq.html:23
 #, fuzzy
 #| msgid ""
 #| "www.2ememain.be vous permet d'avoirune notification journalière des "
@@ -339,11 +340,11 @@ msgstr ""
 "er een nieuwe advertentie is geplaatst die overeenkomt met uw zoekopdracht. "
 "U zult de koopjes niet meer missen!"
 
-#: .\main\templates\main\faq.html:39
+#: .\main\templates\main\faq.html:41
 msgid "Qu'est-ce qu'un tracker ?"
 msgstr "Wat is een Tracker ?"
 
-#: .\main\templates\main\faq.html:40
+#: .\main\templates\main\faq.html:42
 msgid ""
 "Lorsque vous créez un tracker, un logiciel recherche le\n"
 "                            site en fonction des\n"
@@ -351,13 +352,15 @@ msgid ""
 "recherche effectuée en permanence sur le\n"
 "                            site en question."
 msgstr ""
-"Wanneer u een tracker maakt, zoekt de software naar de site op basis van de opties die u hebt opgegeven. Het is dus een zoekopdracht die permanent op de betreffende site wordt uitgevoerd."
+"Wanneer u een tracker maakt, zoekt de software naar de site op basis van de "
+"opties die u hebt opgegeven. Het is dus een zoekopdracht die permanent op de "
+"betreffende site wordt uitgevoerd."
 
-#: .\main\templates\main\faq.html:50
+#: .\main\templates\main\faq.html:52
 msgid "Qu'est-ce qu'une alerte ?"
 msgstr "Wat is een melding?"
 
-#: .\main\templates\main\faq.html:51
+#: .\main\templates\main\faq.html:53
 #, fuzzy
 #| msgid ""
 #| "Lorsque le tracker obtient un résultat, il crée une alerte. Un email vous "
@@ -377,11 +380,11 @@ msgstr ""
 "mail zal dan naar uw e-mailadres worden verzonden om u te waarschuwen, Mis "
 "geen enkel koopje, De meldingen zijn dan hier beschikbaar."
 
-#: .\main\templates\main\faq.html:64
+#: .\main\templates\main\faq.html:66
 msgid "Utilisateur normal"
 msgstr "Normale gebruiker"
 
-#: .\main\templates\main\faq.html:66
+#: .\main\templates\main\faq.html:68
 #, fuzzy
 #| msgid ""
 #| "Vous avez accès au site et vous pouvez créer un tracker gratuitement\n"
@@ -399,11 +402,11 @@ msgstr ""
 "aantal beschikbare meldingen is hier beperkt. U moet ze ook handmatig "
 "verwijderen, zodat u anderen kunt ontvangen."
 
-#: .\main\templates\main\faq.html:77
+#: .\main\templates\main\faq.html:79
 msgid "Utilisateur Argent"
 msgstr "Zilveren gebruiker"
 
-#: .\main\templates\main\faq.html:79
+#: .\main\templates\main\faq.html:81
 #, fuzzy
 #| msgid ""
 #| "Avec l'abonnement \"Argent\" vous augmentez le nombre de trackers que "
@@ -429,11 +432,11 @@ msgstr ""
 "voor 4,99 € / per maand. Met abonnementen zorg je ervoor dat je geen goede "
 "deals mist."
 
-#: .\main\templates\main\faq.html:91
+#: .\main\templates\main\faq.html:93
 msgid "Utilisateur Gold"
 msgstr "Gebruiker Gold"
 
-#: .\main\templates\main\faq.html:93
+#: .\main\templates\main\faq.html:95
 #, fuzzy
 #| msgid ""
 #| "Avec l'abonnement \"Gold\" vous augmentez ENCORE PLUS le nombre de "
@@ -467,11 +470,11 @@ msgstr ""
 "goede deals mist. Wat meer is, archieven worden automatisch gewist, zodat u "
 "zeker bent dat u uw quotum nooit verzadigt en meldingen blijft ontvangen"
 
-#: .\main\templates\main\faq.html:111
+#: .\main\templates\main\faq.html:113
 msgid "Quoi de prévu pour le futur du site"
 msgstr "Wat is gepland voor de toekomst van de site"
 
-#: .\main\templates\main\faq.html:112
+#: .\main\templates\main\faq.html:114
 #, fuzzy
 #| msgid ""
 #| "Pour l'instant,nous ne fonctionnons qu'avec www.2ememain.be mais nous "
@@ -485,21 +488,23 @@ msgstr ""
 "Voor nu werken we alleen met www.2ememain.be maar we zullen binnenkort "
 "andere sites toevoegen."
 
-#: .\main\templates\main\homepage.html:11
+#: .\main\templates\main\homepage.html:14
 msgid "Accueil"
 msgstr "Ontvangst"
 
-#: .\main\templates\main\homepage.html:12
+#: .\main\templates\main\homepage.html:15
 msgid ""
 "Ne loupez plus jamais une bonne affaire sur une site de seconde main en "
 "étant averti tout de suite de la publication d'une nouvelle annonce"
-msgstr "Mis nooit meer veel op een tweedehands site door direct op de hoogte te worden gesteld van de publicatie van een nieuwe advertentie."
+msgstr ""
+"Mis nooit meer veel op een tweedehands site door direct op de hoogte te "
+"worden gesteld van de publicatie van een nieuwe advertentie."
 
-#: .\main\templates\main\homepage.html:28
+#: .\main\templates\main\homepage.html:36
 msgid "Soyez le premier sur les bonnes affaires !"
 msgstr "Wees de eerste op de koopjes!"
 
-#: .\main\templates\main\homepage.html:31
+#: .\main\templates\main\homepage.html:39
 msgid ""
 " TrackAnnonces vous permet d'être le premier à être prévenu\n"
 "                    de la publication d'une annonce correspondant à votre "
@@ -522,7 +527,7 @@ msgstr ""
 "overeenkomen met uw zoekopdracht. U kunt gratis een tracker op onze site "
 "maken, meld u gewoon aan."
 
-#: .\main\templates\main\homepage.html:38
+#: .\main\templates\main\homepage.html:46
 msgid ""
 "Besoin d'effectuer des recherches différentes ? Créer plus de\n"
 "                    trackers grâce à notre\n"
@@ -532,30 +537,37 @@ msgstr ""
 "Moet u verschillende zoekopdrachten uitvoeren? Maak meer trackers met ons "
 "eerste abonnement 'Silver' voor 4,99 € / maand"
 
-#: .\main\templates\main\homepage.html:43
+#: .\main\templates\main\homepage.html:51
 msgid "Inscrivez-vous gratuitement"
 msgstr "Meld je gratis aan"
 
-#: .\main\templates\main\homepage.html:56
+#: .\main\templates\main\homepage.html:64
 msgid "Vos recherches"
 msgstr "Uw zoekopdrachten"
 
-#: .\main\templates\main\homepage.html:57
+#: .\main\templates\main\homepage.html:65
+#, fuzzy
+#| msgid ""
+#| "Avec les trackers, nous serons  l'affut des types d'annonces que vous "
+#| "recherchez.\n"
+#| "                Rentrez un mot clé et nous vous renverrons toutes les "
+#| "nouvelles annonces concernant votre\n"
+#| "                mot."
 msgid ""
 "Avec les trackers, nous serons  l'affut des types d'annonces que vous "
 "recherchez.\n"
-"                Rentrez un mot clé et nous vous renverrons toutes les "
+"                    Rentrez un mot clé et nous vous renverrons toutes les "
 "nouvelles annonces concernant votre\n"
-"                mot."
+"                    mot."
 msgstr ""
 "Met de trackers gaan we op zoek naar de soorten advertenties die u zoekt. "
 "Voer een trefwoord in en we sturen u alle nieuwe advertenties voor uw woord."
 
-#: .\main\templates\main\homepage.html:63
+#: .\main\templates\main\homepage.html:71
 msgid "Vos alertes par email"
 msgstr "Uw meldingen per e-mail"
 
-#: .\main\templates\main\homepage.html:64
+#: .\main\templates\main\homepage.html:72
 #, fuzzy
 #| msgid ""
 #| " Soyez prévenu directement par email lorsque qu'une annonce correspondant "
@@ -566,10 +578,11 @@ msgstr "Uw meldingen per e-mail"
 msgid ""
 " Soyez prévenu directement par email lorsque qu'une annonce correspondant à "
 "votre\n"
-"                recherche est publiée. 2èmemain.be propose un récapitulatif "
-"quotidient des annonces. Nous vous proposons\n"
-"                d'être\n"
-"                prévenu directement"
+"                    recherche est publiée. 2èmemain.be propose un "
+"récapitulatif quotidient des annonces. Nous vous\n"
+"                    proposons\n"
+"                    d'être\n"
+"                    prévenu directement"
 msgstr ""
 "Wordt direct per e-mail op de hoogte gesteld wanneer een advertentie wordt "
 "gepubliceerd die overeenkomt met uw zoekopdracht. 2ememain.be biedt een "
@@ -949,6 +962,9 @@ msgstr "Ongeldige activeringslink"
 #| msgid "Email de vérification envoyé, vérifié vos emails"
 msgid "Email de vérification envoyé, vérifiez vos emails"
 msgstr "Verificatie-e-mail verzonden, controleer uw e-mails"
+
+#~ msgid "Envoyé par sms"
+#~ msgstr "verzonden per sms"
 
 #~ msgid "Téléphone"
 #~ msgstr "Telefoon"
