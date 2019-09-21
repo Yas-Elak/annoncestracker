@@ -25,7 +25,7 @@ def deuxiememainbe_form_call(request):
                                                     search_query=deuxiememainbe_form.data['search_query'],
                                                     distance_meters=ds,
                                                     postal_code=deuxiememainbe_form.data['postal_code'],
-                                                    sms=deuxiememainbe_form.data['sms'],
+                                                    # sms=deuxiememainbe_form.data['sms'],
                                                     email=deuxiememainbe_form.data['email'])
                 messages.success(request, f"{alert_info.search_query} : created")
             else:
