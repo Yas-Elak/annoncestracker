@@ -20,7 +20,7 @@ def payment_notification(sender, **kwargs):
         send_you_got_paypal_news("a annulé son abo", user.username, user.email, ipn_obj.item_name)
 
     if ipn_obj.payment_status == ST_PP_COMPLETED:
-        if ipn_obj.receiver_email != "sb-oa1np146616@business.example.com":
+        if ipn_obj.receiver_email != "lakhnati.dv@gmail.com":
             a = 0
             print("I'm connected and it's not valid")
             return a
