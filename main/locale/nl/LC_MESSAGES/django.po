@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-21 14:04+0200\n"
+"POT-Creation-Date: 2019-09-29 11:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -277,18 +277,6 @@ msgid ""
 msgstr ""
 "Als u al een ander abonnement bij ons hebt, vergeet dit dan niet te "
 "annuleren."
-
-#: .\main\templates\main\faq.html:5
-msgid "FAQ"
-msgstr "FAQ"
-
-#: .\main\templates\main\faq.html:6
-msgid ""
-"Comprenez tout sur nos trackers, alertes et sur comment ne plus louper une "
-"bonne affaire."
-msgstr ""
-"Begrijp alles over onze trackers, waarschuwingen en hoe u een goede deal "
-"niet mag missen."
 
 #: .\main\templates\main\faq.html:21
 msgid "TrackAnnonces"
@@ -966,6 +954,16 @@ msgstr "Ongeldige activeringslink"
 #| msgid "Email de vérification envoyé, vérifié vos emails"
 msgid "Email de vérification envoyé, vérifiez vos emails"
 msgstr "Verificatie-e-mail verzonden, controleer uw e-mails"
+
+#~ msgid "FAQ"
+#~ msgstr "FAQ"
+
+#~ msgid ""
+#~ "Comprenez tout sur nos trackers, alertes et sur comment ne plus louper "
+#~ "une bonne affaire."
+#~ msgstr ""
+#~ "Begrijp alles over onze trackers, waarschuwingen en hoe u een goede deal "
+#~ "niet mag missen."
 
 #~ msgid "Envoyé par sms"
 #~ msgstr "verzonden per sms"
