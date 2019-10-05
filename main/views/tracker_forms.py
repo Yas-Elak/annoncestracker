@@ -22,7 +22,7 @@ def deuxiememainbe_form_call(request):
                     (user_contact.normal_user and number_of_tracker < MAX_TRACKERS_NORMAL):
                 alert_info = Tracker.objects.create(user_id=current_user.id,
                                                     website="www.2ememain.be",
-                                                    search_partial=0,
+                                                    search_partial="0",
                                                     search_query=deuxiememainbe_form.data['search_query'],
                                                     distance_meters=ds,
                                                     postal_code=deuxiememainbe_form.data['postal_code'],
