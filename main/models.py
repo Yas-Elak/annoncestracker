@@ -74,7 +74,7 @@ class Tracker(models.Model):
     distance_meters = models.CharField(max_length=255, choices=DISTANCES_CHOICES, default=all_distances, null=True)
     postal_code = models.CharField(max_length=6, blank=True, null=True)
     exclude_query = models.CharField(max_length=255, blank=True, null=True)
-    search_partial = models.CharField(max_length=4, choices=YES_NO_CHOICES, default=no, blank=True, null=True)
+    search_partial = models.CharField(max_length=4, choices=YES_NO_CHOICES, default=no)
     sms = models.CharField(max_length=4, choices=YES_NO_CHOICES, default=no)
     email = models.CharField(max_length=4, choices=YES_NO_CHOICES, default=yes)
     title_content = models.CharField(max_length=9, choices=ALERT_CHOICES, blank=True, null=True)
