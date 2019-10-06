@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-29 11:40+0200\n"
+"POT-Creation-Date: 2019-10-06 09:39+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,6 +39,10 @@ msgstr "Postcode"
 #: .\main\forms.py:58
 msgid "Distance depuis le code postal"
 msgstr "Afstand van postcode"
+
+#: .\main\forms.py:59
+msgid "Mot partiel ou non"
+msgstr "gedeeltelijk woord of niet"
 
 #: .\main\forms.py:60
 msgid "Envoyé par email"
@@ -751,7 +755,15 @@ msgstr ""
 "\n"
 "scheppen"
 
-#: .\main\templates\main\tracking.html:229
+#: .\main\templates\main\tracking.html:228
+msgid ""
+"Partiel : le mot recherché peut-il faire partie d'un autre mot ?\n"
+"                                         ex:  recherche = \"para\". Est-ce "
+"que parapluie peut-être un résultat ?"
+msgstr "Gedeeltelijk : Kan het gezochte woord deel uitmaken van een ander woord?\n"
+"Zoeken = para: Kan paraplu een gevolg zijn?"
+
+#: .\main\templates\main\tracking.html:231
 msgid ""
 "Pour créer des trackers,\n"
 "                                        enregistrez votre email "
@@ -901,7 +913,7 @@ msgstr "Bericht verzonden"
 msgid "Formulaire invalide"
 msgstr "Ongeldige vorm"
 
-#: .\main\views\tracker_forms.py:32
+#: .\main\views\tracker_forms.py:33
 msgid "Vous n'avez plus droit à des trackers, Upgradez pour en avoir plus"
 msgstr "Je hebt geen recht meer op trackers, upgrade om meer te hebben"
 
