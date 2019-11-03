@@ -142,6 +142,11 @@
                                             {{ deuxiememainbe_form.as_p }}
                                             <button type="submit" class="btn blue-grey darken-1">Créer</button>
                                         </form>
+                                                <br>
+                                                <small>{% blocktrans %}Partiel : le mot recherché peut-il faire partie
+                                                    d'un autre mot ?
+                                                    ex:  recherche = "para". Est-ce que parapluie peut-être un résultat
+                                                    ?{% endblocktrans %}</small>
                                             {% else %}
                                                 <p><a href="{% url "user_info" %}">{% blocktrans %}Pour créer des
                                                     trackers, enregistrez votre email{% endblocktrans %}</a></p>

@@ -1,7 +1,7 @@
 {% extends "main/master.html" %}
 {% block meta_info %}
     <title>Upgrade</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {% endblock %}
 {% block content %}
@@ -32,12 +32,12 @@
                                 <td>5</td>
                                 <td>25</td>
                             </tr>
-{#                            <tr>#}
-{#                                <td class="td-strong">{% trans "Sms : " %}</td>#}
-{#                                <td>10</td>#}
-{#                                <td>50</td>#}
-{#                                <td>250</td>#}
-{#                            </tr>#}
+                            {#                            <tr>#}
+                            {#                                <td class="td-strong">{% trans "Sms : " %}</td>#}
+                            {#                                <td>10</td>#}
+                            {#                                <td>50</td>#}
+                            {#                                <td>250</td>#}
+                            {#                            </tr>#}
                             <tr>
                                 <td class="td-strong">{% trans "Archives : " %}</td>
                                 <td>5</td>
@@ -49,6 +49,12 @@
                                 <td>{% trans "Non" %}</td>
                                 <td>{% trans "Non" %}</td>
                                 <td>{% trans "Oui" %}</td>
+                            </tr>
+                            <tr>
+                                <td class="td-strong">{% trans "Résultats* : " %}</td>
+                                <td>120</td>
+                                <td>60</td>
+                                <td>30</td>
                             </tr>
                             <tr>
                                 <td class="td-strong">{% trans "Prix : " %}</td>
@@ -66,6 +72,7 @@
                             </tr>
                             </tbody>
                         </table>
+                        <small>{% trans  "* Résultats dans les x minutes dès la déccouverte de l'annonce" %}</small>
                     </div>
                 </div>
             </div>
