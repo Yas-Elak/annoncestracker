@@ -13,10 +13,19 @@ from ..models import UserContact
 
 @login_required
 def index(request, tracker_id):
+    """
+
+    :param request:
+    :param tracker_id:
+    :return: The list of the alerts from the tracker find with the tracker ID
+    """
     current_user = auth.get_user(request)
     user_contact = UserContact.objects.get(user__id=current_user.id)
+
+    #We get the form because it will be on the page
     deuxiememainbe_form = DeuxiemeMainBe
 
+    #we will show a certain number of alerts set by the role of the users
     if user_contact.super_premium_user:
         all_alerts = Alert.objects.filter(user__id=current_user.id, activated=True).order_by('-alert_time')[:MAX_ARCHIVES_GOLD]
     elif user_contact.premium_user:
@@ -32,11 +41,24 @@ def index(request, tracker_id):
 
 @login_required
 def alerts_deuxiememainbe_form(request, tracker_id):
+    """
+    Called when the user use the form deuxiememain
+    use the method in the tracker_forms.py
+    :param request:
+    :param tracker_id:
+    :return:
+    """
     deuxiememainbe_form_call(request)
     index(request, tracker_id)
 
 @login_required
 def delete(request, alert_id):
+    """
+    Delete the alert choosen by the user
+    :param request:
+    :param alert_id:
+    :return: Redirect to the page alert
+    """
     if request.method == 'POST':
         alert = Alert.objects.get(pk=alert_id)
         tracker_id = alert.tracker.id
@@ -46,4 +68,3 @@ def delete(request, alert_id):
     return redirect("alerts", tracker_id=tracker_id)
 
 
-# https://codepen.io/marcmatias/pen/gxPzvY

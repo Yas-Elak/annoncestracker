@@ -6,9 +6,17 @@ from django.utils.translation import gettext as _
 from ..constantes import *
 
 def deuxiememainbe_form_call(request):
+    """
+    Call in every page who need this form
+    :param request:
+    :return:
+    """
     current_user = auth.get_user(request)
     user_contact = UserContact.objects.get(user__id=current_user.id)
+
+    #Need the number of tracker the user have to know if he can have another
     number_of_tracker = Tracker.objects.filter(user__id=current_user.id).count()
+
     if request.method == "POST":
         deuxiememainbe_form = DeuxiemeMainBe(request.POST)
         if deuxiememainbe_form.is_valid():

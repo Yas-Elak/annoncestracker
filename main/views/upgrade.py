@@ -8,6 +8,12 @@ from paypal.standard.forms import PayPalPaymentsForm
 
 
 def index(request):
+    """
+    Use the paypal lib to make a transaction.
+    There is two type of transaction. So theres is two dictionnary
+    :param request:
+    :return:
+    """
     current_user = auth.get_user(request)
 
     paypal_dict_argent = {

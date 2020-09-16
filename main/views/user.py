@@ -9,6 +9,11 @@ from ..models import UserContact
 
 @login_required
 def index(request):
+    """
+    Get the basic info of the user to display at the user
+    :param request:
+    :return:
+    """
     user = auth.get_user(request)
     user_contact = UserContact.objects.get(user__id=user.id)
     form = PasswordChangeForm(request.user)
@@ -28,6 +33,12 @@ def index(request):
 
 @login_required
 def activate_auto_delete(request, activation):
+    """
+    An option to auto-delete the alerts. Like that the tracker will not pause automatically
+    :param request:
+    :param activation:
+    :return:
+    """
     current_user = auth.get_user(request)
     if activation == "activation":
         UserContact.objects.filter(user_id=current_user.id).update(auto_delete=True)

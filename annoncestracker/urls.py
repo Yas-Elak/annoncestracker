@@ -24,6 +24,8 @@ from main.views import dashboard, tracking, user_auth, alerts, homepage, user, p
 
 from main.sitemaps import Static_Sitemap
 
+#URL should extend the one in the "main" folder, but it will not work with locale if allthe url are not here
+
 sitemaps = {
     'static': Static_Sitemap(),
 }

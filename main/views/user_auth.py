@@ -17,6 +17,11 @@ from django.utils.translation import gettext as _
 
 
 def create_user(request):
+    """
+    Cretaa user and a ser contact to add information to the table created automaticcaly by django
+    :param request:
+    :return:
+    """
     form = NewUserForm
     if request.method == "POST":
         form = NewUserForm(request.POST)
@@ -50,6 +55,12 @@ def create_user(request):
 
 
 def login_request(request):
+    """
+    Didn't create a custom User before the first migration so I add to use a custom method to log the user with his email
+    if not, django use a username
+    :param request:
+    :return:
+    """
     form = AuthForm()
     if request.method == "POST":
         form = AuthForm(request.POST)
@@ -72,12 +83,24 @@ def login_request(request):
 
 
 def logout_request(request):
+    """
+    Use the logout method of django
+    :param request:
+    :return:
+    """
     logout(request)
     messages.info(request, _("Vous êtes maintenant déconnecté"))
     return redirect("homepage")
 
 
 def activate(request, uidb64, token):
+    """
+    Activate the user account when he clicked the link in the email
+    :param request:
+    :param uidb64:
+    :param token:
+    :return:
+    """
     try:
         uid = force_text(urlsafe_base64_decode(uidb64))
         user = User.objects.get(pk=uid)
@@ -94,6 +117,11 @@ def activate(request, uidb64, token):
 
 @login_required
 def resent_activation_email(request):
+    """
+    Resent an activation email if he didn't get the first one or if the link is no more in use
+    :param request:
+    :return:
+    """
     current_user = auth.get_user(request)
     send_activation_mail(current_user, get_current_site(request).domain, current_user.email)
     messages.info(request, _(f"Email de vérification envoyé, vérifiez vos emails"))

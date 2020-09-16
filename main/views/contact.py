@@ -10,6 +10,11 @@ from django.core import mail
 from django.utils.translation import gettext
 
 def contact(request):
+    """
+    send an email for contact to the owner of the site
+    :param request:
+    :return: to the hompage with an alert saying that the message is sent
+    """
     form = ContactForm()
     if request.method == "POST":
         form = ContactForm(request.POST)
