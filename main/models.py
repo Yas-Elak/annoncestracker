@@ -1,3 +1,5 @@
+import random
+
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.conf import settings
@@ -15,6 +17,9 @@ class UserOrder(models.Model):
     created = models.DateTimeField(default=timezone.now)
 
 
+def random_string():
+    return str(random.randint(1000, 9999))
+
 class UserContact(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL,
                              on_delete=models.CASCADE, related_name='user_contact')
@@ -27,6 +32,9 @@ class UserContact(models.Model):
     super_premium_user = models.BooleanField(default=False)
     auto_delete = models.BooleanField(default=False)
     trackers_activated = models.BooleanField(default=False)
+    tlg_code = models.CharField(max_length=4, default=random_string)
+    tlg_bot = models.BooleanField(default=0)
+    tlg_chat_id = models.CharField(max_length=255, default="")
 
     def __str__(self):
         return f"phone : {self.phone_number} / Email 1 : {self.email_one} / Email 2 : {self.email_two}"
