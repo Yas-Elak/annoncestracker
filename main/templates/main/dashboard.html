@@ -117,8 +117,11 @@
                             {{ form.as_p }}
                             <button type="submit" class="btn">{% trans "Sauvegarder" %}</button>
                         </form>
+                        <br>
                         <p>Code Telegram</p>
                         <p>{{ user_contact.email_one }} {{ user_contact.tlg_code }}</p>
+                        <p>{% blocktrans %}Insérez ce code dans Telegram: https://t.me/trackannonces_bot
+                        et recevez vos alertes sur votre téléphone.{% endblocktrans %}</p>
 
                     </div>
                 </div>

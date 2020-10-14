@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-06 09:39+0200\n"
+"POT-Creation-Date: 2020-10-14 16:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -152,6 +152,22 @@ msgid "Créer un nouveau tracker"
 msgstr "Maak een nieuwe tracker"
 
 #: .\main\templates\main\alerts.html:146
+#, fuzzy
+#| msgid ""
+#| "Partiel : le mot recherché peut-il faire partie d'un autre mot ?\n"
+#| "                                         ex:  recherche = \"para\". Est-"
+#| "ce que parapluie peut-être un résultat ?"
+msgid ""
+"Partiel : le mot recherché peut-il faire partie\n"
+"                                                    d'un autre mot ?\n"
+"                                                    ex:  recherche = \"para"
+"\". Est-ce que parapluie peut-être un résultat\n"
+"                                                    ?"
+msgstr ""
+"Gedeeltelijk : Kan het gezochte woord deel uitmaken van een ander woord?\n"
+"Zoeken = para: Kan paraplu een gevolg zijn?"
+
+#: .\main\templates\main\alerts.html:151
 msgid ""
 "Pour créer des\n"
 "                                                    trackers, enregistrez "
@@ -254,6 +270,13 @@ msgstr "Ontvang meldingen"
 #: .\main\templates\main\register.html:22
 msgid "Sauvegarder"
 msgstr "Besparen"
+
+#: .\main\templates\main\dashboard.html:123
+msgid ""
+"Insérez ce code dans Telegram: https://t.me/trackannonces_bot\n"
+"                        et recevez vos alertes sur votre téléphone."
+msgstr "Voer deze code in in Telegram: https://t.me/trackannonces_bot\n"
+ "en ontvang waarschuwingen op uw telefoon."
 
 #: .\main\templates\main\donepayment.html:4
 msgid "Done"
@@ -501,16 +524,30 @@ msgid "Soyez le premier sur les bonnes affaires !"
 msgstr "Wees de eerste op de koopjes!"
 
 #: .\main\templates\main\homepage.html:39
+#, fuzzy
+#| msgid ""
+#| " TrackAnnonces vous permet d'être le premier à être prévenu\n"
+#| "                    de la publication d'une annonce correspondant à votre "
+#| "recherche sur les sites de\n"
+#| "                    seconde main. Vous serez ainsi le premier à pouvoir "
+#| "réagir et à faire la bonne affaire.\n"
+#| "                    Créer un tracker sur notre site et dés qu'une "
+#| "nouvelle annonce est publiée, vous serez prévenu.\n"
+#| "                    Le tracker recherche inlassablement les nouvelles "
+#| "annonces correspondant à votre recherche\n"
+#| "                    Vous pouvez créer un tracker sur notre site "
+#| "gratuitement, il suffit de vous\n"
+#| "                    inscrire."
 msgid ""
 " TrackAnnonces vous permet d'être le premier à être prévenu\n"
 "                    de la publication d'une annonce correspondant à votre "
 "recherche sur les sites de\n"
 "                    seconde main. Vous serez ainsi le premier à pouvoir "
 "réagir et à faire la bonne affaire.\n"
-"                    Créer un tracker sur notre site et dés qu'une nouvelle "
+"                    Créer un tracker sur notre site et dès qu'une nouvelle "
 "annonce est publiée, vous serez prévenu.\n"
 "                    Le tracker recherche inlassablement les nouvelles "
-"annonces correspondant à votre recherche\n"
+"annonces correspondant à votre recherche.\n"
 "                    Vous pouvez créer un tracker sur notre site "
 "gratuitement, il suffit de vous\n"
 "                    inscrire."
@@ -550,9 +587,9 @@ msgstr "Uw zoekopdrachten"
 #| "nouvelles annonces concernant votre\n"
 #| "                mot."
 msgid ""
-"Avec les trackers, nous serons  l'affut des types d'annonces que vous "
+"Avec les trackers, nous serons  l'affût des types d'annonces que vous "
 "recherchez.\n"
-"                    Rentrez un mot clé et nous vous renverrons toutes les "
+"                    Rentrez un mot-clé et nous vous renverrons toutes les "
 "nouvelles annonces concernant votre\n"
 "                    mot."
 msgstr ""
@@ -575,7 +612,7 @@ msgid ""
 " Soyez prévenu directement par email lorsque qu'une annonce correspondant à "
 "votre\n"
 "                    recherche est publiée. 2èmemain.be propose un "
-"récapitulatif quotidient des annonces. Nous vous\n"
+"récapitulatif quotidien des annonces. Nous vous\n"
 "                    proposons\n"
 "                    d'être\n"
 "                    prévenu directement"
@@ -755,15 +792,16 @@ msgstr ""
 "\n"
 "scheppen"
 
-#: .\main\templates\main\tracking.html:228
+#: .\main\templates\main\tracking.html:229
 msgid ""
 "Partiel : le mot recherché peut-il faire partie d'un autre mot ?\n"
 "                                         ex:  recherche = \"para\". Est-ce "
 "que parapluie peut-être un résultat ?"
-msgstr "Gedeeltelijk : Kan het gezochte woord deel uitmaken van een ander woord?\n"
+msgstr ""
+"Gedeeltelijk : Kan het gezochte woord deel uitmaken van een ander woord?\n"
 "Zoeken = para: Kan paraplu een gevolg zijn?"
 
-#: .\main\templates\main\tracking.html:231
+#: .\main\templates\main\tracking.html:232
 msgid ""
 "Pour créer des trackers,\n"
 "                                        enregistrez votre email "
@@ -802,20 +840,28 @@ msgid "Oui"
 msgstr "ja"
 
 #: .\main\templates\main\upgrade.html:54
+msgid "Résultats* : "
+msgstr ""
+
+#: .\main\templates\main\upgrade.html:60
 msgid "Prix : "
 msgstr "Prix"
 
-#: .\main\templates\main\upgrade.html:55
+#: .\main\templates\main\upgrade.html:61
 msgid "Gratuit"
 msgstr "Gratis"
 
-#: .\main\templates\main\upgrade.html:56
+#: .\main\templates\main\upgrade.html:62
 msgid "4.99€/mois"
 msgstr "4.99€/maand"
 
-#: .\main\templates\main\upgrade.html:57
+#: .\main\templates\main\upgrade.html:63
 msgid "9.99€/mois"
 msgstr "9.99€/maand"
+
+#: .\main\templates\main\upgrade.html:75
+msgid "* Résultats dans les x minutes dès la découverte de l'annonce"
+msgstr ""
 
 #: .\main\templates\main\user.html:18
 msgid "Type de compte"
@@ -901,67 +947,67 @@ msgstr "Bevestig uw e-mailadres"
 msgid "Envoyer un lien pour enregistrer l'email"
 msgstr "Stuur een link om de e-mail op te slaan"
 
-#: .\main\views\alerts.py:44
+#: .\main\views\alerts.py:66
 msgid "{alert.alert_title} : supprimé"
 msgstr "{alert.alert_title} : verwijderde"
 
-#: .\main\views\contact.py:21
+#: .\main\views\contact.py:26
 msgid "Message envoyé"
 msgstr "Bericht verzonden"
 
-#: .\main\views\contact.py:24
+#: .\main\views\contact.py:29
 msgid "Formulaire invalide"
 msgstr "Ongeldige vorm"
 
-#: .\main\views\tracker_forms.py:33
+#: .\main\views\tracker_forms.py:41
 msgid "Vous n'avez plus droit à des trackers, Upgradez pour en avoir plus"
 msgstr "Je hebt geen recht meer op trackers, upgrade om meer te hebben"
 
-#: .\main\views\tracking.py:65
+#: .\main\views\tracking.py:97
 msgid "{alert.search_query} : supprimé"
 msgstr "{alert.search_query} : verwijderde"
 
-#: .\main\views\tracking.py:75 .\main\views\tracking.py:84
+#: .\main\views\tracking.py:112 .\main\views\tracking.py:127
 msgid "Toutes les alertes sont supprimées"
 msgstr "Alle meldingen worden gewist"
 
-#: .\main\views\user_auth.py:26
+#: .\main\views\user_auth.py:31
 msgid "Un utilisateur avec cet email existe déjà"
 msgstr "Er bestaat al een gebruiker met deze e-mail"
 
-#: .\main\views\user_auth.py:36
+#: .\main\views\user_auth.py:41
 msgid "Nouveau compte crée: {username}"
 msgstr "Nieuw account gemaakt : {username}"
 
-#: .\main\views\user_auth.py:38
+#: .\main\views\user_auth.py:43
 msgid "Vous êtes maintenant connecté : {username}"
 msgstr "U bent nu verbonden : {user.username}"
 
-#: .\main\views\user_auth.py:39
+#: .\main\views\user_auth.py:44
 msgid "Enregistrez votre email afin de pouvoir créer des trackers"
 msgstr "Registreer uw e-mailadres om trackers te maken."
 
-#: .\main\views\user_auth.py:62
+#: .\main\views\user_auth.py:73
 msgid "Vous êtes maintenant connecté : {user.username}"
 msgstr "U bent nu verbonden : {user.username}"
 
-#: .\main\views\user_auth.py:65 .\main\views\user_auth.py:67
+#: .\main\views\user_auth.py:76 .\main\views\user_auth.py:78
 msgid "Email ou password invalide"
 msgstr "Ongeldig e-mailadres of wachtwoord"
 
-#: .\main\views\user_auth.py:76
+#: .\main\views\user_auth.py:92
 msgid "Vous êtes maintenant déconnecté"
 msgstr "U bent nu offline"
 
-#: .\main\views\user_auth.py:89
+#: .\main\views\user_auth.py:112
 msgid "Votre email est confirmé, merci"
 msgstr "Je e-mailadres is bevestigd, bedankt"
 
-#: .\main\views\user_auth.py:92
+#: .\main\views\user_auth.py:115
 msgid "Lien d'activation invalide"
 msgstr "Ongeldige activeringslink"
 
-#: .\main\views\user_auth.py:99
+#: .\main\views\user_auth.py:127
 #, fuzzy
 #| msgid "Email de vérification envoyé, vérifié vos emails"
 msgid "Email de vérification envoyé, vérifiez vos emails"
