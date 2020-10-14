@@ -111,6 +111,8 @@
             <div class="col s12 m6">
                 <div class="card">
                     <div class="card-content">
+                        <h3>Code Telegram</h3>
+                        <p>{{ user_contact.email_one }} {{ user_contact.tlg_code }}</p>
                         <span class="card-title">{% trans "Recevoir les alertes" %}</span>
                         <form method="POST">
                             {% csrf_token %}

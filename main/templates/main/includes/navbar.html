@@ -1,9 +1,6 @@
 {% load static %}
 {% load i18n %}
 <ul class="sidenav" id="mobile-demo">
-    {% if not user.user_contact.tlg_bot and  user.is_authenticated %}
-                <li id="" class=""><a href="https://t.me/trackannonces_bot">In Telegram : {{ user.email }} {{ user.tlg_code }}</a></li>
-    {% endif %}
     {% if user.is_authenticated %}
         <li><a href="{% url "dashboard" %}">Dashboard</a></li>
         <li><a href="{% url "tracking" %}">Tracking</a></li>
@@ -50,10 +47,6 @@
 
         </a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <p>ici</p>
-            {% if not user.user_contact.tlg_bot and  user.is_authenticated %}
-                <li id="" class=""><a href="https://t.me/trackannonces_bot">In Telegram : {{ user.email }} {{ user.tlg_code }}</a></li>
-            {% endif %}
             {% if user.is_authenticated %}
                 <li><a href="{% url "dashboard" %}">Dashboard</a></li>
                 <li><a href="{% url "tracking" %}">Tracking</a></li>
