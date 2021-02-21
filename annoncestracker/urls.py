@@ -20,7 +20,7 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from django.contrib.sitemaps.views import sitemap
 
-from main.views import dashboard, tracking, user_auth, alerts, homepage, user, payments, contact, upgrade
+from main.views import dashboard, tracking, user_auth, alerts, homepage, user, payments, contact, upgrade, mobile_connect
 
 from main.sitemaps import Static_Sitemap
 
@@ -34,7 +34,7 @@ urlpatterns = [
     # path('', include('main.urls')),
     path('admin/', admin.site.urls),
     # path('accounts/', include('django.contrib.auth.urls')),
-    path('i18n/', include('django.conf.urls.i18n')),  # Make sure this is present
+    path('i18n/', include('django.conf.urls.i18n')),  # Make sure this is present or the set_language url will not be found
 ]
 #
 urlpatterns += i18n_patterns(
@@ -113,8 +113,11 @@ urlpatterns += i18n_patterns(
     #sitemap
 
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
-         name='django.contrib.sitemaps.views.sitemap')
+         name='django.contrib.sitemaps.views.sitemap'),
     # to delete
+
+
+    path("jsontest/", mobile_connect.jsontest, name="jsontest"),
 
 )
 
