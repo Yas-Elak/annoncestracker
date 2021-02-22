@@ -2,7 +2,7 @@ from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 import random, string
-from ..models import UserContact, Alert
+from ..models import UserContact, Alert, Tracker
 from django.contrib import auth
 from django.utils.translation import gettext as _
 from django.core import serializers
@@ -50,16 +50,9 @@ def generateKey(request):
 def trackersJson(request, api_key):
 
     user_contact = UserContact.objects.get(key_api_mobile=api_key)
-    print(user_contact.user.id)
+    tracker_by_date = Tracker.objects.filter(user__id=user_contact.user.id).order_by('-created')
 
-    if user_contact.super_premium_user:
-        all_alerts = Alert.objects.filter(user__id=user_contact.user.id, activated=True).order_by('-alert_time')[:MAX_ARCHIVES_GOLD]
-    elif user_contact.premium_user:
-        all_alerts = Alert.objects.filter(user__id=user_contact.user.id, activated=True).order_by('-alert_time')[:MAX_ARCHIVES_ARGENT]
-    elif user_contact.normal_user:
-        all_alerts = Alert.objects.filter(user__id=user_contact.user.id, activated=True).order_by('-alert_time')[:MAX_ARCHIVES_NORMAL]
-
-    data = list(all_alerts.values())
+    data = list(tracker_by_date.values())
 
     #serialized_obj = serializers.serialize('json', [all_alerts, ])
 
