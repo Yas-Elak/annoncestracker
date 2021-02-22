@@ -113,7 +113,7 @@ urlpatterns += i18n_patterns(
     #JSON
     path("mobile-app-key/", mobile_connect.apiKeyIndex, name="api_key_index"),
     path("key-generation/", mobile_connect.generateKey, name='generate_key'),
-    path("mobile/<str:api_key>/trackers", mobile_connect.trackersJson, name='trackers_json'),
+    path("mobile/<str:api_key>/trackers/", mobile_connect.trackersJson, name='trackers_json'),
     path("mobile/<str:api_key>/alerts/<int:tracker_id>/", mobile_connect.alertsJson, name='alerts_json'),
     path("mobile/<str:api_key>/verification/", mobile_connect.keyVerification, name='key_verification'),
     #sitemap
