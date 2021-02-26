@@ -61,14 +61,15 @@ def trackersJson(request, api_key):
 def alertsJson(request, api_key, tracker_id):
 
     user_contact = UserContact.objects.get(key_api_mobile=api_key)
-    print(user_contact.user.id)
+    tracker = Tracker.objects.get(id=tracker_id)
+
 
     if user_contact.super_premium_user:
-        all_alerts = Alert.objects.filter(user__id=user_contact.user.id, activated=True).order_by('-alert_time')[:MAX_ARCHIVES_GOLD]
+        all_alerts = Alert.objects.filter(user__id=user_contact.user.id, activated=True, tracker=tracker).order_by('-alert_time')[:MAX_ARCHIVES_GOLD]
     elif user_contact.premium_user:
-        all_alerts = Alert.objects.filter(user__id=user_contact.user.id, activated=True).order_by('-alert_time')[:MAX_ARCHIVES_ARGENT]
+        all_alerts = Alert.objects.filter(user__id=user_contact.user.id, activated=True, tracker=tracker).order_by('-alert_time')[:MAX_ARCHIVES_ARGENT]
     elif user_contact.normal_user:
-        all_alerts = Alert.objects.filter(user__id=user_contact.user.id, activated=True).order_by('-alert_time')[:MAX_ARCHIVES_NORMAL]
+        all_alerts = Alert.objects.filter(user__id=user_contact.user.id, activated=True, tracker=tracker).order_by('-alert_time')[:MAX_ARCHIVES_NORMAL]
 
     data = list(all_alerts.values())
 
