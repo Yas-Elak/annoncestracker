@@ -116,6 +116,7 @@ urlpatterns += i18n_patterns(
     path("mobile/<str:api_key>/trackers/", mobile_connect.trackersJson, name='trackers_json'),
     path("mobile/<str:api_key>/alerts/<int:tracker_id>/", mobile_connect.alertsJson, name='alerts_json'),
     path("mobile/<str:api_key>/verification/", mobile_connect.keyVerification, name='key_verification'),
+    path("mobile/<str:api_key>/alerts_count/", mobile_connect.alertsCountJson, name='alerts_count_json'),
     #sitemap
 
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps},

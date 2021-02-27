@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
@@ -90,3 +92,20 @@ def keyVerification(request, api_key):
         }
 
     return JsonResponse(data)
+
+def alertsCountJson(request, api_key):
+
+    user_contact = UserContact.objects.get(key_api_mobile=api_key)
+    created_time = datetime.datetime.now() - datetime.timedelta(minutes=15)
+    tracker_by_date = Tracker.objects.filter(user__id=user_contact.id).order_by('-created')
+    alerts_count = 0
+    for tracker in tracker_by_date:
+        alerts_count += Alert.objects.filter(tracker_id=tracker.id, activated=1, alert_time__gte=created_time).count()
+
+    if alerts_count > 0:
+        data = {
+            'alerts_count': alerts_count
+        }
+
+    return JsonResponse(data)
+
